@@ -16,7 +16,7 @@ public class Arkham_Horror_1DAM {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        //Viva españa
         //Juego arkham horros xicos
     }
     
