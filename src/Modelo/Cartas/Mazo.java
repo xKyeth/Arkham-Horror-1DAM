@@ -16,7 +16,9 @@ import java.util.LinkedList;
 
 public class Mazo {
   LinkedList<Carta> c;
-    public Mazo(){}
+    public Mazo(){
+    this.c = new LinkedList();
+    }
     
     
     
