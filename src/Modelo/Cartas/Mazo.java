@@ -32,7 +32,7 @@ public class Mazo {
         c.add(a);
         c.add(a);
         c.add(a);
-        c.add(a);
+       
         
     }
     
