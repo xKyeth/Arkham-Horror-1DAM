@@ -11,7 +11,7 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Zero
+ * @author Jose
  */
 
 public class Mazo {
