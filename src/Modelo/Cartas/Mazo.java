@@ -61,7 +61,7 @@ public class Mazo {
     
     }
     
-  public void barajar(LinkedList c){
+  public void barajar(){
 
    Collections.shuffle(c);
    System.out.println("barajo");
