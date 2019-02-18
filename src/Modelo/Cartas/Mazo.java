@@ -69,7 +69,7 @@ public class Mazo {
   }
     
     
-    public boolean mazoVacio(LinkedList c){
+    public boolean mazoVacio(){
        
     if (c.isEmpty()){
         System.out.println("mazo vacio");
