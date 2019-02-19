@@ -39,5 +39,5 @@ public abstract class Carta_Acto extends Carta {
         return texto;
     }
     
-    abstract public boolean usarCarta(int pistas);
+    abstract public boolean usarCarta(int pistas, Object obj);
 }
