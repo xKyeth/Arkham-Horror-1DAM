@@ -11,5 +11,10 @@ import Modelo.Cartas.Carta;
  * @author alumno
  */
 public abstract class Carta_Acto extends Carta {
-    
+    int coste;
+    boolean add;
+    String pretexto;
+    String accion;
+    String objetivo;
+    String texto;    
 }
