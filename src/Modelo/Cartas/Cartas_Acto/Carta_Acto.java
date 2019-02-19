@@ -8,7 +8,7 @@ import Modelo.Cartas.Carta;
 
 /**
  *
- * @author alumno
+ * @author pecorte
  */
 public abstract class Carta_Acto extends Carta {
     int coste;
