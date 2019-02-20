@@ -19,10 +19,16 @@ public class Main {
         
         MazoPlan mp = new MazoPlan();
         
-        mp.añadirCartasPlan();
+        mp.añadirCartasPlan();      
         
-        mp.infoCartasPlan();
-        
+        mp.cartaPlan1();
+        mp.cartaPlan2();
+        mp.cartaPlan3();
+        mp.cartaPlan4();
+        mp.cartaPlan5();
+        mp.cartaPlan6();
+        mp.cartaPlan7();
+        mp.cartaPlan8();
         
         
     }
