@@ -47,9 +47,9 @@ public class PruebasCombate {
         boolean muerto=false;
         if(enemigo.salud<=0){
             muerto=true;
-            if(enemigo.puntosDeVictoria){
+            /**if(Enemigo tiene puntos de victoria){
                 pilaVictoria.push(enemigo);
-            }
+            }**/
         }
         return muerto;
     }
