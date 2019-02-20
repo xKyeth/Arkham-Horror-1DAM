@@ -13,8 +13,31 @@ import Modelo.Cartas.Carta;
 public abstract class Carta_Acto extends Carta {
     int coste;
     boolean add;
+    String titulo;
     String pretexto;
     String accion;
     String objetivo;
     String texto;    
+    
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public String getPretexto() {
+        return pretexto;
+    }
+
+    public String getAccion() {
+        return accion;
+    }
+
+    public String getObjetivo() {
+        return objetivo;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+    
+    abstract public boolean usarCarta(int pistas, Object obj);
 }
