@@ -47,7 +47,7 @@ public class MazoPlan {
         public void añadirCartasPlan(){
             
             cartasPlan1.add(new CartaPlan1("¡¿Qué está pasando?!"));
-            cartasPlan2.add(new CartaPlan2("El asceso de los gules"));
+            cartasPlan2.add(new CartaPlan2("El acceso de los gules"));
             cartasPlan3.add(new CartaPlan3("¡Están saliendo!"));
             cartasPlan4.add(new CartaPlan4("¿Depredador o presa?"));
             cartasPlan5.add(new CartaPlan5("El tiempo se agota"));
