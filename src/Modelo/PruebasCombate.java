@@ -60,5 +60,10 @@ public class PruebasCombate {
         }
         return muerto;
     }
+
+    public LinkedList<Enemigo> getPilaVictoria() {
+        return pilaVictoria;
+    }
+    
     
 }
