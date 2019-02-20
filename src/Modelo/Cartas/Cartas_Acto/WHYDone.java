@@ -26,6 +26,14 @@ public class WHYDone extends Carta_Acto {
         
     }
 
+    public String getOpc1() {
+        return opc1;
+    }
+
+    public String getOpc2() {
+        return opc2;
+    }
+    
     @Override
     public boolean usarCarta(int pistas, Object obj, PruebasCombate pr) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
