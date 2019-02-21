@@ -16,13 +16,13 @@ public class HabilidadMainPrueba {
      */
     public static void main(String[] args) {
 //        
-        Investigador Roland = new Investigador(6,4,5,4);        
+        Investigador Roland = new Investigador(0,4,5,4);        
         
-        Apoyo apoyo1 = new Apoyo(1,0,1,0);
+        Apoyo apoyo1 = new Apoyo(5,0,1,0);
         
         Caos caos1 = new Caos(1,0,2,0);
         
-        Habilidad prueba = new Habilidad(2, Roland, apoyo1, caos1);
+        Habilidad prueba = new Habilidad(3, Roland, apoyo1, caos1);
         
 //        Habilidad prueba = new Habilidad(Roland, apoyo1, caos1);
 //        System.out.println(Roland.getAgilidad());
