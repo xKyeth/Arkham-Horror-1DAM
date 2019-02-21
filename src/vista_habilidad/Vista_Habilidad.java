@@ -52,8 +52,8 @@ public class Vista_Habilidad {
             case 4: System.out.println("Fracaso en Combate"); break;
         }    
     }
-
-
+    
+  
 
     
     
