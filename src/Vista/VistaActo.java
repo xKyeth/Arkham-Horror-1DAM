@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class VistaActo {
     public void verCartas(ArrayList <Carta_Acto> c){
         for(Carta_Acto x: c){
+            System.out.println("Indice :"+ c.indexOf(x));
             System.out.println("Titulo: "+x.getTitulo());
             System.out.println(x.getPretexto());
             System.out.println("Necesario: "+x.getObjetivo());
