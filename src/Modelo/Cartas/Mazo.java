@@ -38,7 +38,7 @@ public class Mazo {
      System.out.println("Numero inválido");
     
     }else for (int i=0; i<x; i++){
-        System.out.println("barajo 1 vez");
+        System.out.println("cojo una carta");
         return c.getFirst();
         
       }

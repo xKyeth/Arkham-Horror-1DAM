@@ -5,6 +5,7 @@
  */
 package Modelo.Cartas.Cartas_Acto;
 import java.util.ArrayList;
+import java.util.Collections;
 /**
  *
  * @author pecorte
@@ -24,4 +25,24 @@ public class MazoActo {
         mazo.add(c=new WHYDone());
     }
     
+    public ArrayList <Carta_Acto> verCartas(){
+        return mazo;
+    }
+    
+    public ArrayList <Carta_Acto> verCartasUsadas(){
+        return cartasused;
+    }
+    
+    public void usarCarta(Carta_Acto c){
+        int i=mazo.indexOf(c);
+        cartasused.add(mazo.remove(i));
+    }
+    
+    public Carta_Acto getCarta(int x){
+        return mazo.get(x);
+    }
+    
+    public void barajar(){
+        Collections.shuffle(mazo);
+    }
 }
