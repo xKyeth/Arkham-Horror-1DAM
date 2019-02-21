@@ -38,6 +38,10 @@ public class MazoActo {
         cartasused.add(mazo.remove(i));
     }
     
+    public Carta_Acto getCarta(int x){
+        return mazo.get(x);
+    }
+    
     public void barajar(){
         Collections.shuffle(mazo);
     }
