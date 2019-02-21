@@ -9,7 +9,7 @@ package modelohabilidad;
  *
  * @author cristian
  */
-public class ArkhamHorror {
+public class HabilidadMainPrueba {
 
     /**
      * @param args the command line arguments
