@@ -80,7 +80,7 @@ public class Escenario {
     
         public void barajarCartas(){
             m.barajar();
-            System.out.println("Mazo barajado xd");
+            System.out.println("El Mazo ha sido barajado");
         }
             
             
