@@ -49,6 +49,26 @@ public class uso_descarte_cartas {
         
     }
     
-    
-    
+    Investigador investigador;
+    LinkedList <String> cartasapoyo = new LinkedList();
+    LinkedList <String> cartasactividad = new LinkedList();
+    LinkedList <String> cartasenmesa = new LinkedList();
+
+    public void ComprarCartaActividad(){
+        //investigador.RecursosInvestigador =  investigador.RecursosInvestigador - cartasactividad.get(0).coste;
+        //Esto funciona cuando esté implementado el coste de las cartas
+        cartasactividad.getLast();
+        descarte.add(cartasactividad.getLast());
+    }
+   public void ComprarCartaApoyo(){
+       
+      // investigador.RecursosInvestigador = investigador.RecursosInvestigador - cartasapoyo.get(0).coste;
+       //Esto funciona cuando esté implementado el coste de las cartas
+       cartasenmesa.add(cartasapoyo.getLast());
+       cartasapoyo.removeLast();
+       
+   }
 }
+
+    
+
