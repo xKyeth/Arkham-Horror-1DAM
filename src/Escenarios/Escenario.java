@@ -12,6 +12,7 @@ package Escenarios;
 
 import Mazo_Plan.MazoPlan;
 import Modelo.Cartas.*;
+import Vista.vistaPlan;
 import java.util.LinkedList;
 
 /**
@@ -20,7 +21,7 @@ import java.util.LinkedList;
  */
 public class Escenario {
     
-            MazoPlan mp;
+            vistaPlan vp;
             Mazo m;
     public void introEscenario(){
      System.out.println("Tus compañeros y tú habéis estado investigando los extraños sucesos que "
@@ -43,28 +44,28 @@ public class Escenario {
         
         switch(1) {
             case 1:
-              mp.cartaPlan1();
+              vp.cartaPlan1();
               break;
             case 2:
-              mp.cartaPlan2();
+              vp.cartaPlan2();
               break;
             case 3:
-              mp.cartaPlan3();
+              vp.cartaPlan3();
               break;
             case 4:
-              mp.cartaPlan4();
+              vp.cartaPlan4();
               break;
             case 5:
-              mp.cartaPlan5();
+              vp.cartaPlan5();
               break;
             case 6:
-              mp.cartaPlan6();
+              vp.cartaPlan6();
               break;
             case 7:
-              mp.cartaPlan7();
+              vp.cartaPlan7();
               break;
             case 8:
-              mp.cartaPlan8();
+              vp.cartaPlan8();
               break;
             default:
                //code block
