@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author jesus
+ * @author Jesus Rosa Rodriguez
  */
 public class MenuArkham {
 
@@ -66,7 +66,7 @@ public class MenuArkham {
                                 System.out.println("2. Dificultad Media");
                                 System.out.println("3. Dificultad Extrema");
                                 System.out.println("4. Salir");
-
+   
                                 System.out.println("Escribe una de las opciones");
                                 opcion = sn.nextInt();
                                 
