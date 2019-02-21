@@ -30,7 +30,7 @@ public class Main {
         mp.cartaPlan7();
         mp.cartaPlan8();
         
-        
+        // comentario de Jorge
     }
     
 }
