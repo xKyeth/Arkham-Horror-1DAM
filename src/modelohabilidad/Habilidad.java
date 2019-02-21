@@ -76,6 +76,7 @@ public class Habilidad {
     }
 
     private void iniciarPruebaCombate() {
+        // Lo hace Miguel.
         if(apoyo != null)inv.setCombate(inv.getCombate()+apoyo.getCombate());
         inv.setCombate(inv.getCombate()-caos.getCombate());
         
