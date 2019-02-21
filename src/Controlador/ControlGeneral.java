@@ -7,7 +7,7 @@ package Controlador;
 
 /**
  *
- * @author usuario
+ * @author Jose
  */
 public class ControlGeneral {
     
@@ -25,12 +25,48 @@ public class ControlGeneral {
     
     
     
-    public void prepararPartida(){}
+    public void prepararPartida(){
+    
+    //Elegir investigador
+    
+    //Crear y barajar mazo Jugador
+    
+    //Formar reserva de ficha/(?
+    
+    //Formar bolsa del caos
+    
+    //Coger Recursos iniciales(?
+    
+    //Robar mano inicial
+    
+    //Buscar las cartas de Escenario de "El encuento"
+    
+    //Preparar mazo de Plan
+    
+    //Preparar mazo de acto
+    
+    //Colocar la carta de referencia
+    
+    //poner estudio en juego
+    
+    //pon aparte todos os demas lugares fuera de juego(??
+    
+    //Poner investigador en el Estudio
+    
+    //poner aparte las cartas gul y chantler
+    
+    //Crea mazo encuentro
+    
+    }
     
     
     
     public void faseMitos(){
     
+        
+        //Colocar 1 ficha de perducuib sivre el plan en curso
+        
+        //Compara la cantidad de piezas de 
     
     
     }
