@@ -1,14 +1,12 @@
 package Modelo;
 
+import java.util.ArrayList;
 
 
+public class RolandBanks extends Investigador {
 
-public class Roland_Banks extends Investigador {
-
- 
-     
-       public Roland_Banks(){
-           
+       public RolandBanks(){
+        
         this.tipo="Guardián";
         this.voluntad=3;
         this.intelecto=3;
@@ -17,6 +15,9 @@ public class Roland_Banks extends Investigador {
         this.vida=9;
         this.numeroPistas=0;
         this.numeroRecursos=5;
+        this.horror=5;
+        this.daño=1;
+        this.mazo=new MazoInvestigador();
         //this.lugar=new Salita();
         
         
@@ -29,7 +30,10 @@ public class Roland_Banks extends Investigador {
        
     }
     public String toString(){
-        return "tipo "+ this.getTipo()+ " voluntad "+this.getVoluntad() + " intelecto " +this.getIntelecto()+ " combate "+this.getCombate() + " agilidad " +this.getAgilidad()+
-                " vida "+this.getVida() + " numero de pistas " + this.getNumeroPistas() + " recursos " +this.getNumeroRecursos(); //+"lugar "+this.lugar;
-    }
+        return "tipo "+ this.tipo+ " voluntad "+this.voluntad + " intelecto " +this.intelecto;
+                
+                }         
+
+    
+  
 }
