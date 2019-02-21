@@ -1,0 +1,112 @@
+/*  Primer escenario de la partida
+ *  -X. X es la cantidad de Enemigos Gul que hay en tu Lugar.
+ *  -1. Si fracasas, recibe 1 punto de horror.
+ *  -2. Si hay un enemigo Gul en tu Lugar, recibe 1 punto de daño.
+ *  El escenario hace que avance plan y que avance mito
+ *  Reunir las cartas : Ratas, Gules, Miedo Impactante, Antiguos males, Frío Helador
+ *  Poner en juego el lugar Estudio.
+ *  Apartar las cartas Sacerdote Gul y Lita Chantler.
+ *  Barajar el resto de las cartas de Encuentro.
+ */
+package Escenarios;
+
+import Mazo_Plan.MazoPlan;
+import Modelo.Cartas.*;
+import java.util.LinkedList;
+
+/**
+ *
+ * @author Jesus Rosa
+ */
+public class Escenario {
+    
+            MazoPlan mp;
+            Mazo m;
+    public void introEscenario(){
+     System.out.println("Tus compañeros y tú habéis estado investigando los extraños sucesos que "
+             + "\n están teniendo lugar en vuestra ciudad natal de Arkham, en Massachussets. Durante "
+             + "\n las últimas semanas, varios habitantes de la ciudad han desaparecido misteriosamente."
+             + "\n Y hace poco aparecieron sus cadáveres en el bosque, medio devorados y salvajemente mutilados."
+             + "\n La  policía y los periódicos han dicho que ha sido obra de animales, pero creéis que hay algo"
+             + "\n más en marcha. Os habéis reunido en casa del investigador jefe para deliberar sobre estos "
+             + "\n misteriosos acontecimientos.");
+     
+     
+     
+    }
+    
+    // Poner en juego el lugar Estudio
+    
+        public void PonerJuego(){
+        // hacer un for en el que cojera todo un linked list de x cartas y las mostrara por SOUT
+       
+        
+        switch(1) {
+            case 1:
+              mp.cartaPlan1();
+              break;
+            case 2:
+              mp.cartaPlan2();
+              break;
+            case 3:
+              mp.cartaPlan3();
+              break;
+            case 4:
+              mp.cartaPlan4();
+              break;
+            case 5:
+              mp.cartaPlan5();
+              break;
+            case 6:
+              mp.cartaPlan6();
+              break;
+            case 7:
+              mp.cartaPlan7();
+              break;
+            case 8:
+              mp.cartaPlan8();
+              break;
+            default:
+               //code block
+          }
+        
+        
+          
+            
+        
+        }
+    
+    // Barajar el resto de las cartas de Encuentro.
+    
+        public void barajarCartas(){
+            m.barajar();
+            System.out.println("Mazo barajado xd");
+        }
+            
+            
+            
+    
+    // El escenario hace que avance plan y que avance mito
+    
+        //Hacer un for para recorrer un arraylist de forma aleatoria, y los datos que
+        // saquemos de el lo añadiriamos a otro arraylist el cual comparariamos con el primero
+        // para saber que datos ya hemos sacado y cuales no (mediante un if) si se repiten
+        // sacariamos otro dato mediante un random,.
+    
+    // Reunir las cartas : Ratas, Gules, Miedo Impactante, Antiguos males, Frío Helador
+    
+        
+    
+    // Apartar las cartas Sacerdote Gul y Lita Chantler.
+    
+        
+    
+    // Si hay un enemigo Gul en tu Lugar, recibe 1 punto de daño.
+    
+        
+    
+    // Si fracasas, recibe 1 punto de horror.
+    
+        
+    
+}
