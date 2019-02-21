@@ -2,7 +2,7 @@ package Modelo;
 /**AUTOR ALEXANDRA**/
 import java.util.ArrayList;
 
-public interface NewInterface {
+public interface IMazoInvestigador {
 
     void añadirCarta(Carta carta);
 
