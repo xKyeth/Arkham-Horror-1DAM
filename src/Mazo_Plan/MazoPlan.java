@@ -87,7 +87,7 @@ public class MazoPlan {
  
         }
     
-        
+        //Metodos para usar las cartas(lo que hace es mostrar por pantalla que hace dicha carta)
         public void cartaPlan1(){
             System.out.println("El investigador jefe debe decidir (elige una opción):"
                     + " \nCada investigador descarta 1 carta al azar de su mano o el"
