@@ -10,7 +10,7 @@ package Controlador;
  * @author Jose
  */
 public class ControlGeneral {
-    
+    boolean acabarPartida=false;
     public ControlGeneral(){
     
     
@@ -19,19 +19,46 @@ public class ControlGeneral {
     public void Juego(){
     
     
-    
+        
+       prepararPartida();
+       
+       faseInvestigacion();
+        
+        faseEnemigos();
+       
+        faseMantenimiento();
+       
+        
+       while(true!=acabarPartida){
+       
+       faseMitos();
+        
+       faseInvestigacion();
+        
+        faseEnemigos();
+       
+        faseMantenimiento();
+    }
+       
+       
+        
+        
     
     }
     
     
     
     public void prepararPartida(){
+        
+        
+        
+        
     
-    //Elegir investigador
+    //Elegir investigador/Por ahora NO SE IMPLEMENTA
     
     //Crear y barajar mazo Jugador
     
-    //Formar reserva de ficha/(?
+    //Formar reserva de ficha(?
     
     //Formar bolsa del caos
     
@@ -64,7 +91,7 @@ public class ControlGeneral {
     public void faseMitos(){
     
         
-        //Colocar 1 ficha de perducuib sivre el plan en curso
+        //Colocar 1 ficha de perdicion sirve el plan en curso
         
         //Compara la cantidad de piezas de 
     
@@ -73,6 +100,9 @@ public class ControlGeneral {
     
     public void faseInvestigacion(){
     
+        
+        //Vamos a una vista para elegir las 3 distintas opciones y en ella escogen una de estas 3
+        
     //Robar 1 carta
     
     //Obtener un recurso
