@@ -54,7 +54,8 @@ public class Habilidad {
     }
 
     public void iniciarPruebaVoluntad() {
-        if(apoyo != null)inv.setVoluntad(inv.getVoluntad()+apoyo.getVoluntad());
+        int n = seleccionaApoyo(1);
+        inv.setVoluntad(inv.getVoluntad()+n);
         inv.setVoluntad(inv.getVoluntad()-caos.getVoluntad());
         
         if(inv.getVoluntad()>=carta.getDificultad()){
@@ -65,7 +66,8 @@ public class Habilidad {
     }
 
     private void iniciarPruebaAgilidad() {
-        if(apoyo != null)inv.setAgilidad(inv.getAgilidad()+apoyo.getAgilidad());
+        int n = seleccionaApoyo(2);
+        inv.setAgilidad(inv.getAgilidad()+n);
         inv.setAgilidad(inv.getAgilidad()-caos.getAgilidad());
         
         if(inv.getAgilidad()>=carta.getDificultad()){
@@ -76,7 +78,9 @@ public class Habilidad {
     }
 
     private void iniciarPruebaCombate() {
-        if(apoyo != null)inv.setCombate(inv.getCombate()+apoyo.getCombate());
+        // Lo hace Miguel.
+        int n = seleccionaApoyo(4);
+        inv.setCombate(inv.getCombate()+n);
         inv.setCombate(inv.getCombate()-caos.getCombate());
         
         if(inv.getCombate()>=carta.getDificultad()){
@@ -87,7 +91,8 @@ public class Habilidad {
     }
 
     private void iniciarPruebaIntelecto() {
-        if(apoyo != null)inv.setIntelecto(inv.getIntelecto()+apoyo.getIntelecto());
+        int n = seleccionaApoyo(3);
+        inv.setIntelecto(inv.getIntelecto()+n);
         inv.setIntelecto(inv.getIntelecto()-caos.getIntelecto());
         
         if(inv.getIntelecto()>=carta.getDificultad()){
@@ -108,14 +113,14 @@ public class Habilidad {
     public int seleccionaApoyo(int a){
         //Selecciono apoyos que al final son números para sumar a la habilidad seleccionada
         //Puedo no seleccionar ninguno. No sumaría nada.
+        int n = 0;
         switch(a){
-            case 1:
-            case 2:
-            case 3:
-            case 4:
+            case 1: n = 6; break;
+            case 2: n = 1; break;
+            case 3: n = 2; break;
+            case 4: n = 1; break;
         }
-//        Apoyo ap = apoyos.get(0);
-        return 0;
+        return n;
         //Retorna un número que sería la suma de todos los apoyos usados de la habilidad seleccionada
     }
     
