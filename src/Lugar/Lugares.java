@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Lugares {
     
     public ArrayList <Lugar> lugares = new ArrayList();
-    public boolean[][] conexion = new boolean[5][5];
+    private boolean[][] conexion = new boolean[5][5];
     
     //Hay que introducir los lugares en este orden (ya que
     //la matriz de adyacencia está hecha en base a dicho orden):
@@ -41,11 +41,25 @@ public class Lugares {
     public void cambiarLugar(Lugar a, Lugar b){
         int x = lugares.indexOf(a);
         int y = lugares.indexOf(b);
-        if(conexion[x][y]){
+        if(getConexion()[x][y]){
             System.out.println("Estamos aquí: "+a.getNombre()+" y nos movemos aquí: "+b.getNombre());
         }else{
             System.out.println("No puedes moverte.");
         }
+    }
+
+    /**
+     * @return the conexion
+     */
+    public boolean[][] getConexion() {
+        return conexion;
+    }
+
+    /**
+     * @param conexion the conexion to set
+     */
+    public void setConexion(boolean[][] conexion) {
+        this.conexion = conexion;
     }
     
 }
