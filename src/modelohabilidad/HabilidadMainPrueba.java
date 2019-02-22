@@ -5,6 +5,9 @@
  */
 package modelohabilidad;
 
+import BolsaDelCaos.BolsaDelCaos;
+import Modelo.RolandBanks;
+
 /**
  *
  * @author cristian
@@ -16,13 +19,14 @@ public class HabilidadMainPrueba {
      */
     public static void main(String[] args) {
 //        
-        Investigador Roland = new Investigador(0,4,5,4);        
+        RolandBanks Roland = new RolandBanks();        
         
         Apoyo apoyo1 = new Apoyo(5,0,1,0);
         
-        Caos caos1 = new Caos(1,0,2,0);
+        BolsaDelCaos bolsa = new BolsaDelCaos();
+//        Caos caos1 = new Caos(1,0,2,0);
         
-        Habilidad prueba = new Habilidad(3, Roland, apoyo1, caos1);
+        Habilidad prueba = new Habilidad(2, Roland, apoyo1, bolsa);
         
 //        Habilidad prueba = new Habilidad(Roland, apoyo1, caos1);
 //        System.out.println(Roland.getAgilidad());
