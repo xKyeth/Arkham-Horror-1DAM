@@ -2,7 +2,7 @@ package Modelo;
 /**AUTOR ALEXANDRA**/
 import java.util.ArrayList;
 
-public class MazoInvestigador implements NewInterface {
+public class MazoInvestigador implements IMazoInvestigador {
 
     private String nombre;
     private ArrayList<Carta> listaCartasMazo=new ArrayList<>();

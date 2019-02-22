@@ -1,0 +1,6 @@
+
+package CartasInvestigador;
+
+class Carta {
+    
+}

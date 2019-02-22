@@ -10,7 +10,7 @@ public class BD {
     public BD(){
     this.listaCartas=new ArrayList<>();
         listaCartas.add(new Carta(".38 Especial de Roland.","Neutral",3,"Apoyo",1,0,0,1, true, "Objeto. Arma. Arma de fuego"));
-        listaCartas.add(new Carta("Primeros auxilios.","Guardián",2,"Apoyo",1,0,0,0, false, "Talento. Ciencia"));
+        listaCartas.add(new Carta("Primeros auxilios.","Guardián",2,"Apoyo",0,1,0,0, false, "Talento. Ciencia"));
         listaCartas.add(new Carta("Viejo libro de conocimiento.","Buscador",3,"Apoyo",0,1,0,0, false, "Objeto. Tomo"));
         listaCartas.add(new Carta("Textos médicos.","Buscador",2,"Apoyo",1,0,0,0, false, "Objeto. Tomo"));
         listaCartas.add(new Carta("Linterna.","Neutral",2,"Apoyo",0,0,1,0, false, "Objeto. Herramienta"));
