@@ -13,6 +13,10 @@ public class CartaPrimerosAuxilios extends Carta{
     Scanner sc = new Scanner(System.in);
     
     public CartaPrimerosAuxilios(){
+        
+    }
+    
+    public void Accion(){
         while(suministros>0){
             // Prueba de habilidad para voluntad
             investigador.numeroRecursos=investigador.numeroRecursos-2;
@@ -34,7 +38,7 @@ public class CartaPrimerosAuxilios extends Carta{
             }
             
         }
-    
+
     }
 
 }
