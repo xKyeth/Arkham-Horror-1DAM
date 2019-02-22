@@ -4,25 +4,31 @@
  * and open the template in the editor.
  */
 package Controlador;
-
+  import *;
+import Modelo.RolandBanks;
+import Vista.Vista;
+import java.util.InputMismatchException;
 /**
  *
  * @author Jose
  */
 public class ControlGeneral {
-    boolean acabarPartida=false;
+    boolean acabarPartida=false; 
+    Vista v;
+     RolandBanks Roland;
     public ControlGeneral(){
-    
+    v=new Vista(this);
     
     }
     
     public void Juego(){
     
+
     
         
        prepararPartida();
        
-       faseInvestigacion();
+        v.MenuPrincipal();
         
         faseEnemigos();
        
@@ -33,7 +39,7 @@ public class ControlGeneral {
        
        faseMitos();
         
-       faseInvestigacion();
+        v.MenuPrincipal();
         
         faseEnemigos();
        
@@ -55,7 +61,7 @@ public class ControlGeneral {
         
     
     //Elegir investigador/Por ahora NO SE IMPLEMENTA
-    
+   Roland=new RolandBanks();
     //Crear y barajar mazo Jugador
     
     //Formar reserva de ficha(?
@@ -98,36 +104,93 @@ public class ControlGeneral {
     
     }
     
-    public void faseInvestigacion(){
+    public void faseInvestigacion(int opcion){
     
         
-        //Vamos a una vista para elegir las 3 distintas opciones y en ella escogen una de estas 3
-        
-    //Robar 1 carta
+        try {
+
+             
+                        
+                switch (opcion) {
+                     
+                
+                    case 1://Robar 1 carta
+                    
+                        break;
+                        
+                       
+                    case 2:  //Obtener un recurso
+                  
+                        break;
+                        
+                        
+                        
+                    case 3:  //Acivar una capacidad
+                      
+                         break;
+                                              
+                    case 4: //Enfrentarse a un enemigo
+
+                        
+                        break;
+                        
+                      
+                    case 5: //Investigar 
+                       
+                    break;
+                    
+                     case 6: //Moverse
+                       
+                    break;
+                      
+                     case 7:  //Jugar una carta de apoyo o Evento de su mano
+                       
+                    break;
+                     case 8://intentar evitar a un enemigo
+                             EvitarEnemigo evitar=new EvitarEnemigo();
+                             if (evitar.EvitarEnemigo(Roland.getAgilidad(), 0, 0)==true){
+                             System.out.println("Has Evitado al enemigo");
     
-    //Obtener un recurso
     
-    //Acivar una capacidad
     
-    //Enfrentarse a un enemigo
+                            }else System.out.println("No has evitado al enemigo");
+                       
+                    break;
+                     case 9:    //Combatir con un enemigo
+                       
+                    break;
+                    
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Debes insertar un número");
+             
     
-    //Investigar
     
-    //Moverse
     
-    //Jugar una carta de apoyo o Evento de su mano
+   
     
-    //intentar evitar a un enemigo
+  
     
-    //Combatir con un enemigo
     
-    }
+    
+    
+    
+   
+    
+
+    
+    
+    
+    
+
+    
+    
+    }}
     
     public void faseEnemigos(){
     
     //Mover a monstruos Cazador
-    
-    
+   
     //Enemigo ataca 
     
     

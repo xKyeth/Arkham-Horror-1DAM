@@ -4,6 +4,7 @@ import java.util.Scanner;
 import java.util.LinkedList;
 import Modelo.Carta;
 import Modelo.MazoInvestigador;
+import Modelo.Investigador;
 public class uso_descarte_cartas {
     
     
@@ -69,25 +70,41 @@ public class uso_descarte_cartas {
     }
     
     Investigador investigador;
-    LinkedList <String> cartasapoyo = new LinkedList();
-    LinkedList <String> cartasactividad = new LinkedList();
-    LinkedList <String> cartasenmesa = new LinkedList();
+    LinkedList <Carta> cartasenmesa = new LinkedList();
 
     public void ComprarCartaActividad(){
-        //investigador.RecursosInvestigador =  investigador.RecursosInvestigador - cartasactividad.get(0).coste;
-        //Esto funciona cuando esté implementado el coste de las cartas
-        cartasactividad.getLast();
-        //descarte.add(cartasactividad.getLast());
+        System.out.println("Selecciona la carta que quieres comprar: ");
+        int y = entrada.nextInt();
+        //if (cartasmano.get(y).getCoste()> investigador.getRecursos()){
+            //System.out.println("No se dispone de los recursos suficientes");
+        //}
+        //else{         
+            //investigador.getRecursos =  investigador.getRecursos() - cartasmano.get(y).getCoste();
+           cartasmano.get(y);
+           descarte.add(cartasmano.get(y)); 
+        
+       // }
+        
+        
     }
    public void ComprarCartaApoyo(){
        
-      // investigador.RecursosInvestigador = investigador.RecursosInvestigador - cartasapoyo.get(0).coste;
-       //Esto funciona cuando esté implementado el coste de las cartas
-       cartasenmesa.add(cartasapoyo.getLast());
-       cartasapoyo.removeLast();
+         System.out.println("Selecciona la carta que quieres comprar: ");
+            int y = entrada.nextInt();
+        //if (cartasmano.get(y).getCoste()> investigador.getRecursos()){
+            //System.out.println("No se dispone de los recursos suficientes");
+        //}
+        //else{         
+            //investigador.getRecursos =  investigador.getRecursos() - cartasmano.get(y).getCoste();
+            cartasenmesa.add(cartasmano.get(y));
+            cartasmano.remove(y); 
+        
+        //}
        
-   }
+ }
 }
+   
 
-    
+
+  
 
