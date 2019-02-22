@@ -15,7 +15,10 @@ import java.util.LinkedList;
  */
 
 public class Mazo {
-  LinkedList<Carta> c;
+
+  private LinkedList<Carta> c;
+  
+  
     public Mazo(){
     this.c = new LinkedList();
     }
@@ -26,7 +29,7 @@ public class Mazo {
    
         
         System.out.println("cojo la primera cartas");
-        return c.getFirst();
+        return getC().getFirst();
         
       
     }
@@ -39,7 +42,7 @@ public class Mazo {
     
     }else for (int i=0; i<x; i++){
         System.out.println("cojo una carta");
-        return c.getFirst();
+        return getC().getFirst();
         
       }
       return null;
@@ -49,21 +52,21 @@ public class Mazo {
     public Carta buscaCarta(int x){
        
     System.out.println("busco carta por numero concreto");
-    return c.get(x);
+    return getC().get(x);
     }
     
     public void introducirCartaAleatoria(Carta card){
   
     
-    c.addLast(card);
-    Collections.shuffle(c);
+        getC().addLast(card);
+    Collections.shuffle(getC());
    System.out.println("he introducido una carta");
     
     }
     
   public void barajar(){
 
-   Collections.shuffle(c);
+   Collections.shuffle(getC());
    System.out.println("barajo");
   
   }
@@ -71,7 +74,7 @@ public class Mazo {
     
     public boolean mazoVacio(){
        
-    if (c.isEmpty()){
+    if (getC().isEmpty()){
         System.out.println("mazo vacio");
     return true;
     
@@ -80,6 +83,21 @@ public class Mazo {
     System.out.println("mazo con cartas");
     return false;
     
+    }
+    
+    
+    /**
+     * @return the c
+     */
+    public LinkedList<Carta> getC() {
+        return c;
+    }
+
+    /**
+     * @param c the c to set
+     */
+    public void setC(LinkedList<Carta> c) {
+        this.c = c;
     }
     
     
