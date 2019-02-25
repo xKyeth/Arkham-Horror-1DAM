@@ -13,19 +13,16 @@ import Modelo.RolandBanks;
  *
  * @author cristian
  */
-public class Habilidad {
+public abstract class PruebaHabilidad {
     
     ArrayList<Apoyo> apoyos;
     RolandBanks inv = new RolandBanks();
     Apoyo apoyo;
-//    Caos caos;
     CartaHabilidad carta;
     Vista_Habilidad vista;
     BolsaDelCaos bolsa;
-//    seleccion bolsa;
-//    Combate combate;
     
-    public Habilidad(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa){      
+    public PruebaHabilidad(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa){      
         this.inv=inv;
         this.apoyo=apoyo;
         this.bolsa=bolsa;
@@ -57,7 +54,7 @@ public class Habilidad {
         }
     }
 
-//    public void iniciarPruebaVoluntad() { FALTA LA VOLUNTAD EN ROLAND BANKS O EN PERSONAJE O EN INVESTIGADOR
+    public abstract void iniciarPruebaVoluntad(); // FALTA LA VOLUNTAD EN ROLAND BANKS O EN PERSONAJE O EN INVESTIGADOR
 //        int n = seleccionaApoyo(1);
 //        inv.setVoluntad(inv.getVoluntad()+n);
 //        inv.setVoluntad(inv.getVoluntad()-seleccionaCaos(1));
@@ -67,21 +64,21 @@ public class Habilidad {
 //        }else{
 //            resultadoPruebaVistaFracaso(1);
 //        }
-//    }
 
-    private void iniciarPruebaAgilidad() {
-        int n = seleccionaApoyo(2);
-        inv.setAgilidad(inv.getAgilidad()+n);
-        inv.setAgilidad(inv.getAgilidad()-seleccionaCaos(2));
-        
-        if(inv.getAgilidad()>=carta.getDificultad()){
-            resultadoPruebaVistaExito(2);
-        }else{
-            resultadoPruebaVistaFracaso(2);
-        }
-    }
 
-//    private void iniciarPruebaCombate() {
+    public abstract void iniciarPruebaAgilidad();
+//        int n = seleccionaApoyo(2);
+//        inv.setAgilidad(inv.getAgilidad()+n);
+//        inv.setAgilidad(inv.getAgilidad()-seleccionaCaos(2));
+//        
+//        if(inv.getAgilidad()>=carta.getDificultad()){
+//            resultadoPruebaVistaExito(2);
+//        }else{
+//            resultadoPruebaVistaFracaso(2);
+//        }
+    
+
+    public abstract void iniciarPruebaCombate();
 //        // Lo hace Miguel.
 //        int n = seleccionaApoyo(4);
 //        inv.setCombate(inv.getCombate()+n);
@@ -92,9 +89,8 @@ public class Habilidad {
 //        }else{
 //            resultadoPruebaVistaFracaso(4);
 //        }
-//    }
 
-//    private void iniciarPruebaIntelecto() { FALTA INTELECTO EN ROLAND BANKS, EN PERSONAJE O EN INVESTIGADOR
+    public abstract void iniciarPruebaIntelecto(); // FALTA INTELECTO EN ROLAND BANKS, EN PERSONAJE O EN INVESTIGADOR
 //        int n = seleccionaApoyo(3);
 //        inv.setIntelecto(inv.getIntelecto()+n);
 //        inv.setIntelecto(inv.getIntelecto()-seleccionaCaos(3));
@@ -104,7 +100,6 @@ public class Habilidad {
 //        }else{
 //            resultadoPruebaVistaFracaso(3);
 //        }
-//    }
     
     public void resultadoPruebaVistaExito(int a){
         vista.resultadoPruebaExito(a);

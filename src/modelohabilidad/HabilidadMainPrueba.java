@@ -26,9 +26,9 @@ public class HabilidadMainPrueba {
         BolsaDelCaos bolsa = new BolsaDelCaos();
 //        Caos caos1 = new Caos(1,0,2,0);
         
-        Habilidad prueba = new Habilidad(2, Roland, apoyo1, bolsa);
+//        PruebaHabilidad prueba = new PruebaHabilidad(2, Roland, apoyo1, bolsa);
         
-//        Habilidad prueba = new Habilidad(Roland, apoyo1, caos1);
+//        PruebaHabilidad prueba = new PruebaHabilidad(Roland, apoyo1, caos1);
 //        System.out.println(Roland.getAgilidad());
 //        System.out.println(Roland.getCombate());
 //        System.out.println(Roland.getIntelecto());
