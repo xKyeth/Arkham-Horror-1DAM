@@ -4,32 +4,37 @@
  * and open the template in the editor.
  */
 package vista_habilidad;
-import modelohabilidad.Habilidad;
+import modelohabilidad.PruebaHabilidad;
 //import arkhamhorror.Investigador;
 //import arkhamhorror.Apoyo;
 //import arkhamhorror.Caos;
 import java.util.Scanner;
+import modelohabilidad.PruebaVoluntad;
 /**
  *
  * @author cristian
  */
 public class Vista_Habilidad {
         
-    Habilidad habilidad;
+    PruebaHabilidad habilidad;
     
-    public Vista_Habilidad(Habilidad h){
+    public Vista_Habilidad(PruebaHabilidad h){
        this.habilidad=h;
     }
     
     public void pruebaHabilidad(int n){
         switch(n){
-            case 1: System.out.println("Prueba de Voluntad"); 
+            case 1: System.out.println("Prueba de Voluntad");
+//                    PruebaVoluntad voluntad = new PruebaVoluntad();
                     break;
             case 2: System.out.println("Prueba de Agilidad");
+//                    PruebaAgilidad agilidad = new PruebaAgilidad();
                     break;
             case 3: System.out.println("Prueba de Intelecto");
+//                    PruebaIntelecto intelecto = new PruebaIntelecto();
                     break;
             case 4: System.out.println("Prueba de Combate");
+//                    PruebaCombate combate = new Combate();
                     break;
         }        
         habilidad.procesarOrden(n, null);
