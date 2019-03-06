@@ -20,15 +20,15 @@ public class uso_descarte_cartas {
     public uso_descarte_cartas() {
         
     }
-                       
+        //Fernando               
     public void robar5cartas() {
         int c = 0;
         while(c<5) {
-            
+            //aqui va el metodo de robar una carta
             
         }
     }
-    
+    //Fernando
     public void usoyDescarte() {
         System.out.println("Cuantas cartas quieres utilizar");
         int n = entrada.nextInt();
@@ -45,7 +45,7 @@ public class uso_descarte_cartas {
             contador++;
         }
     }
-        
+        //Fernando
     public void descartar8Cartas() {
         //Se eliminan 8 cartas del linkedList baraja y se añaden al linkedList 
         //descarte
@@ -71,7 +71,9 @@ public class uso_descarte_cartas {
     
     Investigador investigador;
     LinkedList <Carta> cartasenmesa = new LinkedList();
-
+    
+        //JACINTO
+    
     public void ComprarCartaActividad(){
         System.out.println("Selecciona la carta que quieres comprar: ");
         int y = entrada.nextInt();
@@ -87,6 +89,9 @@ public class uso_descarte_cartas {
         
         
     }
+    
+            //JACINTO
+    
    public void ComprarCartaApoyo(){
        
          System.out.println("Selecciona la carta que quieres comprar: ");
