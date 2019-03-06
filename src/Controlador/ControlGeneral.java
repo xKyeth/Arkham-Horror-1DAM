@@ -142,7 +142,7 @@ ME.cogerCarta();
                 case 6: //Moverse
 
                     
-                    Roland.moverPersonaje(lugares., opcion, Roland);
+                    Roland.moverPersonaje(lugares.getLugares(), " ", Roland);
                     
                     
                        
@@ -175,6 +175,13 @@ ME.cogerCarta();
     public void faseEnemigos() {
 
         //Mover a monstruos Cazador
+        MovimientoCazador MC= new MovimientoCazador();
+        
+        
+        MC.Moverse( ENEMIGO CAZADOR     , lugares.getConexion());
+        
+        
+        
         //Enemigo ataca 
     }
 
