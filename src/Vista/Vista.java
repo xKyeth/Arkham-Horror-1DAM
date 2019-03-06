@@ -18,7 +18,7 @@ public class Vista {
         this.control=control;
     }
     
-    public void MenuPrincipal(){
+    public int MenuPrincipal(){
 
            System.out.println("RONDA "+numRonda);
            System.out.println(decisionesRestantes+" deciciones restantes. Elige una:");
@@ -43,9 +43,7 @@ public class Vista {
 
            control.procesaOrden(opcion);
            
-
-
-
+        return opcion;
     }
     
     public void mostrarMazos(ArrayList<MazoInvestigador> mazo){

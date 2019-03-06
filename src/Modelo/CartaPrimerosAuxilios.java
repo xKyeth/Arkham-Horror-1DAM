@@ -8,7 +8,6 @@ public class CartaPrimerosAuxilios extends Carta{
     // Usos (3 suministros). Si los Primeros auxilios no tienen suministros, descártalos.
     // Gasta 1 suministro: Cura 1 punto de daño o de horror de un investigador que esté en tu Lugar
     private int suministros=3;
-    Investigador investigador;
     RolandBanks roland;
     Scanner sc = new Scanner(System.in);
     
@@ -19,7 +18,7 @@ public class CartaPrimerosAuxilios extends Carta{
     public void Accion(){
         while(suministros>0){
             // Prueba de habilidad para voluntad
-            investigador.numeroRecursos=investigador.numeroRecursos-2;
+            roland.numeroRecursos=roland.numeroRecursos-2;
             System.out.println("Escribe 1 para curarte un punto de daño o 2 para curarte un punto de horror.");
             int respuesta=sc.nextInt();
             switch(respuesta){

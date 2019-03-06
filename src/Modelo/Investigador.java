@@ -13,7 +13,7 @@ public abstract class Investigador extends Personaje{
 
     abstract int  efectoEstrella();
     
-     public void moverPersonaje(ArrayList<Object> lugares, int posicion, Personaje personaje) {
+    public void moverPersonaje(ArrayList<Object> lugares, int posicion, Personaje personaje) {
        Object lugar=lugares.get(posicion);
        personaje.setLugar(lugar);
     }

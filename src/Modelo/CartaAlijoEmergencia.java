@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class CartaAlijoEmergencia {
     //listaCartas.add(new Carta("Alijo de emergencia.","Neutral",0,"Evento", 0,0,0,0, false, "Suministros"));
     // Obtén 3 recursos.
-    Investigador investigador;
     RolandBanks roland;
     int numVeces=2; //Ya que tiene 2 veces la carta en el mazo
     Scanner sc=new Scanner(System.in);
@@ -20,10 +19,10 @@ public class CartaAlijoEmergencia {
         int respuesta=sc.nextInt();
         switch(respuesta){
             case 1: 
-                investigador.numeroRecursos=investigador.numeroRecursos+3;
+                roland.numeroRecursos=roland.numeroRecursos+3;
             break;
             case 2:
-                investigador.numeroRecursos=investigador.numeroRecursos+6;
+                roland.numeroRecursos=roland.numeroRecursos+6;
             break;
                 
             default:
