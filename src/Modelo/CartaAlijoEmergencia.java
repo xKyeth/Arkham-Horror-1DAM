@@ -20,10 +20,10 @@ public class CartaAlijoEmergencia {
         int respuesta=sc.nextInt();
         switch(respuesta){
             case 1: 
-                investigador.numeroRecursos=investigador.numeroRecursos+3;
+                investigador.setNumeroRecursos(investigador.getNumeroRecursos() + 3);
             break;
             case 2:
-                investigador.numeroRecursos=investigador.numeroRecursos+6;
+                investigador.setNumeroRecursos(investigador.getNumeroRecursos() + 6);
             break;
                 
             default:

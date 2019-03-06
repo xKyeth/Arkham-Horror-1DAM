@@ -20,25 +20,19 @@ public class RolandBanks extends Investigador {
         this.daño=1;
         this.mazo=new MazoInvestigador();
         this.lugar=new Salita();
-        
+        this.habilidadPropia="Después de que derrotes a un Enemigo: Descubre 1 pista en tu Lugar. Límite de una vez por ronda";
         
     }
     @Override
     public int efectoEstrella() {
         Lugar l=getLugar();
+        System.out.println(" +1 por cada pista que haya en tu Lugar.");
         return l.getPistas();
         
        
     }
-    public String toString(){
-        return "tipo "+ this.tipo+ " voluntad "+this.voluntad + " intelecto " +this.intelecto;
-                
-                }         
+    
 
  
-
-  
-
-    
   
 }
