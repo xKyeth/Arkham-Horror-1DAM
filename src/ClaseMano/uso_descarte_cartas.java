@@ -20,6 +20,12 @@ public class uso_descarte_cartas {
     public uso_descarte_cartas() {
         
     }
+    
+    public void robarCarta() {
+        
+        cartasmano.addLast(c);
+        mazo.eliminarCarta(c);
+    }
         //Fernando               
     public void robar5cartas() {
         int c = 0;
