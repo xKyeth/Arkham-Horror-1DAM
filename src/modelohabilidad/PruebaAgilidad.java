@@ -14,28 +14,33 @@ import Modelo.RolandBanks;
  */
 public class PruebaAgilidad extends PruebaHabilidad{
     
+    private String nombre; 
     public PruebaAgilidad(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa) {
         super(n, inv, apoyo, bolsa);
+        nombre = "Agilidad";
+        iniciarPruebaAgilidad(n);
     }
 
-    @Override
-    public void iniciarPruebaAgilidad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void iniciarPruebaAgilidad(int n){
+        vista.pruebaHabilidad(n);
     }
 
-    @Override
-    public void iniciarPruebaVoluntad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
     }
 
-    @Override
-    public void iniciarPruebaCombate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    @Override
-    public void iniciarPruebaIntelecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void procesarOrden(int a, Object datos) {
+        
     }
     
 }

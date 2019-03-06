@@ -5,8 +5,18 @@
  */
 package Controlador;
   import *;
+import BolsaDelCaos.BolsaDelCaos;
+import Lugar.*;
+import Mazo_Plan.MazoPlan;
+import Modelo.Carta;
+import Modelo.Cartas.Cartas_Acto.MazoActo;
+import Modelo.Cartas.Mazo;
+import Modelo.MazoInvestigador;
 import Modelo.RolandBanks;
 import Vista.Vista;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.InputMismatchException;
 /**
  *
@@ -16,6 +26,21 @@ public class ControlGeneral {
     boolean acabarPartida=false; 
     Vista v;
      RolandBanks Roland;
+     
+    Lugar Estudio=new Estudio();
+    Lugar Pasillo=new Pasillo();
+    Lugar Salita=new Salita();
+    Lugar Sotano=new Sótano();
+    Lugar Atico=new Ático();
+     Lugares lugares=new Lugares(Estudio, Pasillo, Salita, Sotano, Atico);
+     BolsaDelCaos BDC=new BolsaDelCaos();
+     MazoActo MA= new MazoActo();
+     MazoPlan MP = new MazoPlan();
+     Mazo ME= new Mazo();
+     MazoInvestigador MI= new MazoInvestigador();
+     
+     
+     
     public ControlGeneral(){
     v=new Vista(this);
     
@@ -28,7 +53,7 @@ public class ControlGeneral {
         
        prepararPartida();
        
-        v.MenuPrincipal();
+       faseInvestigacion(v.MenuPrincipal());
         
         faseEnemigos();
        
@@ -39,11 +64,10 @@ public class ControlGeneral {
        
        faseMitos();
         
-        v.MenuPrincipal();
-        
-        faseEnemigos();
+       faseEnemigos();
        
         faseMantenimiento();
+       faseInvestigacion(v.MenuPrincipal());
     }
        
        
@@ -64,31 +88,46 @@ public class ControlGeneral {
    Roland=new RolandBanks();
     //Crear y barajar mazo Jugador
     
-    //Formar reserva de ficha(?
+ArrayList<Carta> MIF =new ArrayList();
+   MIF=MI.getListaCartasMazo();
+   Collections.shuffle(MI.getListaCartasMazo());
+   MI.setListaMazo(MIF);
+
     
-    //Formar bolsa del caos
-    
-    //Coger Recursos iniciales(?
+
     
     //Robar mano inicial
     
-    //Buscar las cartas de Escenario de "El encuento"
+   
+ 
+    
     
     //Preparar mazo de Plan
     
+   MP.añadirCartasPlan();
+    
     //Preparar mazo de acto
+    MA.barajar();
+    
     
     //Colocar la carta de referencia
     
-    //poner estudio en juego
     
-    //pon aparte todos os demas lugares fuera de juego(??
+    
+
     
     //Poner investigador en el Estudio
     
-    //poner aparte las cartas gul y chantler
+    Roland.setLugar(Estudio);
+    
+    
+    
+   
     
     //Crea mazo encuentro
+    
+    ME.barajar();
+   
     
     }
     
@@ -98,6 +137,8 @@ public class ControlGeneral {
     
         
         //Colocar 1 ficha de perdicion sirve el plan en curso
+        
+        
         
         //Compara la cantidad de piezas de 
     
@@ -115,18 +156,25 @@ public class ControlGeneral {
                      
                 
                     case 1://Robar 1 carta
+                        
+                        
+                        
+                       MI.añadirCarta(carta);
                     
                         break;
                         
                        
                     case 2:  //Obtener un recurso
-                  
+                  Roland.getRecursoRobo();
                         break;
                         
                         
                         
                     case 3:  //Acivar una capacidad
                       
+                        
+                        
+                        
                          break;
                                               
                     case 4: //Enfrentarse a un enemigo
@@ -140,11 +188,19 @@ public class ControlGeneral {
                     break;
                     
                      case 6: //Moverse
+                         
+                         //ME FALTA UN METODO PARA SABER DONDE MOVERNOS
+                         
+                         
+                         
+                         lugares.cambiarLugar(Roland.getLugar(),DONDE MOVERSE);
                        
                     break;
                       
                      case 7:  //Jugar una carta de apoyo o Evento de su mano
                        
+                         
+                         
                     break;
                      case 8://intentar evitar a un enemigo
                              EvitarEnemigo evitar=new EvitarEnemigo();
@@ -191,6 +247,8 @@ public class ControlGeneral {
     
     //Mover a monstruos Cazador
    
+    
+    
     //Enemigo ataca 
     
     
@@ -203,9 +261,14 @@ public class ControlGeneral {
     
     //Prepara todas las cartas agotadas
         
-    //robar un carta y obtiene un recurso
+    //robar una carta y obtiene un recurso
+    
+    
+    
     
     //si hay mas de 8 cartas elige y descarta 
+    
+    
     
     }
 }

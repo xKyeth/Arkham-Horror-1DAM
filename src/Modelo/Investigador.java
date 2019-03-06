@@ -44,6 +44,10 @@ public abstract class Investigador extends Personaje{
          
          System.out.println("Tienes "+numeroRecursos+" recursos");
      }
+
+    public int getNumeroRecursos() {
+        return numeroRecursos;
+    }
      
      
     
