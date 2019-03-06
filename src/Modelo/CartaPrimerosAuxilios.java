@@ -19,7 +19,7 @@ public class CartaPrimerosAuxilios extends Carta{
     public void Accion(){
         while(suministros>0){
             // Prueba de habilidad para voluntad
-            investigador.numeroRecursos=investigador.numeroRecursos-2;
+            investigador.setNumeroRecursos(investigador.getNumeroRecursos() - 2);
             System.out.println("Escribe 1 para curarte un punto de daño o 2 para curarte un punto de horror.");
             int respuesta=sc.nextInt();
             switch(respuesta){
