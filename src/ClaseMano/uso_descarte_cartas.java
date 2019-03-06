@@ -73,19 +73,19 @@ public class uso_descarte_cartas {
     LinkedList <Carta> cartasenmesa = new LinkedList();
     
         //JACINTO
-    
+    int recursos = investigador.getNumeroRecursos();
     public void ComprarCartaActividad(){
         System.out.println("Selecciona la carta que quieres comprar: ");
         int y = entrada.nextInt();
-        //if (cartasmano.get(y).getCoste()> investigador.getRecursos()){
-            //System.out.println("No se dispone de los recursos suficientes");
-        //}
-        //else{         
-            //investigador.getRecursos =  investigador.getRecursos() - cartasmano.get(y).getCoste();
+        if (cartasmano.get(y).getCoste()> investigador.getNumeroRecursos()){
+            System.out.println("No se dispone de los recursos suficientes");
+        }
+        else{         
+            recursos =  investigador.getNumeroRecursos() - cartasmano.get(y).getCoste();
            cartasmano.get(y);
            descarte.add(cartasmano.get(y)); 
         
-       // }
+       }
         
         
     }
@@ -96,15 +96,15 @@ public class uso_descarte_cartas {
        
          System.out.println("Selecciona la carta que quieres comprar: ");
             int y = entrada.nextInt();
-        //if (cartasmano.get(y).getCoste()> investigador.getRecursos()){
-            //System.out.println("No se dispone de los recursos suficientes");
-        //}
-        //else{         
-            //investigador.getRecursos =  investigador.getRecursos() - cartasmano.get(y).getCoste();
+        if (cartasmano.get(y).getCoste()> investigador.getNumeroRecursos()){
+            System.out.println("No se dispone de los recursos suficientes");
+        }
+        else{       
+            recursos =  investigador.getNumeroRecursos() - cartasmano.get(y).getCoste();
             cartasenmesa.add(cartasmano.get(y));
             cartasmano.remove(y); 
         
-        //}
+        }
        
  }
 }
