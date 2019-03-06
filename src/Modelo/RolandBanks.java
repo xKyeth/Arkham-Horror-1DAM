@@ -1,5 +1,6 @@
 package Modelo;
-
+import Lugar.Lugar;
+import Lugar.Salita;
 import java.util.ArrayList;
 
 
@@ -18,21 +19,25 @@ public class RolandBanks extends Investigador {
         this.horror=5;
         this.daño=1;
         this.mazo=new MazoInvestigador();
-        //this.lugar=new Salita();
+        this.lugar=new Salita();
         
         
     }
     @Override
     public int efectoEstrella() {
-       // Lugar l=getLugar();
-//        return l.getPistas();
-        return 1;
+        Lugar l=getLugar();
+        return l.getPistas();
+        
        
     }
     public String toString(){
         return "tipo "+ this.tipo+ " voluntad "+this.voluntad + " intelecto " +this.intelecto;
                 
                 }         
+
+ 
+
+  
 
     
   
