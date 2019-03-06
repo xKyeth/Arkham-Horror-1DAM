@@ -68,24 +68,11 @@ public class PruebaCombate extends PruebaHabilidad{
 //        return pilaVictoria;
 //    }
 
-    @Override
-    public void iniciarPruebaVoluntad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    public void procesarOrden(int a, Object datos) {
+        
     }
 
-    @Override
-    public void iniciarPruebaAgilidad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void iniciarPruebaCombate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void iniciarPruebaIntelecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
 }
