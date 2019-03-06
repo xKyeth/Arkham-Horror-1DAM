@@ -28,7 +28,7 @@ ArrayList<Investigador> personajes= new ArrayList();
     
     }
     
-    public void Moverse(Personaje e, int[][] l){
+    public void Moverse(Personaje e, boolean[][] l){
     
         
             ExpandirNodo(e.getLugar().getId(), l)
@@ -67,10 +67,10 @@ ArrayList<Investigador> personajes= new ArrayList();
     
     
     
-    public void expandirNodo(int i, int[][] l){
+    public void expandirNodo(int i, boolean[][] l){
     
         for (int j = i; j < l.length; j++) {
-            if (l[i][j]==1){
+            if (l[i][j]=true){
             Cola.addLast(l[i][j]);
             usados.add(i);
             
