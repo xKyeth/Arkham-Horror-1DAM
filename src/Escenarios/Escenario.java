@@ -12,7 +12,9 @@ package Escenarios;
 
 import Mazo_Plan.MazoPlan;
 import Modelo.Cartas.*;
+import Modelo.RolandBanks;
 import Vista.vistaPlan;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -20,7 +22,7 @@ import java.util.LinkedList;
  * @author Jesus Rosa
  */
 public class Escenario {
-    
+            
             vistaPlan vp;
             Mazo m;
     public void introEscenario(){
@@ -70,21 +72,15 @@ public class Escenario {
             default:
                //code block
           }
-        
-        
-          
-            
+       
         
         }
-    
     // Barajar el resto de las cartas de Encuentro.
     
         public void barajarCartas(){
             m.barajar();
             System.out.println("El Mazo ha sido barajado");
         }
-            
-            
             
     
     // El escenario hace que avance plan y que avance mito
@@ -107,7 +103,13 @@ public class Escenario {
         
     
     // Si fracasas, recibe 1 punto de horror.
-    
-        
-    
+        public void resultado(){
+        int victoria=1;
+        if (victoria==1){
+            System.out.println("Enhorabuena has completado el eccenario satisfactoriamente");
+                }else{
+            System.out.println("Lo siento, has fracasado. Se sumará un punto de horror");
+            RolandBanks personaje = new RolandBanks();
+        }
+}
 }
