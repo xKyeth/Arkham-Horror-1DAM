@@ -33,4 +33,9 @@ public class CartaAlijoEmergencia extends Evento{
             break;
             }
     }
+
+    @Override
+    public void verCarta() {
+        System.out.println("Uno nunca está demasiado preparado. Coste 0. Obtén 3 recursos. El investigador tiene 2 cartas de este tipo.");
+    }
 }
