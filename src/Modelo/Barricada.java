@@ -32,7 +32,7 @@ public abstract class Barricada extends Evento {
         }
         
         
-        
+         
         
     }
     
