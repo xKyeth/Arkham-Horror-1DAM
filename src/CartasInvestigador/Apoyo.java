@@ -7,6 +7,9 @@ public class Apoyo extends CartasInvestigador{
         super(voluntad, intelecto, combate, habilidad, comodin, vida, cordura, coste, suministro, comprada);
     }
     
+    @Override
+    public void verCarta() {
+    }
     
     @Override
     public void Accion() {
@@ -94,6 +97,8 @@ public class Apoyo extends CartasInvestigador{
     public void setComprada(boolean comprada) {
         this.comprada = comprada;
     }
+
+    
     
     
 }
