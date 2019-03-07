@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class LaMenteSobreLaMateria extends Evento {
 
     RolandBanks roland;
-   // FaseInvestigacion investigacion = new FaseInvestigacion();
+   Controlador.ControlGeneral investigar;
 
     public LaMenteSobreLaMateria() {
         super(0, 0, 1, 1, 0, 1);
@@ -26,7 +26,7 @@ public class LaMenteSobreLaMateria extends Evento {
     }
     
     public void usarCarta(){
-         if(investigacion.fase){Accion(); restablecerValoresRoland();}
+         if(investigar.getInvestigacion()== true){Accion(); restablecerValoresRoland();}
         else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
      }
     
