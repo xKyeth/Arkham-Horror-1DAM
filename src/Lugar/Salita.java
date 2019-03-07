@@ -12,11 +12,4 @@ public class Salita extends Lugar{
         super.instruccionesNR = "--La entrada a la Salita está bloqueada por una inexplicable barrera que emite un brillo oscuro. No puedes moverte a la Salita.--";
         super.instruccionesR = "-- >Desistir. \"¡Esto es demasiado para mí!\". Huyes por la puerta delantera, presa del pánico.\nMientras Lita Chantler no esté controlada por un jugador, obtiene: --Negociar. Realiza una prueba de (4). Si tienes éxito, toma el control de Lita Chantler.\"";
     }
-    
-    
-    //Este método es de prueba para comprobar si sale todo correctamente.
-    public void muestra(Salita sa){
-        super.caraNoRevelada(sa);
-        super.caraRevelada(sa);
-    }
 }

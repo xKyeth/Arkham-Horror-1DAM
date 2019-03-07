@@ -11,11 +11,4 @@ public class Estudio extends Lugar{
         super.pistas = 2;
     }
     
-    
-    //Este método es de prueba para comprobar si sale todo correctamente.
-    public void muestra(Estudio e){
-        super.caraNoRevelada(e);
-        super.caraRevelada(e);
-    }
-    
 }
