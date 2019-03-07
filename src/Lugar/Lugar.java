@@ -40,6 +40,13 @@ public abstract class Lugar {
         System.out.println("El número de velo es: "+getVelo());
         System.out.println("El número de pistas es: "+getPistas());
     }
+    
+    //este método es sólo para comprobar que todo está bien
+    
+    public void muestra(Lugar l){
+        caraNoRevelada(l);
+        caraRevelada(l);
+    }
 
     
     //SETS AND GETS

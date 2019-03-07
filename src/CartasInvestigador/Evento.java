@@ -1,10 +1,18 @@
 
 package CartasInvestigador;
 
-public class Evento extends CartasInvestigador{
+public abstract class Evento extends CartasInvestigador{
     
     public Evento(int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
         super(voluntad, intelecto, habilidad, combate, comodin, coste);
+    }
+    
+    @Override
+    public abstract void verCarta() ;
+    
+    @Override
+    public void Accion() {
+        
     }
 
     public int getVoluntad() {

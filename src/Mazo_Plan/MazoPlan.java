@@ -31,30 +31,23 @@ public class MazoPlan {
         //Declaracion de varibales
             
         //Lista donde se guardan las cartas del plan
-        LinkedList<CartaPlan1> cartasPlan1 = new LinkedList<>();
-        LinkedList<CartaPlan2> cartasPlan2 = new LinkedList<>();
-        LinkedList<CartaPlan3> cartasPlan3 = new LinkedList<>();
-        LinkedList<CartaPlan4> cartasPlan4 = new LinkedList<>();
-        LinkedList<CartaPlan5> cartasPlan5 = new LinkedList<>();
-        LinkedList<CartaPlan6> cartasPlan6 = new LinkedList<>();
-        LinkedList<CartaPlan7> cartasPlan7 = new LinkedList<>();
-        LinkedList<CartaPlan8> cartasPlan8 = new LinkedList<>();
+        LinkedList<CartaPlan> cartasPlan = new LinkedList<>();
+        
+
         
         //Este metodo añade las cartas del plan a las listas.
         public void añadirCartasPlan(){
             
-            cartasPlan1.add(new CartaPlan1("¡¿Qué está pasando?!"));
-            cartasPlan2.add(new CartaPlan2("El acceso de los gules"));
-            cartasPlan3.add(new CartaPlan3("¡Están saliendo!"));
-            cartasPlan4.add(new CartaPlan4("¿Depredador o presa?"));
-            cartasPlan5.add(new CartaPlan5("El tiempo se agota"));
-            cartasPlan6.add(new CartaPlan6("The Arkham Woods"));
-            cartasPlan7.add(new CartaPlan7("El ritual comienza"));
-            cartasPlan8.add(new CartaPlan8("La venganza espera"));
+            cartasPlan.add(new CartaPlan("¡¿Qué está pasando?!"));
+            cartasPlan.add(new CartaPlan("El acceso de los gules"));
+            cartasPlan.add(new CartaPlan("¡Están saliendo!"));
+
 
     }
 
-       
+      public LinkedList<CartaPlan> recorrerCartasPlan(){ 
+         return cartasPlan; 
+      }
         
             
         
