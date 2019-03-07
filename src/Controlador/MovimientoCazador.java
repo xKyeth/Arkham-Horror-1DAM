@@ -23,12 +23,12 @@ public class MovimientoCazador {
     //ArrayList usados=new ArrayList();
 //ArrayList<Investigador> personajes= new ArrayList();   
 //boolean encontrado=false;
-RolandBanks RB=new RolandBanks();
+RolandBanks RB;
 Lugar pasillo=new Pasillo();
     
-    public MovimientoCazador(RolandBanks r){
+    public MovimientoCazador(){
       //  personajes=p;
-    RB=r;}
+    }
     
 public void moverseMapa1(Personaje p){
    if (p.getLugar()==pasillo && RB.getLugar()!=pasillo){
