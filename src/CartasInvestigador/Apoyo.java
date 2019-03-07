@@ -1,15 +1,14 @@
 
 package CartasInvestigador;
 
-public class Apoyo extends CartasInvestigador{
+public abstract class Apoyo extends CartasInvestigador{
     
     public Apoyo(int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
         super(voluntad, intelecto, combate, habilidad, comodin, vida, cordura, coste, suministro, comprada);
     }
     
     @Override
-    public void verCarta() {
-    }
+    public abstract void verCarta();
     
     @Override
     public void Accion() {
