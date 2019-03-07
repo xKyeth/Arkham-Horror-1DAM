@@ -37,5 +37,10 @@ public class CartaPoliciaRaso extends Apoyo {
         
     //}
 }
+
+    @Override
+    public void verCarta() {
+        System.out.println("Recibes +1 de combate. Descarta el Policía raso: Inflige 1 punto de daño a un Enemigo que esté en tu Lugar.");
+    }
 }
 
