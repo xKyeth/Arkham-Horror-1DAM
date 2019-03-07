@@ -11,9 +11,7 @@ public abstract class Apoyo extends CartasInvestigador{
     public abstract void verCarta();
     
     @Override
-    public void Accion() {
-        
-    }
+    public abstract void Accion();
     
     
 
