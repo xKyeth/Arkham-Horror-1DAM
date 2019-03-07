@@ -1,9 +1,13 @@
 
 package CartasMito;
 
+import Modelo.Carta;
 
-public abstract class Traicion {
+
+public  class Traicion extends Carta{
     
-    public abstract void rebelacion();
+    public  void Accion(){
+        
+    }
     
 }
