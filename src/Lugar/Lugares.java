@@ -4,20 +4,27 @@ import java.util.ArrayList;
 
 public class Lugares {
     
-    public ArrayList <Lugar> lugares = new ArrayList();
+    private ArrayList <Lugar> lugares = new ArrayList();
     private boolean[][] conexion = new boolean[5][5];
     
-    //Hay que introducir los lugares en este orden (ya que
-    //la matriz de adyacencia está hecha en base a dicho orden):
-    //Ático, Pasillo, Salita, Sótano, Estudio
+    //Podemos introducir los lugares en el orden que queramos.
     
     public Lugares(Lugar a, Lugar b, Lugar c, Lugar d, Lugar e){
         
-        lugares.add(a);
-        lugares.add(b);
-        lugares.add(c);
-        lugares.add(d);
-        lugares.add(e);
+        for (int i=0; i<5; i++){
+            lugares.add(null);            
+        }
+        
+        lugares.remove(a.getId());
+        lugares.add(a.getId(),a);
+        lugares.remove(b.getId());
+        lugares.add(b.getId(),b);
+        lugares.remove(c.getId());
+        lugares.add(c.getId(),c);
+        lugares.remove(d.getId());
+        lugares.add(d.getId(),d);
+        lugares.remove(e.getId());
+        lugares.add(e.getId(),e);
         
         for (int i=0; i<5; i++){
             for (int j=0; j<5; j++){
@@ -39,8 +46,8 @@ public class Lugares {
     //*usamos la matriz de adyacencia ya creada*
     
     public void cambiarLugar(Lugar a, Lugar b){
-        int x = lugares.indexOf(a);
-        int y = lugares.indexOf(b);
+        int x = getLugares().indexOf(a);
+        int y = getLugares().indexOf(b);
         if(getConexion()[x][y]){
             System.out.println("Estamos aquí: "+a.getNombre()+" y nos movemos aquí: "+b.getNombre());
         }else{
@@ -60,6 +67,20 @@ public class Lugares {
      */
     public void setConexion(boolean[][] conexion) {
         this.conexion = conexion;
+    }
+
+    /**
+     * @return the lugares
+     */
+    public ArrayList <Lugar> getLugares() {
+        return lugares;
+    }
+
+    /**
+     * @param lugares the lugares to set
+     */
+    public void setLugares(ArrayList <Lugar> lugares) {
+        this.lugares = lugares;
     }
     
 }
