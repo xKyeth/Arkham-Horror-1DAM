@@ -15,7 +15,7 @@ public class DestrezaManual {
     PruebaHabilidad ph;
     Mazo m;
     public void DestrezaManual(){
-        ph.iniciarPrueba(0);
+        ph.procesarOrden(0, this);
         //Si la prueba tiene exito se roba una carta
         //if(prueba tiene exito)
         m.cogerCarta();
