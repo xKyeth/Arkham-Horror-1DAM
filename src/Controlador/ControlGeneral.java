@@ -42,6 +42,8 @@ public class ControlGeneral {
     MazoPlan MP = new MazoPlan();
     Mazo ME = new Mazo();
     MazoInvestigador MI = new MazoInvestigador();
+    uso_descarte_cartas UD=new uso_descarte_cartas();
+    private Boolean investigacion=false;
 
     public ControlGeneral() {
         v = new Vista(this);
@@ -51,9 +53,9 @@ public class ControlGeneral {
     public void Juego() {
 
         prepararPartida();
-
+        setInvestigacion((Boolean) true);
         faseInvestigacion(v.MenuPrincipal());
-
+        setInvestigacion((Boolean) false);
         faseEnemigos();
 
         faseMantenimiento();
@@ -65,7 +67,9 @@ public class ControlGeneral {
             faseEnemigos();
 
             faseMantenimiento();
-            faseInvestigacion(v.MenuPrincipal());
+            setInvestigacion((Boolean) true);
+        faseInvestigacion(v.MenuPrincipal());
+            setInvestigacion((Boolean) false);
         }
 
     }
@@ -103,12 +107,13 @@ public class ControlGeneral {
 
         //Colocar 1 ficha de perdicion sirve el plan en curso
         
+        
         //Compara umbral de perdicion
         
 
-//robar una carta encuentro
+        //robar una carta encuentro
 
-ME.cogerCarta();
+        UD.robarCarta();
     }
 
     public void faseInvestigacion(int opcion) {
@@ -119,7 +124,7 @@ ME.cogerCarta();
 
                 case 1://Robar 1 carta
 
-                    MI.añadirCarta(carta);
+                    UD.robarCarta();
 
                     break;
 
@@ -178,7 +183,7 @@ ME.cogerCarta();
         MovimientoCazador MC= new MovimientoCazador();
         
         
-        MC.Moverse( ENEMIGO CAZADOR     , lugares.getConexion());
+       MC.moverseMapa1(""   );
         
         
         
@@ -187,9 +192,22 @@ ME.cogerCarta();
 
     public void faseMantenimiento() {
 
-        //Poner boca arriba carta pequeña
         //Prepara todas las cartas agotadas
         //robar una carta y obtiene un recurso
         //si hay mas de 8 cartas elige y descarta 
+    }
+
+    /**
+     * @return the investigacion
+     */
+    public Boolean getInvestigacion() {
+        return investigacion;
+    }
+
+    /**
+     * @param investigacion the investigacion to set
+     */
+    public void setInvestigacion(Boolean investigacion) {
+        this.investigacion = investigacion;
     }
 }
