@@ -8,6 +8,10 @@ public class Habilidad extends CartasInvestigador{
     }
     
     @Override
+    public void verCarta() {
+    }
+    
+    @Override
     public void Accion() {
         
     }
