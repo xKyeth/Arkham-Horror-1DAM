@@ -1,9 +1,10 @@
 package Modelo;
 
+import CartasInvestigador.Apoyo;
 import java.util.Scanner;
 
 /**AUTOR ALEXANDRA**/
-public class CartaPrimerosAuxilios extends Carta{
+public class CartaPrimerosAuxilios extends Apoyo{
     //new Carta("Primeros auxilios.","Guardián",2,"Apoyo",0,1,0,0, false, "Talento. Ciencia");
     // Usos (3 suministros). Si los Primeros auxilios no tienen suministros, descártalos.
     // Gasta 1 suministro: Cura 1 punto de daño o de horror de un investigador que esté en tu Lugar
@@ -13,7 +14,7 @@ public class CartaPrimerosAuxilios extends Carta{
     Scanner sc = new Scanner(System.in);
     
     public CartaPrimerosAuxilios(){
-        
+        super(1, 0, 0, 0, 0, 0, 0, 2, 3, false);
     }
     
     public void Accion(){
@@ -28,7 +29,7 @@ public class CartaPrimerosAuxilios extends Carta{
                     suministros--;
                 break;
                 case 2:
-                    roland.horror=+1;
+                    roland.horror=-1;
                     suministros--;
                 break;
                 
@@ -39,6 +40,12 @@ public class CartaPrimerosAuxilios extends Carta{
             
         }
 
+    }
+
+    @Override
+    public void verCarta() {
+        System.out.println("Usos (3 suministros). Si los Primeros auxilios no tienen suministros, descártalos.\n" +
+        "\n" + " Gasta 1 suministro: Cura 1 punto de daño o de horror de un investigador que esté en tu Lugar.");
     }
 
 }

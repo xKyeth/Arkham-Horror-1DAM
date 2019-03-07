@@ -11,11 +11,4 @@ public class Pasillo extends Lugar{
         super.pistas = 0;
     }
     
-
-    //Este método es de prueba para comprobar si sale todo correctamente.
-    public void muestra(Pasillo p){
-        super.caraNoRevelada(p);
-        super.caraRevelada(p);
-    }
-    
 }

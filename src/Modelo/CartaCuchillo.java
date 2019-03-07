@@ -1,17 +1,30 @@
 package Modelo;
 
+import CartasInvestigador.Apoyo;
 import java.util.Scanner;
 
 /**
  *
  * @author paula
  */
-public class CartaCuchillo {
+public class CartaCuchillo  extends Apoyo{
     Scanner sn=new Scanner(System.in);
     boolean descarte=false;
     RolandBanks roland;
+
+    public CartaCuchillo() {
+        super(0, 0, 1, 0, 0, 0, 0, 1, 0, false);
+    }
+     public void verCarta(){
+         System.out.println("Objeto. Arma. Cuerpo a cuerpo.\n" +
+          "\n" +
+          "Coste: 1.\n" +
+          ": Combatir. Recibes +1  para este ataque.\n" +
+          "\n" +
+          "Descarta el Cuchillo: Combatir. Recibes +2  para este ataque. Este ataque inflige +1 de daño.");
+     }
     
-    public void action(){
+    public void Accion(){
         System.out.println("Arma cuerpo a cuerpo");
         System.out.println("Elige una opcion:");
         System.out.println("1-Combatir. Recibes +1 de combate para este ataque");

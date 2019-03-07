@@ -1,9 +1,11 @@
 package Modelo;
 
+import CartasInvestigador.Evento;
 import java.util.Scanner;
 
 /**AUTOR ALEXANDRA**/
-public class CartaAlijoEmergencia {
+public class CartaAlijoEmergencia extends Evento{
+    
     //listaCartas.add(new Carta("Alijo de emergencia.","Neutral",0,"Evento", 0,0,0,0, false, "Suministros"));
     // Obtén 3 recursos.
     Investigador investigador;
@@ -12,7 +14,7 @@ public class CartaAlijoEmergencia {
     Scanner sc=new Scanner(System.in);
     
     public CartaAlijoEmergencia(){
-        
+        super(0,0,0,0,0,0);
     }
     
     public void Accion(){
@@ -20,15 +22,20 @@ public class CartaAlijoEmergencia {
         int respuesta=sc.nextInt();
         switch(respuesta){
             case 1: 
-                investigador.setNumeroRecursos(investigador.getNumeroRecursos() + 3);
+                roland.setNumeroRecursos(roland.getNumeroRecursos() + 3);
             break;
             case 2:
-                investigador.setNumeroRecursos(investigador.getNumeroRecursos() + 6);
+                roland.setNumeroRecursos(roland.getNumeroRecursos() + 6);
             break;
                 
             default:
                 System.out.println("No has escrito un número válido.");
             break;
             }
+    }
+
+    @Override
+    public void verCarta() {
+        System.out.println("Uno nunca está demasiado preparado. Coste 0. Obtén 3 recursos. El investigador tiene 2 cartas de este tipo.");
     }
 }

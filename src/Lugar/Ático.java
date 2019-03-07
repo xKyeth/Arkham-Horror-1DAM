@@ -12,12 +12,4 @@ public class Ático extends Lugar{
         super.obligado = "**Después de que entres en el Ático: Recibe 1 punto de horror.**";
     }
     
-    
-    //Este método es de prueba para comprobar si sale todo correctamente.
-    public void muestra(Ático a){
-        super.caraNoRevelada(a);
-        super.caraRevelada(a);
-        
-    }
-    
 }

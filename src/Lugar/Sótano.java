@@ -12,11 +12,4 @@ public class Sótano extends Lugar{
         super.obligado = "**Después de que entres en el Sótano: Recibe 1 punto de daño.**";
     }
     
-    
-    //Este método es de prueba para comprobar si sale todo correctamente.
-    public void muestra(Sótano so){
-        super.caraNoRevelada(so);
-        super.caraRevelada(so);
-    }
-    
 }

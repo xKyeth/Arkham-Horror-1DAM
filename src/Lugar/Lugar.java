@@ -11,6 +11,7 @@ public abstract class Lugar {
     public String obligado;
     public String instruccionesNR;
     public String instruccionesR;
+    private int id;
     
     
     //cuando se saca un lugar del mazo por primera vez y se coloca
@@ -38,6 +39,13 @@ public abstract class Lugar {
         }
         System.out.println("El número de velo es: "+getVelo());
         System.out.println("El número de pistas es: "+getPistas());
+    }
+    
+    //este método es sólo para comprobar que todo está bien
+    
+    public void muestra(Lugar l){
+        caraNoRevelada(l);
+        caraRevelada(l);
     }
 
     
@@ -106,6 +114,12 @@ public abstract class Lugar {
     public void setInstruccionesR(String instruccionesR) {
         this.instruccionesR = instruccionesR;
     }
-    
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    } 
 }
