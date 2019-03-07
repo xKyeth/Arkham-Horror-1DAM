@@ -4,20 +4,28 @@
  * and open the template in the editor.
  */
 package Modelo;
+import CartasInvestigador.Habilidad;
 import Modelo.Cartas.Mazo;
 import modelohabilidad.PruebaHabilidad;
 /**
  *
  * @author imanol
  */
-public class DestrezaManual {
+public abstract class DestrezaManual extends Habilidad {
     
     PruebaHabilidad ph;
     Mazo m;
-    public void DestrezaManual(){
-        ph.procesarOrden(0, this);
-        //Si la prueba tiene exito se roba una carta
-        //if(prueba tiene exito)
+
+    
+    
+    public DestrezaManual(){
+        super(0, 0, 2, 0, 0);
+    }
+    
+    
+    public void usarCarta(){
+        ph.procesarOrden(vida, this);
+        //if(prueba tiene exito);
         m.cogerCarta();
     }
     

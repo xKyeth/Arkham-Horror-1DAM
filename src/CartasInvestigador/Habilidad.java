@@ -1,15 +1,14 @@
 
 package CartasInvestigador;
 
-public class Habilidad extends CartasInvestigador{
+public abstract class Habilidad extends CartasInvestigador{
     
     public Habilidad(int voluntad, int intelecto, int habilidad, int combate, int comodin) {
         super(voluntad, intelecto, habilidad, combate, comodin);
     }
     
     @Override
-    public void verCarta() {
-    }
+    public abstract void verCarta();
     
     @Override
     public void Accion() {
