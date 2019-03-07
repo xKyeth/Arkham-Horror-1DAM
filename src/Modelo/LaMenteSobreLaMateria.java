@@ -14,11 +14,22 @@ public class LaMenteSobreLaMateria extends Evento {
 
     }
     
+     @Override
+    public void verCarta() {
+         System.out.println("Voluntad "+getVoluntad()
+                 +" Intelecto "+getIntelecto()
+                 +" Habilidad "+getHabilidad()
+                 +" Combate "+getCombate()
+                 +" Comodin "+getComodin()
+                 +" Coste "+getComodin()
+                 +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
+    }
+    
 //    public void usarCarta(){
 //         if(investigacion.fase){Accion(); restablecerValoresRoland();}
 //        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
 //     }
-//    
+    
     public void restablecerValoresRoland(){
         roland.setAgilidad(2);
         roland.setCombate(4);
@@ -69,6 +80,8 @@ public class LaMenteSobreLaMateria extends Evento {
           System.out.println(""); Accion();
       }  
     }
+
+   
    
 
 }
