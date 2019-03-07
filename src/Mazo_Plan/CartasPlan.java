@@ -9,10 +9,6 @@ package Mazo_Plan;
  *
  * @author imanol
  */
-public class CartaPlan7 {
-    CartaPlan7(String CartaPlan) {
-    }
-
-    CartaPlan7() {
-    }
+public class CartasPlan {
+    
 }

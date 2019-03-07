@@ -9,10 +9,11 @@ package Mazo_Plan;
  *
  * @author imanol
  */
-public class CartaPlan4 {
-    CartaPlan4(String CartaPlan) {
+public class CartaPlan {
+
+    public CartaPlan(String nombre) {
     }
 
-    CartaPlan4() {
-    }
+    
+    
 }
