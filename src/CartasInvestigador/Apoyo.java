@@ -8,7 +8,8 @@ public class Apoyo extends CartasInvestigador{
     }
     
     
-    public void usarCarta(){
+    @Override
+    public void Accion() {
         
     }
     

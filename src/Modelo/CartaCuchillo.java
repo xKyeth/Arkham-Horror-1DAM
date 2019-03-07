@@ -1,15 +1,20 @@
 package Modelo;
 
+import CartasInvestigador.Apoyo;
 import java.util.Scanner;
 
 /**
  *
  * @author paula
  */
-public class CartaCuchillo {
+public class CartaCuchillo  extends Apoyo{
     Scanner sn=new Scanner(System.in);
     boolean descarte=false;
     RolandBanks roland;
+
+    public CartaCuchillo() {
+        super(0, 0, 1, 0, 0, 0, 0, 1, 0, false);
+    }
     
     public void action(){
         System.out.println("Arma cuerpo a cuerpo");
