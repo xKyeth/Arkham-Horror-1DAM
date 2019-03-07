@@ -8,6 +8,10 @@ public class Evento extends CartasInvestigador{
     }
     
     @Override
+    public void verCarta() {
+    }
+    
+    @Override
     public void Accion() {
         
     }
