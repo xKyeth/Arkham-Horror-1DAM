@@ -42,4 +42,10 @@ public class CartaPrimerosAuxilios extends Apoyo{
 
     }
 
+    @Override
+    public void verCarta() {
+        System.out.println("Usos (3 suministros). Si los Primeros auxilios no tienen suministros, descártalos.\n" +
+        "\n" + " Gasta 1 suministro: Cura 1 punto de daño o de horror de un investigador que esté en tu Lugar.");
+    }
+
 }

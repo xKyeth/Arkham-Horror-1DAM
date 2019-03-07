@@ -15,6 +15,14 @@ public class CartaCuchillo  extends Apoyo{
     public CartaCuchillo() {
         super(0, 0, 1, 0, 0, 0, 0, 1, 0, false);
     }
+     public void verCarta(){
+         System.out.println("Objeto. Arma. Cuerpo a cuerpo.\n" +
+          "\n" +
+          "Coste: 1.\n" +
+          ": Combatir. Recibes +1  para este ataque.\n" +
+          "\n" +
+          "Descarta el Cuchillo: Combatir. Recibes +2  para este ataque. Este ataque inflige +1 de daño.");
+     }
     
     public void action(){
         System.out.println("Arma cuerpo a cuerpo");
