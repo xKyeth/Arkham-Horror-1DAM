@@ -11,6 +11,7 @@ public abstract class Lugar {
     public String obligado;
     public String instruccionesNR;
     public String instruccionesR;
+    private int id;
     
     
     //cuando se saca un lugar del mazo por primera vez y se coloca
@@ -106,6 +107,12 @@ public abstract class Lugar {
     public void setInstruccionesR(String instruccionesR) {
         this.instruccionesR = instruccionesR;
     }
-    
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    } 
 }
