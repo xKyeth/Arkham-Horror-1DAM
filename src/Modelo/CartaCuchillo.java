@@ -24,7 +24,7 @@ public class CartaCuchillo  extends Apoyo{
           "Descarta el Cuchillo: Combatir. Recibes +2  para este ataque. Este ataque inflige +1 de daño.");
      }
     
-    public void action(){
+    public void Accion(){
         System.out.println("Arma cuerpo a cuerpo");
         System.out.println("Elige una opcion:");
         System.out.println("1-Combatir. Recibes +1 de combate para este ataque");
