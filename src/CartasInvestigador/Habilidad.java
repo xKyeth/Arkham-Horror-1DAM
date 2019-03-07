@@ -11,9 +11,7 @@ public abstract class Habilidad extends CartasInvestigador{
     public abstract void verCarta();
     
     @Override
-    public void Accion() {
-        
-    }
+    public abstract  void Accion();
 
     public int getVoluntad() {
         return voluntad;
