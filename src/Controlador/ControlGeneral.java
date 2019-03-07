@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import *;
+
 import BolsaDelCaos.BolsaDelCaos;
 import ClaseMano.uso_descarte_cartas;
 import Lugar.*;
@@ -20,6 +20,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.InputMismatchException;
+import modelohabilidad.PruebaCombate;
 
 /**
  *
@@ -188,12 +189,18 @@ public class ControlGeneral {
         
         
         //Enemigo ataca 
+        
+         PruebaCombate PC=new PruebaCombate();
+        
+        
     }
 
     public void faseMantenimiento() {
 
         //Prepara todas las cartas agotadas
         //robar una carta y obtiene un recurso
+        UD.robarCarta();
+        Roland.setNumeroRecursos(Roland.getNumeroRecursos()+1);
         //si hay mas de 8 cartas elige y descarta 
     }
 
