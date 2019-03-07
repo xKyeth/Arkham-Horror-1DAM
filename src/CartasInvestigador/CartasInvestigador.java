@@ -44,6 +44,10 @@ public class CartasInvestigador extends Carta{
     } //HABILIDAD
     
     
+    @Override
+    public void Accion() {
+        
+    }
     
 
     public int getVoluntad() {
@@ -125,5 +129,7 @@ public class CartasInvestigador extends Carta{
     public void setComprada(boolean comprada) {
         this.comprada = comprada;
     }
+
+    
 
 }

@@ -18,7 +18,7 @@ public class Paranoia {
    }
     
     public ArrayList<Object> Paranoia(ArrayList<Object> recurso){
-        
+        System.out.println("¿Que ha sido ese ruido?");
     this.r=recurso;
     r.removeAll(r);
     return r;

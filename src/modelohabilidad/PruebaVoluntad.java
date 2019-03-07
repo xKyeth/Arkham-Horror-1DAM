@@ -16,26 +16,15 @@ public class PruebaVoluntad extends PruebaHabilidad{
     
     public PruebaVoluntad(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa) {
         super(n, inv, apoyo, bolsa);
+        iniciarPruebaVoluntad(n);
     }
 
-    @Override
-    public void iniciarPruebaVoluntad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   public void iniciarPruebaVoluntad(int n){
+       vista.pruebaHabilidad(n);
+   }
 
-    @Override
-    public void iniciarPruebaAgilidad() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void iniciarPruebaCombate() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void iniciarPruebaIntelecto() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void procesarOrden(int a, Object datos) {
+        
     }
     
 }

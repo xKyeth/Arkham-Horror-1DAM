@@ -1,6 +1,8 @@
 
 package CartasInvestigador;
 
-class Carta {
+public abstract  class Carta {
+    
+    public abstract void Accion();
     
 }
