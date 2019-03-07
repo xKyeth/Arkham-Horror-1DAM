@@ -16,7 +16,6 @@ import Modelo.Cartas.Mazo;
 import Modelo.MazoInvestigador;
 import Modelo.RolandBanks;
 import Vista.Vista;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.InputMismatchException;
