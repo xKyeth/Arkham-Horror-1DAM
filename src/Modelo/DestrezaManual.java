@@ -11,7 +11,7 @@ import modelohabilidad.PruebaHabilidad;
  *
  * @author imanol
  */
-public class DestrezaManual extends Habilidad {
+public abstract class DestrezaManual extends Habilidad {
     
     PruebaHabilidad ph;
     Mazo m;
