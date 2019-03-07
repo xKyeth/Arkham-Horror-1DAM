@@ -39,83 +39,22 @@ boolean encontrado=false;
              if(Integer.parseInt(Cola.peekFirst().toString())==personajes.get(i).getLugar().getId()){
                  encontrado=true;
             System.out.println("Lo has encontrado");
-       
-            
-            
-        
-        }else
-        
+       }else
         //expando
         expandirNodo(   Integer.parseInt(Cola.getFirst().toString())   , l);
-        
-        //remuevo el primer item
-        
+         //remuevo el primer item
         Cola.removeFirst();  
-            
-            }
-     
-        }
+            }}}
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        }
-        
-
-    
-    
-    
-    
-    
-    
-    
-    
     public void expandirNodo(int i, boolean[][] l){
     
-        
-//Recorre la matriz de adyacencia        
+        //Recorre la matriz de adyacencia        
         for (int j = i; j < l.length; j++) {
-            
-           //si el punto donde está es verdad sigue 
+         //si el punto donde está es verdad sigue 
             if (l[i][j]=true){
-                
-                //recorre los lugares usados, si no estuvo en ellos entonces lo mete en la cola 
+              //recorre los lugares usados, si no estuvo en ellos entonces lo mete en la cola 
                 for (int k = 0; k < usados.size(); k++) {
                     if (k!=j){
-                        
-                        
-                     Cola.addLast(l[i][j]);
-            usados.add(i);
-                    
-                    
-                    }
-                    
-                }
-           
-            
-            }
-            
- 
-            
-        }
-    
-    
-    
-    
-    
-    }
-    
-    
-    
-    
-    
-    
-}
+                    Cola.addLast(l[i][j]);
+                    usados.add(i);
+                    }}}}}}
