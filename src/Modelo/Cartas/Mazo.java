@@ -6,8 +6,10 @@
 package Modelo.Cartas;
 
 
+import Modelo.Carta;
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.Scanner;
 
 /**
  *
@@ -28,7 +30,7 @@ public class Mazo {
     public Carta cogerCarta(){
    
         
-        System.out.println("cojo la primera cartas");
+        System.out.println("cojo la primera carta");
         return getC().getFirst();
         
       
@@ -36,7 +38,11 @@ public class Mazo {
  
     public Carta cogerNCartas(int x){
   
-        if (x>3 || x <1){
+       
+      
+      
+        try {
+             if (x>3 || x <1){
     
      System.out.println("Numero inválido");
     
@@ -45,14 +51,38 @@ public class Mazo {
         return getC().getFirst();
         
       }
+      
+        } catch (Exception e) {
+            
+            System.out.println("Introduce un número por favor");
+            cogerNCartas(x);
+            
+        }
       return null;
+      
       
    }
     
     public Carta buscaCarta(int x){
        
-    System.out.println("busco carta por numero concreto");
-    return getC().get(x);
+    
+    
+        for (int i = 0; i < getC().size(); i++) {
+            getC().get(i).getNombre();
+          
+        }
+        Scanner sc=new Scanner(System.in);
+          String nombre= sc.next();
+          
+            for (int i = 0; i < getC().size(); i++) {
+            if (getC().get(i).getNombre()==nombre){
+            return getC().get(i);
+            }else System.out.println("Esa carta no existe");
+         
+        }
+      return null;
+          
+          
     }
     
     public void introducirCartaAleatoria(Carta card){
