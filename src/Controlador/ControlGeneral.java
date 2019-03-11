@@ -134,10 +134,14 @@ public class ControlGeneral {
 
                 case 3:  //Acivar una capacidad
 
+                    
+                    
                     break;
 
                 case 4: //Enfrentarse a un enemigo
 
+                    
+                    
                     break;
 
                 case 5: //Investigar 
@@ -183,13 +187,14 @@ public class ControlGeneral {
         MovimientoCazador MC= new MovimientoCazador();
         
         
-       MC.moverseMapa1(""   );
+       MC.moverseMapa1( "");
         
         
         
         //Enemigo ataca 
         
          PruebaCombate PC=new PruebaCombate();
+         PC.iniciarPruebaCombate(0);
         
         
     }
@@ -197,10 +202,12 @@ public class ControlGeneral {
     public void faseMantenimiento() {
 
         //Prepara todas las cartas agotadas
+        
         //robar una carta y obtiene un recurso
         UD.robarCarta();
         Roland.setNumeroRecursos(Roland.getNumeroRecursos()+1);
         //si hay mas de 8 cartas elige y descarta 
+        
     }
 
     /**
