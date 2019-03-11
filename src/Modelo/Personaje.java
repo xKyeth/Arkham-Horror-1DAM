@@ -1,19 +1,18 @@
 package Modelo;
-
+import Lugar.Lugar;
 import java.util.ArrayList;
 
 
 public abstract class  Personaje {
     protected int combate,agilidad,daño,vida,horror;
-    private Object lugar;
-    public abstract void moverPersonaje(ArrayList<Object> lugares,int posicion,Personaje personaje);
+    protected Lugar lugar;
+   
+    public abstract void moverPersonaje(ArrayList<Lugar> lugares,int posicion,Personaje personaje);
  
     public Personaje(){
         
     }
-    
-   
-//       
+       
 
     /**
      * @return the combate
@@ -88,14 +87,14 @@ public abstract class  Personaje {
     /**
      * @return the lugar
      */
-    public Object getLugar() {
+    public Lugar getLugar() {
         return lugar;
     }
 
     /**
      * @param lugar the lugar to set
      */
-    public void setLugar(Object lugar) {
+    public void setLugar(Lugar lugar) {
         this.lugar = lugar;
     }
     

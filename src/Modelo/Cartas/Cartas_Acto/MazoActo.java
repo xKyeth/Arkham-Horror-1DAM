@@ -16,11 +16,7 @@ public class MazoActo {
 
     public MazoActo() {
         Carta_Acto c;
-        mazo.add(c=new Conspiracy());
-        mazo.add(c=new Darkness());
-        mazo.add(c=new Ritual());
         mazo.add(c=new TheBarrier());
-        mazo.add(c=new Trail());
         mazo.add(c=new Trapped());
         mazo.add(c=new WHYDone());
     }

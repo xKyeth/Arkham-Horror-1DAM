@@ -44,4 +44,10 @@ public class MazoInvestigador implements IMazoInvestigador {
     public void añadirCarta(Carta carta){
         getListaCartasMazo().add(carta);
     }
+    
+    
+    public void eliminarCarta(Carta carta){
+        
+        getListaCartasMazo().remove(0);
+    }
 }

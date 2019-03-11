@@ -5,6 +5,7 @@
  */
 package menuarkham;
 
+import Controlador.ControlGeneral;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -52,6 +53,9 @@ public class MenuArkham {
                         if ("Si".equals(respuesta)) {
                             System.out.println("Se reiniciará el juego");
                             // llamamos al inicio del juego
+                            ControlGeneral inicio = new ControlGeneral();
+                            inicio.Juego();
+                                    
                         }else{
                             System.out.println("De acuerdo. Regresaras al menú");
                         break;
@@ -105,4 +109,4 @@ public class MenuArkham {
         }
  
     }
-    }
+     }

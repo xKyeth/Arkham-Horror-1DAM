@@ -41,7 +41,7 @@ public class Vista {
            }
            int opcion=sc.nextInt();
 
-           control.procesaOrden(opcion);
+          return opcion;
            
         return opcion;
     }

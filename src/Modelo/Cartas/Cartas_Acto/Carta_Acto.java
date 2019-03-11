@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
-import Modelo.Cartas.Carta;
+import Modelo.Carta;
 import Modelo.PruebasCombate;
 
 /**

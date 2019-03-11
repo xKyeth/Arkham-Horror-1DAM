@@ -1,6 +1,6 @@
 package CartasInvestigador;
 
-public class CartasInvestigador extends Carta{
+public abstract class CartasInvestigador extends Carta{
 
     protected int voluntad;
     protected int intelecto;
@@ -42,8 +42,15 @@ public class CartasInvestigador extends Carta{
         this.habilidad = habilidad;
         this.comodin = comodin;
     } //HABILIDAD
+
+        
     
+    public abstract void verCarta();
     
+    @Override
+    public void Accion() {
+        
+    }
     
 
     public int getVoluntad() {
@@ -125,5 +132,7 @@ public class CartasInvestigador extends Carta{
     public void setComprada(boolean comprada) {
         this.comprada = comprada;
     }
+
+    
 
 }
