@@ -11,7 +11,7 @@ import CartasInvestigador.Apoyo;
  *
  * @author pecorte
  */
-public class CartaSiguiendoUnaCorazonda extends Apoyo {
+public abstract class CartaSiguiendoUnaCorazonda extends Apoyo {
     
     public CartaSiguiendoUnaCorazonda() {
         super(0, 2, 0, 0, 0, 0, 0, 2, 0, false);
