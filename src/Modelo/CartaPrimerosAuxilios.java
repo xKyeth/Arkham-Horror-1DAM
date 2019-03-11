@@ -8,7 +8,7 @@ public class CartaPrimerosAuxilios extends Apoyo{
     //new Carta("Primeros auxilios.","Guardián",2,"Apoyo",0,1,0,0, false, "Talento. Ciencia");
     // Usos (3 suministros). Si los Primeros auxilios no tienen suministros, descártalos.
     // Gasta 1 suministro: Cura 1 punto de daño o de horror de un investigador que esté en tu Lugar
-    private int suministros=3;
+    private int suministros=4;
     RolandBanks roland;
     Scanner sc = new Scanner(System.in);
     
