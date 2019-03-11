@@ -7,6 +7,8 @@ package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
+import java.util.ArrayList;
+import CartasInvestigador.Apoyo;
 
 /**
  *
@@ -21,20 +23,15 @@ public class HabilidadMainPrueba {
 //        
         RolandBanks Roland = new RolandBanks();        
         
-        Apoyo apoyo1 = new Apoyo(5,0,1,0);
+        ArrayList<Apoyo> apoyosprueba = new ArrayList();
+//        Apoyo apoyo1 = new Apoyo(0,0,0,0,0,0,0,0,0,false) {
+//            
+//        apoyosprueba.add(apoyo1);
         
         BolsaDelCaos bolsa = new BolsaDelCaos();
-//        Caos caos1 = new Caos(1,0,2,0);
         
-//        PruebaHabilidad prueba = new PruebaHabilidad(2, Roland, apoyo1, bolsa);
+        PruebaHabilidad prueba = new PruebaAgilidad(2,Roland, apoyosprueba, bolsa);
         
-//        PruebaHabilidad prueba = new PruebaHabilidad(Roland, apoyo1, caos1);
-//        System.out.println(Roland.getAgilidad());
-//        System.out.println(Roland.getCombate());
-//        System.out.println(Roland.getIntelecto());
-//        System.out.println(Roland.getVoluntad());
-//        System.out.println();
-//        prueba.iniciarPrueba();
         
         
     }

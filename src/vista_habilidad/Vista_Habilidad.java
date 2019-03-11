@@ -22,33 +22,18 @@ public class Vista_Habilidad {
        this.habilidad=h;
     }
     
-    
-    
-    
-    
-    public void pruebaHabilidad(int n){
-        
+    public void pruebaHabilidad(int n){        
         System.out.println("Se inicia la prueba de habilidad de dificultad "+n);    
-        habilidad.procesarOrden(n, null);
+        habilidad.prueba(n);
     }
 //
-//    public void resultadoPruebaExito(int a) {        
-//        switch(a){
-//            case 1: System.out.println("Éxito en Voluntad"); break;
-//            case 2: System.out.println("Éxito en Agilidad"); break;
-//            case 3: System.out.println("Éxito en Intelecto"); break;
-//            case 4: System.out.println("Éxito en Combate"); break;
-//        }        
-//    }
+    public void resultadoPruebaExito() {        
+        System.out.println("Prueba superada con éxito.");
+    }
 //
-//    public void resultadoPruebaFracaso(int a) {
-//        switch(a){
-//            case 1: System.out.println("Fracaso en Voluntad"); break;
-//            case 2: System.out.println("Fracaso en Agilidad"); break;
-//            case 3: System.out.println("Fracaso en Intelecto"); break;
-//            case 4: System.out.println("Fracaso en Combate"); break;
-//        }    
-//    }
+    public void resultadoPruebaFracaso() {
+        System.out.println("No has superado la prueba.");
+    }
     
   
 

@@ -5,34 +5,41 @@
  */
 package Modelo;
 import modelohabilidad.PruebaHabilidad;
+import CartasInvestigador.Apoyo;
 
 /**
  *
  * @author Cristian
  */
-public class CartaTextosMedicos {
+public class CartaTextosMedicos extends Apoyo{
     
-    private int combate;
-    private int coste;
-    private String nombre;
+    PruebaHabilidad prueba;
     RolandBanks roland;
 
     public CartaTextosMedicos(){
-        combate = 1;
-        coste = 2;
-        nombre = "Textos Médicos";
+        super(0, 0, 1, 0, 0, 0, 0, 2, 0, false);
     }
     
-    public void accion(){
+    @Override
+    public void Accion(){
         
         System.out.println("Elige un investigador que esté en tu Lugar y realiza "
                 + "una prueba de intelecto(2). Si tienes éxito, cúrale 1 punto de daño a "
                 + "ese investigador. Si fracasas, inflígele 1 punto de daño a ese "
                 + "investigador.");
-//        if(pruebaHabilidad == true){
-//            roland.setDaño(roland.getDaño()+1);
-//        }else{
-//            roland.setDaño(roland.getDaño()-1);
-//        }
+        if(prueba.prueba(prueba.getDificultad())== true){
+            roland.setDaño(roland.getDaño()+1);
+        }else{
+            roland.setDaño(roland.getDaño()-1);
+        }
     }
+
+    @Override
+    public void verCarta() {
+    
+    }
+    
+    //MÉTODO RESTABLECER
+
+    
 }

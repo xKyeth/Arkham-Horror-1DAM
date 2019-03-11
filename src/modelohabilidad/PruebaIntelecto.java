@@ -7,6 +7,7 @@ package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,17 +15,36 @@ import Modelo.RolandBanks;
  */
 public class PruebaIntelecto extends PruebaHabilidad{
     
-    public PruebaIntelecto(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa) {
-        super(n, inv, apoyo, bolsa);
+    public PruebaIntelecto(int n, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(n, inv, apoyos, bolsa);
         iniciarPruebaIntelecto(n);
     }
-
-    public void iniciarPruebaIntelecto(int n){
+    
+    public boolean iniciarPruebaIntelecto(int n){
         vista.pruebaHabilidad(n);
+        boolean x = prueba(n);
+        if(x == true){
+            vista.resultadoPruebaExito();
+        }else{
+            vista.resultadoPruebaFracaso();
+        }
+        return x;        
     }
 
-    public void procesarOrden(int a, Object datos) {
-
+    public boolean prueba(int a) {
+        boolean x = false;
+        int n = inv.getIntelecto() + seleccionaApoyo() - bolsa.BolsaDelCaos();
+        if (n < a){
+            return x;
+        }
+        else{
+            return x = true;
+        }
+    }
+    
+    public int seleccionaApoyo(){
+        //Seleccionar apoyo de las cartas disponibles. Hay que implementarlo.
+        return sumaApoyos(apoyos);
     }
     
 }
