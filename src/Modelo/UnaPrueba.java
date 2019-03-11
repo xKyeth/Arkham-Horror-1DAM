@@ -24,7 +24,7 @@ public class UnaPrueba extends Evento{
         System.out.println("Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar.");
         
         if((muerteEnemigo==true) && (roland.getLugar().pistas!=0)){
-            roland.setLugar().pistas--;
+            roland.getLugar().pistas--;
             roland.setNumeroPistas(roland.getNumeroPistas()+1);
         }
         else{
