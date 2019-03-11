@@ -1,6 +1,7 @@
 package Modelo;
 
 import CartasInvestigador.Evento;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -75,7 +76,7 @@ public class LaMenteSobreLaMateria extends Evento {
 
         }
     }
-      catch(Exception e){
+      catch(InputMismatchException e){
           System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
           System.out.println(""); Accion();
       }  
