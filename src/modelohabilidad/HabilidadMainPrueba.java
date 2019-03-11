@@ -24,8 +24,9 @@ public class HabilidadMainPrueba {
         RolandBanks Roland = new RolandBanks();        
         
         ArrayList<Apoyo> apoyosprueba = new ArrayList();
-        Apoyo apoyo1 = new Apoyo(0,0,0,0,0,0,0,0,0,false);
-        apoyosprueba.add(apoyo1);
+//        Apoyo apoyo1 = new Apoyo(0,0,0,0,0,0,0,0,0,false) {
+//            
+//        apoyosprueba.add(apoyo1);
         
         BolsaDelCaos bolsa = new BolsaDelCaos();
         
