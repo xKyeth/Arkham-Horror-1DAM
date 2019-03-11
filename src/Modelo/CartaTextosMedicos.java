@@ -19,6 +19,7 @@ public class CartaTextosMedicos extends Apoyo{
     public CartaTextosMedicos(){
         super(0, 0, 1, 0, 0, 0, 0, 2, 0, false);
     }
+    
     @Override
     public void Accion(){
         
