@@ -30,7 +30,7 @@ public class HabilidadMainPrueba {
         
         BolsaDelCaos bolsa = new BolsaDelCaos();
         
-        PruebaHabilidad prueba = new PruebaAgilidad(5,Roland, apoyosprueba, bolsa);
+        PruebaHabilidad prueba = new PruebaAgilidad(2,Roland, apoyosprueba, bolsa);
         
         
         

@@ -32,20 +32,16 @@ public class PruebaVoluntad extends PruebaHabilidad{
         return x;
    }
 
-    public boolean prueba(int a) {
-        //(investigador+apoyo)-(dificultad+caos)
-        
-        
+    public boolean prueba(int a) {        
        boolean x = false;
-       // FALTA VOLUNTAD EN INVESTIGADOR
-//        int n = inv.getVoluntad() + seleccionaApoyo() - bolsa.BolsaDelCaos();
-//        if (n < a){
-//            return x;
-//        }
-//        else{
-//            x = true;
+        int n = inv.getVoluntad() + seleccionaApoyo() - bolsa.BolsaDelCaos();
+        if (n < a){
             return x;
-//        }
+        }
+        else{
+            x = true;
+            return x;
+        }
     }
     
     public int seleccionaApoyo(){

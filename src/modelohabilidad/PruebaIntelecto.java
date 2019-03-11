@@ -32,15 +32,14 @@ public class PruebaIntelecto extends PruebaHabilidad{
     }
 
     public boolean prueba(int a) {
-        // FALTA INTELECTO EN INVESTIGADOR
         boolean x = false;
-//        int n = inv.getIntelecto() + seleccionaApoyo() - bolsa.BolsaDelCaos();
-//        if (n < a){
-//            return x;
-//        }
-//        else{
+        int n = inv.getIntelecto() + seleccionaApoyo() - bolsa.BolsaDelCaos();
+        if (n < a){
+            return x;
+        }
+        else{
             return x = true;
-//        }
+        }
     }
     
     public int seleccionaApoyo(){
