@@ -20,7 +20,6 @@ public abstract class PruebaHabilidad {
     
     ArrayList<Apoyo> apoyos;
     RolandBanks inv = new RolandBanks();
-//    Apoyo apoyo;
     Vista_Habilidad vista;
     BolsaDelCaos bolsa;
     uso_descarte_cartas mano;
@@ -34,16 +33,12 @@ public abstract class PruebaHabilidad {
         vista = new Vista_Habilidad(this);
         switch(n){
             case 1: PruebaHabilidad voluntad = new PruebaVoluntad(5, inv, apoyos, bolsa);
-//                    carta = new CartaHabilidad("Voluntad", 5); MI PRUEBA INICIAL
                     break;
             case 2: PruebaHabilidad agilidad = new PruebaAgilidad(5, inv, apoyos, bolsa);
-//                    carta = new CartaHabilidad("Agilidad", 5); 
                     break;
             case 3: PruebaHabilidad intelecto = new PruebaIntelecto(5, inv, apoyos, bolsa);
-//                    carta = new CartaHabilidad("Intelecto", 5); 
                     break;
 //            case 4: PruebaHabilidad combate = new PruebaCombate(5, inv, apoyos, bolsa);
-////                    carta = new CartaHabilidad("Combate", 5); 
 //                    break;
         }
     }
