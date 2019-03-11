@@ -7,6 +7,7 @@ package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,17 +15,44 @@ import Modelo.RolandBanks;
  */
 public class PruebaVoluntad extends PruebaHabilidad{
     
-    public PruebaVoluntad(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa) {
-        super(n, inv, apoyo, bolsa);
-        iniciarPruebaVoluntad(n);
+
+    public PruebaVoluntad(int i, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(i, inv, apoyos, bolsa);
+        iniciarPruebaVoluntad(i);
     }
 
-   public void iniciarPruebaVoluntad(int n){
+   public boolean iniciarPruebaVoluntad(int n){
        vista.pruebaHabilidad(n);
+       boolean x = prueba(n);
+        if(x == true){
+            vista.resultadoPruebaExito();
+        }else{
+            vista.resultadoPruebaFracaso();
+        }
+        return x;
    }
 
-    public void procesarOrden(int a, Object datos) {
+    public boolean prueba(int a) {
+        //(investigador+apoyo)-(dificultad+caos)
         
+        
+       boolean x = false;
+       // FALTA VOLUNTAD EN INVESTIGADOR
+//        int n = inv.getVoluntad() + seleccionaApoyo() - bolsa.BolsaDelCaos();
+//        if (n < a){
+//            return x;
+//        }
+//        else{
+//            x = true;
+            return x;
+//        }
     }
+    
+    public int seleccionaApoyo(){
+        //Seleccionar apoyo de las cartas disponibles. Hay que implementarlo.
+        return sumaApoyos(apoyos);
+    }
+
+    
     
 }

@@ -7,6 +7,7 @@ package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -14,9 +15,20 @@ import java.util.LinkedList;
  * @author cristian
  */
 public class PruebaCombate extends PruebaHabilidad{
+
+    public PruebaCombate(int n, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(n, inv, apoyos, bolsa);
+        iniciarPruebaCombate(n);
+    }
     
-    public PruebaCombate(int n, RolandBanks inv, Apoyo apoyo, BolsaDelCaos bolsa) {
-        super(n, inv, apoyo, bolsa);
+    public void iniciarPruebaCombate(int n){
+        vista.pruebaHabilidad(n);
+        prueba(n);
+    }
+    
+    public boolean prueba(int a){
+        boolean x = false;
+        return x;
     }
         /**Me falta el enemigo y el investigador, he basado 
      esta parte asumiendo que en los atributos de cada uno
@@ -28,7 +40,6 @@ public class PruebaCombate extends PruebaHabilidad{
      que si hacemos lo del enum pueda modificarse facilmente
      pero la otra forma me parece mas eficiente**/
     
-    Investigador investigador;
 //    Enemigo enemigo;
 //    LinkedList<Enemigo> pilaVictoria;
     
@@ -69,9 +80,7 @@ public class PruebaCombate extends PruebaHabilidad{
 //    }
 
     
-    public void procesarOrden(int a, Object datos) {
-        
-    }
+    
 
     
     
