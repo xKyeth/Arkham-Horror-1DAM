@@ -25,7 +25,10 @@ public class LaMenteSobreLaMateria extends Evento {
                  +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
     }
     
-    
+//    public void usarCarta(){
+//         if(investigar.getInvestigacion()== true){Accion(); restablecerValoresRoland();}
+//        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
+//     }
     
     public void restablecerValoresRoland(){
         roland.setAgilidad(2);
