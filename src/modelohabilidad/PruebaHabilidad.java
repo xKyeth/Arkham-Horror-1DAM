@@ -24,21 +24,23 @@ public abstract class PruebaHabilidad {
     BolsaDelCaos bolsa;
     uso_descarte_cartas mano;
     MazoInvestigador mazo;
-  
+    private int dificultad;
     
     public PruebaHabilidad(int n, RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
         this.apoyos=apoyos;        
         this.bolsa=bolsa;
+        dificultad = 5;
         vista = new Vista_Habilidad(this);
         switch(n){
-            case 1: PruebaHabilidad voluntad = new PruebaVoluntad(5, inv, apoyos, bolsa);
+            case 1: PruebaHabilidad voluntad = new PruebaVoluntad(getDificultad(), inv, apoyos, bolsa);
                     break;
-            case 2: PruebaHabilidad agilidad = new PruebaAgilidad(5, inv, apoyos, bolsa);
+            case 2: PruebaHabilidad agilidad = new PruebaAgilidad(getDificultad(), inv, apoyos, bolsa);
                     break;
-            case 3: PruebaHabilidad intelecto = new PruebaIntelecto(5, inv, apoyos, bolsa);
+            case 3: PruebaHabilidad intelecto = new PruebaIntelecto(getDificultad(), inv, apoyos, bolsa);
                     break;
-//            case 4: PruebaHabilidad combate = new PruebaCombate(5, inv, apoyos, bolsa);
+//            case 4: PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
+//                    break;//            case 4: PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
 //                    break;
         }
     }
@@ -81,6 +83,20 @@ public abstract class PruebaHabilidad {
         else if(n == 13) a = 0;//estrella. Con Paula.
         return a;
         //Retorna ese valor obtenido
+    }
+
+    /**
+     * @return the dificultad
+     */
+    public int getDificultad() {
+        return dificultad;
+    }
+
+    /**
+     * @param dificultad the dificultad to set
+     */
+    public void setDificultad(int dificultad) {
+        this.dificultad = dificultad;
     }
     
     

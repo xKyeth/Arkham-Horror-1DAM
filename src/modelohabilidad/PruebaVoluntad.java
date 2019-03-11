@@ -44,6 +44,7 @@ public class PruebaVoluntad extends PruebaHabilidad{
         }
     }
     
+    
     public int seleccionaApoyo(){
         //Seleccionar apoyo de las cartas disponibles. Hay que implementarlo.
         return sumaApoyos(apoyos);
