@@ -4,29 +4,31 @@
  * and open the template in the editor.
  */
 package Modelo;
+import CartasInvestigador.Apoyo;
 
 /**
  *
  * @author Cristian
  */
-public class CartaViejoLibroDeConocimiento extends Carta{
+public class CartaViejoLibroDeConocimiento extends Apoyo{
     
     RolandBanks roland;
-    private int voluntad;
-    private int coste;
-    private String nombre;
 
     
     public CartaViejoLibroDeConocimiento(){
-        voluntad = 1;
-        coste = 3;
-        nombre = "Viejo Libro De Conocimiento";
+        super(1, 0, 0, 0, 0, 0, 0, 3, 0, false);
     }
     
-    public void accion(){
+    @Override
+    public void Accion(){
         System.out.println("Agota el Viejo libro de conocimiento: Elige un investigador "
                 + "que esté en tu Lugar. Ese investigador busca 1 carta entre las 3 primeras "
                 + "cartas de su mazo, la roba, devuelve las cartas restantes a su mazo y lo baraja.");
         
+    }
+
+    @Override
+    public void verCarta() {
+    
     }
 }
