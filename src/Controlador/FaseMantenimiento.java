@@ -9,6 +9,30 @@ package Controlador;
  *
  * @author usuario
  */
-public class FaseMantenimiento {
+public class FaseMantenimiento extends Fase {
+    FaseMito Mito=new FaseMito();
     
+               public  FaseMantenimiento(){};
+    
+    
+     public   FaseMito RealizaFaseMantenimiento(){
+         
+           //Prepara todas las cartas agotadas
+        
+        //robar una carta y obtiene un recurso
+        UsoDeCartasInvestigador.robarCarta();
+        Roland.setNumeroRecursos(Roland.getNumeroRecursos()+1);
+        //si hay mas de 8 cartas elige y descarta 
+        
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         return Mito;
+}
 }
