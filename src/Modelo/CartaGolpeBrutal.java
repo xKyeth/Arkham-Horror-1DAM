@@ -6,7 +6,7 @@ package Modelo;
 import CartasInvestigador.Habilidad;
 
 
-public class CartaGolpeBrutal extends Habilidad{
+public abstract class CartaGolpeBrutal extends Habilidad{
     
     Investigador investigador;
     RolandBanks roland;

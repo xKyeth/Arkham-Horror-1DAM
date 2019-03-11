@@ -3,6 +3,7 @@ package Controlador;
 import java.util.ArrayList;
 import Modelo.BD;
 import Modelo.Carta;
+import Modelo.Investigador;
 import Modelo.MazoInvestigador;
 import Vista.Vista;
 
@@ -12,6 +13,7 @@ public class Control {
     private Vista vista;
     private MazoInvestigador mazo;
     private boolean salir=false;
+    Investigador investigador;
     
     public Control(){
         bd=new BD();
@@ -30,7 +32,7 @@ public class Control {
                     break;
                     
                 case 2:
-                    
+                    investigador.getRecursoFase();
                     vista.MenuPrincipal();
                     break;
                     
@@ -68,12 +70,6 @@ public class Control {
                     
                     vista.MenuPrincipal();
                     break;
-                    
-//                case 1 :
-//                   ArrayList<Carta> cartas=bd.getListaCartas();
-//                   vista.mostrarCartas(cartas);
-//                   vista.MenuPrincipal();
-//                   break;
 
                 default:
                    System.out.println("Opción incorrecta.");

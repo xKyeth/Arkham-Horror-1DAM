@@ -8,7 +8,7 @@ import CartasInvestigador.Apoyo;
  
 
 
-public class CartaEntrenamientoFisico extends Apoyo {
+public abstract class CartaEntrenamientoFisico extends Apoyo {
     
     Investigador investigador;
     RolandBanks roland;

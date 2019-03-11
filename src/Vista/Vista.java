@@ -42,10 +42,6 @@ public class Vista {
            int opcion=sc.nextInt();
 
           return opcion;
-           
-
-
-
     }
     
     public void mostrarMazos(ArrayList<MazoInvestigador> mazo){
