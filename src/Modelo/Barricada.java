@@ -18,7 +18,7 @@ public abstract class Barricada extends Evento {
     boolean puesta = false;
     
     public Barricada(){
-        super(1,1,1,0,0,0);
+        super("Barricada",false,1,1,1,0,0,0);
     }
     
     public void usarCarta(String lugar){

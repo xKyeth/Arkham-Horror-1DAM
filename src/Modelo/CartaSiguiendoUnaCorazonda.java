@@ -14,7 +14,7 @@ import CartasInvestigador.Apoyo;
 public class CartaSiguiendoUnaCorazonda extends Apoyo {
     
     public CartaSiguiendoUnaCorazonda() {
-        super(0, 2, 0, 0, 0, 0, 0, 2, 0, false);
+        super("Siguiendo una Corazonada",false,0, 2, 0, 0, 0, 0, 0, 2, 0, false);
     }
     
     public void usarCarta(Investigador inv){

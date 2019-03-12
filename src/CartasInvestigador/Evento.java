@@ -3,8 +3,8 @@ package CartasInvestigador;
 
 public abstract class Evento extends CartasInvestigador{
     
-    public Evento(int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
-        super(voluntad, intelecto, habilidad, combate, comodin, coste);
+    public Evento(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
+        super(nombreCarta,preparada,voluntad, intelecto, habilidad, combate, comodin, coste);
     }
     
     @Override

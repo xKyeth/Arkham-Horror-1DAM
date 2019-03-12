@@ -19,7 +19,7 @@ public class CartaAutomaticaDel45 extends Apoyo{
     Scanner sc = new Scanner(System.in);
     
     public CartaAutomaticaDel45(){
-      super(1, 0, 0, 0, 0, 0, 0, 4, 4, false);        
+      super("Automatica de 45",false,1, 0, 0, 0, 0, 0, 0, 4, 4, false);        
     }
     
     @Override

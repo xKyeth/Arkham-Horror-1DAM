@@ -3,8 +3,8 @@ package CartasInvestigador;
 
 public abstract class Habilidad extends CartasInvestigador{
     
-    public Habilidad(int voluntad, int intelecto, int habilidad, int combate, int comodin) {
-        super(voluntad, intelecto, habilidad, combate, comodin);
+    public Habilidad(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
+        super(nombreCarta, preparada,voluntad, intelecto, habilidad, combate, comodin);
     }
     
     @Override

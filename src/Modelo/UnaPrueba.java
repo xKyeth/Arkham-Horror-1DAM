@@ -6,7 +6,7 @@ public class UnaPrueba extends Evento{
     RolandBanks roland;
     
     public UnaPrueba() {
-        super(0, 2, 0, 0, 0, 1);
+        super("Una Prueba",false,0, 2, 0, 0, 0, 1);
     }
     
     

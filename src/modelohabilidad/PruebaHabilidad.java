@@ -30,7 +30,7 @@ public abstract class PruebaHabilidad {
         this.inv=inv;
         this.apoyos=apoyos;        
         this.bolsa=bolsa;
-        dificultad = 5;
+        dificultad = 5; // Hay que poner la dificultad de la prueba con algún método.
         vista = new Vista_Habilidad(this);
         switch(n){
             case 1: PruebaHabilidad voluntad = new PruebaVoluntad(getDificultad(), inv, apoyos, bolsa);

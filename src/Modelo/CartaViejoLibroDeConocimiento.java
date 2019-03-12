@@ -16,7 +16,7 @@ public class CartaViejoLibroDeConocimiento extends Apoyo{
 
     
     public CartaViejoLibroDeConocimiento(){
-        super(1, 0, 0, 0, 0, 0, 0, 3, 0, false);
+        super("Viejo Libro de Conocimiento",false,1, 0, 0, 0, 0, 0, 0, 3, 0, false);
     }
     
     @Override
