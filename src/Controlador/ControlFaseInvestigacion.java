@@ -7,23 +7,25 @@ import Modelo.BD;
 import Modelo.Carta;
 import Modelo.Investigador;
 import Modelo.MazoInvestigador;
-import Vista.Vista;
+import Modelo.RolandBanks;
+import Vista.VistaFaseInvestigacion;
 import java.util.Scanner;
 
-public class Control {
+public class ControlFaseInvestigacion {
     
     private BD bd;
-    private Vista vista;
+    private VistaFaseInvestigacion vista;
     private MazoInvestigador mazo;
     private boolean salir=false;
     Investigador investigador;
     EvitarEnemigo ev;
     uso_descarte_cartas uso;
+    RolandBanks roland;
     Scanner sc=new Scanner(System.in);
     
-    public Control(){
+    public ControlFaseInvestigacion(){
         bd=new BD();
-        vista=new Vista(this);
+        vista=new VistaFaseInvestigacion(this);
         vista.MenuPrincipal();
     }
     
@@ -49,29 +51,29 @@ public class Control {
                     break;
                     
                 case 3:
-                    //activarCapacidadCarta
+                    // Activar carta
                     vista.MenuPrincipal();
                     break;
                     
                 case 4:
-                    //me hace falta clases de Carlos
+                    // Enfrentar 
                     vista.MenuPrincipal();
                     break;
                     
                 case 5:
-                    
+                    // No existe método para investigar un lugar
                     vista.MenuPrincipal();
                     break;
                     
                 case 6:
                     System.out.println("Escribe el lugar a moverte:");
-//                    Lugar lugar=sc.nextLine();
-//                    investigador.moverPersonaje(lugares, opcion, investigador);
+                    String lugar=sc.nextLine();
+                    investigador.moverPersonaje(lugar, opcion, roland);
                     vista.MenuPrincipal();
                     break;
                     
                 case 7:
-                    
+                    // Jugar una carta de apoyo o evento
                     vista.MenuPrincipal();
                     break;
                     
@@ -87,7 +89,7 @@ public class Control {
                     break;
                     
                 case 9:
-                    
+                    // Combatir
                     vista.MenuPrincipal();
                     break;
 

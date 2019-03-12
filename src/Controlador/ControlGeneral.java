@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import Vista.Vista;
+import Vista.VistaFaseInvestigacion;
 
 
 /**
@@ -15,14 +15,14 @@ import Vista.Vista;
 public class ControlGeneral {
 
     boolean acabarPartida = false;
-    Vista v;
+    VistaFaseInvestigacion v;
    
 
 
     private Boolean investigacion=false;
 
     public ControlGeneral() {
-        v = new Vista(this);
+        v = new VistaFaseInvestigacion(this);
 
     }
 
