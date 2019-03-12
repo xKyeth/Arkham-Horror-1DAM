@@ -1,10 +1,14 @@
 package Modelo;
 
+/*
+* Autor: Juan Martin Ayala
+*/
 import CartasInvestigador.Habilidad;
         
 public class CartaDeduccion extends Habilidad{
     
     RolandBanks roland;
+    
     public CartaDeduccion(){
         super(0, 1, 0, 0, 0);  
     }
@@ -17,6 +21,7 @@ public class CartaDeduccion extends Habilidad{
         System.out.println("Sabía que había visto antes este símbolo. ¡Debo advertir a los demás antes de que sea demasiado tarde");
     }
     
+    @Override
     public void Accion(){
         //if (pruebaHabilidad.exito==true){
             

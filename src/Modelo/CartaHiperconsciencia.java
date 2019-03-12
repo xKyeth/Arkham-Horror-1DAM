@@ -1,5 +1,8 @@
 package Modelo;
 
+/*
+* Autor: Juan Martin Ayala
+*/
 import CartasInvestigador.Apoyo;
 import java.util.Scanner;
 
@@ -7,7 +10,7 @@ public class CartaHiperconsciencia extends Apoyo {
 
     RolandBanks roland;
 
-    public CartaHiperconsciencia(int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
+    public CartaHiperconsciencia() {
         super(0, 1, 0, 1, 0, 0, 0, 2, 0, false);
     }
     
