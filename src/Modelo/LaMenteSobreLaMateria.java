@@ -1,6 +1,7 @@
 package Modelo;
 
 import CartasInvestigador.Evento;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
@@ -10,7 +11,7 @@ public class LaMenteSobreLaMateria extends Evento {
    Controlador.ControlGeneral investigar;
 
     public LaMenteSobreLaMateria() {
-        super(0, 0, 1, 1, 0, 1);
+        super("La Mente Sobre La Materia",false,0, 0, 1, 1, 0, 1);
 
     }
     
@@ -25,10 +26,10 @@ public class LaMenteSobreLaMateria extends Evento {
                  +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
     }
     
-    public void usarCarta(){
-         if(investigar.getInvestigacion()== true){Accion(); restablecerValoresRoland();}
-        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
-     }
+//    public void usarCarta(){
+//         if(investigar.getInvestigacion()== true){Accion(); restablecerValoresRoland();}
+//        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
+//     }
     
     public void restablecerValoresRoland(){
         roland.setAgilidad(2);
@@ -75,7 +76,7 @@ public class LaMenteSobreLaMateria extends Evento {
 
         }
     }
-      catch(Exception e){
+      catch(InputMismatchException e){
           System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
           System.out.println(""); Accion();
       }  

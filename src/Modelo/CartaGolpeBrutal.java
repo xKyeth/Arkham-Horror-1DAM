@@ -6,13 +6,13 @@ package Modelo;
 import CartasInvestigador.Habilidad;
 
 
-public class CartaGolpeBrutal extends Habilidad{
+public abstract class CartaGolpeBrutal extends Habilidad{
     
     Investigador investigador;
     RolandBanks roland;
     
    public CartaGolpeBrutal(){
-    super(0, 0 , 0 , 1 ,0 );
+    super("Golpe Brutal",false,0, 0 , 0 , 1 ,0 );
    }
    
    public void Accion (){

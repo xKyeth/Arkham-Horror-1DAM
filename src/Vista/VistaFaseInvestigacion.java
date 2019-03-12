@@ -1,20 +1,20 @@
 package Vista;
 /**AUTOR ALEXANDRA**/
-import Controlador.Control;
+import Controlador.ControlFaseInvestigacion;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Modelo.BD;
 import Modelo.Carta;
 import Modelo.MazoInvestigador;
 
-public class Vista {
-    Control control;
+public class VistaFaseInvestigacion {
+    ControlFaseInvestigacion control;
     private BD bd;
     Scanner sc=new Scanner(System.in);
     int numRonda=1;
     int decisionesRestantes=3;
     
-    public Vista(Control control){
+    public VistaFaseInvestigacion(ControlFaseInvestigacion control){
         this.control=control;
     }
     
@@ -42,10 +42,6 @@ public class Vista {
            int opcion=sc.nextInt();
 
           return opcion;
-           
-
-
-
     }
     
     public void mostrarMazos(ArrayList<MazoInvestigador> mazo){

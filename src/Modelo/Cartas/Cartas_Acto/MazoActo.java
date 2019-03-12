@@ -16,9 +16,9 @@ public class MazoActo {
 
     public MazoActo() {
         Carta_Acto c;
-        mazo.add(c=new TheBarrier());
-        mazo.add(c=new Trapped());
-        mazo.add(c=new WHYDone());
+        mazo.add(c=new LaBarrera());
+        mazo.add(c=new Atrapados());
+        mazo.add(c=new QueHabeisHecho());
     }
     
     public ArrayList <Carta_Acto> verCartas(){

@@ -8,13 +8,12 @@ public class CartaAlijoEmergencia extends Evento{
     
     //listaCartas.add(new Carta("Alijo de emergencia.","Neutral",0,"Evento", 0,0,0,0, false, "Suministros"));
     // Obtén 3 recursos.
-    Investigador investigador;
     RolandBanks roland;
     int numVeces=2; //Ya que tiene 2 veces la carta en el mazo
     Scanner sc=new Scanner(System.in);
     
     public CartaAlijoEmergencia(){
-        super(0,0,0,0,0,0);
+        super("Alijo de Emergencia",false,0,0,0,0,0,0);
     }
     
     public void Accion(){
@@ -22,10 +21,13 @@ public class CartaAlijoEmergencia extends Evento{
         int respuesta=sc.nextInt();
         switch(respuesta){
             case 1: 
-                roland.setNumeroRecursos(roland.getNumeroRecursos() + 3);
+
+                roland.numeroRecursos=roland.numeroRecursos+3;
             break;
             case 2:
-                roland.setNumeroRecursos(roland.getNumeroRecursos() + 6);
+
+                roland.numeroRecursos=roland.numeroRecursos+6;
+
             break;
                 
             default:

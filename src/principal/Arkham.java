@@ -1,12 +1,12 @@
 package principal;
 
-import Controlador.Control;
+import Controlador.ControlFaseInvestigacion;
 
 /**AUTOR ALEXANDRA**/
 public class Arkham {
 
     public static void main(String[] args) {
-        Control control=new Control();
+        ControlFaseInvestigacion control=new ControlFaseInvestigacion();
     }
     
 }

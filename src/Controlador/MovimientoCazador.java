@@ -31,6 +31,7 @@ Lugar pasillo=new Pasillo();
     }
     
 public void moverseMapa1(Personaje p){
+    
    if (p.getLugar()==pasillo && RB.getLugar()!=pasillo){
    p.setLugar(RB.getLugar());
    } else if (p.getLugar()==RB.getLugar()){
