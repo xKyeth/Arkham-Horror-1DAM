@@ -11,7 +11,7 @@ public class CartaHiperconsciencia extends Apoyo {
     RolandBanks roland;
 
     public CartaHiperconsciencia() {
-        super(0, 1, 0, 1, 0, 0, 0, 2, 0, false);
+        super("Hiperconsciencia",false,0, 1, 0, 1, 0, 0, 0, 2, 0, false);
     }
     
     public void restablecerValoresRoland(){
