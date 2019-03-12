@@ -13,7 +13,7 @@ import CartasInvestigador.Apoyo;
 public class CartaDrMilanChristopher extends Apoyo{
 
     public CartaDrMilanChristopher() {
-        super(0, 1, 0, 0, 0, 1, 2, 4, 0, false);
+        super("Dr Milan Christopher",false,0, 1, 0, 0, 0, 1, 2, 4, 0, false);
     }
 
     

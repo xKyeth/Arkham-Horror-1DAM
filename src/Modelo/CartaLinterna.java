@@ -22,7 +22,7 @@ public class CartaLinterna extends Apoyo{
     Scanner sc = new Scanner(System.in);
     
     public CartaLinterna(){
-        super(1, 0, 0, 0, 0, 0, 0, 4, 3, false);        
+        super("Linterna",false,1, 0, 0, 0, 0, 0, 0, 4, 3, false);        
     }
     
     @Override
