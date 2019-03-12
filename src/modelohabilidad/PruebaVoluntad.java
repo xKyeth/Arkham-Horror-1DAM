@@ -16,9 +16,9 @@ import java.util.ArrayList;
 public class PruebaVoluntad extends PruebaHabilidad{
     
 
-    public PruebaVoluntad(int i, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(i, inv, apoyos, bolsa);
-        iniciarPruebaVoluntad(i);
+    public PruebaVoluntad(int dificultad, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(dificultad, inv, apoyos, bolsa);
+        iniciarPruebaVoluntad(dificultad);
     }
 
    public boolean iniciarPruebaVoluntad(int n){
@@ -34,7 +34,7 @@ public class PruebaVoluntad extends PruebaHabilidad{
 
     public boolean prueba(int a) {        
        boolean x = false;
-        int n = inv.getVoluntad() + seleccionaApoyo() - bolsa.BolsaDelCaos();
+        int n = inv.getVoluntad() + seleccionaApoyo() + bolsa.BolsaDelCaos();
         if (n < a){
             return x;
         }

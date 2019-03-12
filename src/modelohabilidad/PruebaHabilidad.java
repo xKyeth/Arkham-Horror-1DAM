@@ -19,27 +19,27 @@ import CartasInvestigador.Apoyo;
 public abstract class PruebaHabilidad {
     
     ArrayList<Apoyo> apoyos;
-    RolandBanks inv = new RolandBanks();
+    RolandBanks inv;
     Vista_Habilidad vista;
     BolsaDelCaos bolsa;
     uso_descarte_cartas mano;
     MazoInvestigador mazo;
     private int dificultad;
     
-    public PruebaHabilidad(int n, RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
+    public PruebaHabilidad(int prueba, RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
         this.apoyos=apoyos;        
         this.bolsa=bolsa;
-        dificultad = 5; // Hay que poner la dificultad de la prueba con algún método.
+        dificultad = 1; // Hay que poner la dificultad de la prueba con algún método.
         vista = new Vista_Habilidad(this);
-        switch(n){
-            case 1: PruebaHabilidad voluntad = new PruebaVoluntad(getDificultad(), inv, apoyos, bolsa);
+        switch(prueba){
+            case 1: PruebaHabilidad voluntad = new PruebaVoluntad(dificultad, inv, apoyos, bolsa);
                     break;
-            case 2: PruebaHabilidad agilidad = new PruebaAgilidad(getDificultad(), inv, apoyos, bolsa);
+            case 2: PruebaHabilidad agilidad = new PruebaAgilidad(dificultad, inv, apoyos, bolsa);
                     break;
-            case 3: PruebaHabilidad intelecto = new PruebaIntelecto(getDificultad(), inv, apoyos, bolsa);
+            case 3: PruebaHabilidad intelecto = new PruebaIntelecto(dificultad, inv, apoyos, bolsa);
                     break;
-//            case 4: PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
+//            case "combate": PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
 //                    break;//            case 4: PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
 //                    break;
         }
@@ -80,7 +80,7 @@ public abstract class PruebaHabilidad {
 //                    case 4: a = inv.getCombate(); break; // Con Miguel.
 //                }
 //            }//tentáculo
-        else if(n == 13) a = 0;//estrella. Con Paula.
+        else if(n == 13) a = inv.efectoEstrella();
         return a;
         //Retorna ese valor obtenido
     }

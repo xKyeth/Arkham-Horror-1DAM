@@ -17,9 +17,9 @@ import java.util.ArrayList;
 public class PruebaAgilidad extends PruebaHabilidad{
     
 
-    public PruebaAgilidad(int n, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(n, inv, apoyos, bolsa);        
-        iniciarPruebaAgilidad(n);
+    public PruebaAgilidad(int dificultad, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(dificultad, inv, apoyos, bolsa);        
+        iniciarPruebaAgilidad(getDificultad());
     }
 
    
