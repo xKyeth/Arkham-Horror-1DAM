@@ -49,7 +49,7 @@ public class Lugares {
         int x = getLugares().indexOf(a);
         int y = getLugares().indexOf(b);
         if(getConexion()[x][y]){
-            System.out.println("Estamos aquí: "+a.getNombre()+" y nos movemos aquí: "+b.getNombre());
+            System.out.println("Estamos aquí: "+a.getNombreCarta()+" y nos movemos aquí: "+b.getNombreCarta());
         }else{
             System.out.println("No puedes moverte.");
         }

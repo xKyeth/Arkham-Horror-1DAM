@@ -1,24 +1,28 @@
 
 package Lugar;
+import CartasInvestigador.Carta;
 
-public abstract class Lugar {
+public abstract class Lugar extends Carta{
     
     public int pistas;
     public int velo;
-    public String nombre;
     public String descripcionNR;
     public String descripcionR;
     public String obligado;
     public String instruccionesNR;
     public String instruccionesR;
     private int id;
+
+    public Lugar(String nombreCarta, boolean preparada) {
+        super(nombreCarta, preparada);
+    }
     
     
     //cuando se saca un lugar del mazo por primera vez y se coloca
     //en el escenario, se muestra la cara no revelada.
     
     public void caraNoRevelada(Lugar l){
-        System.out.println("Nos encontramos en: "+getNombre()+" ▓\n(El lugar no está revelado)");
+        System.out.println("Nos encontramos en: "+getNombreCarta()+" ▓\n(El lugar no está revelado)");
         System.out.println("Descripción:\n"+getDescripcionNR());
         if(getInstruccionesNR() != null){
             System.out.println("Instrucciones:\n"+getInstruccionesNR());
@@ -29,7 +33,7 @@ public abstract class Lugar {
     //la cara revelada.
     
     public void caraRevelada(Lugar l){
-        System.out.println("Nos encontramos en: "+getNombre()+" ░\n(El lugar está revelado)");
+        System.out.println("Nos encontramos en: "+getNombreCarta()+" ░\n(El lugar está revelado)");
         System.out.println("Descripción:\n"+getDescripcionR());
         if(getInstruccionesR() != null){
             System.out.println("Instrucciones:\n"+getInstruccionesR());
@@ -65,14 +69,6 @@ public abstract class Lugar {
 
     public void setVelo(int velo) {
         this.velo = velo;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public String getDescripcionNR() {
