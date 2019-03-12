@@ -31,4 +31,6 @@ public class CartaViejoLibroDeConocimiento extends Apoyo{
     public void verCarta() {
     
     }
+    
+    //MÉTODO RESTABLECER
 }
