@@ -10,7 +10,7 @@ public class CartaDeduccion extends Habilidad{
     RolandBanks roland;
     
     public CartaDeduccion(){
-        super(0, 1, 0, 0, 0);  
+        super("Deduccion",false,0, 1, 0, 0, 0);  
     }
     
     @Override
