@@ -6,7 +6,7 @@
 package Modelo.Cartas;
 
 
-import Modelo.Carta;
+import CartasInvestigador.Carta;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -68,14 +68,14 @@ public class Mazo {
     
     
         for (int i = 0; i < getC().size(); i++) {
-            getC().get(i).getNombre();
+            getC().get(i).getNombreCarta();
           
         }
         Scanner sc=new Scanner(System.in);
           String nombre= sc.next();
           
             for (int i = 0; i < getC().size(); i++) {
-            if (getC().get(i).getNombre()==nombre){
+            if (getC().get(i).getNombreCarta()==nombre){
             return getC().get(i);
             }else System.out.println("Esa carta no existe");
          
