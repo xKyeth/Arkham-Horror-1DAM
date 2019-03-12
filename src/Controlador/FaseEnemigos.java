@@ -19,10 +19,10 @@ public class FaseEnemigos extends Fase{
      public   FaseMantenimiento RealizaFaseEnemigos(){
          
           //Mover a monstruos Cazador
-        MovimientoCazador MC= new MovimientoCazador();
+        MovimientoCazador MovimientoCazador= new MovimientoCazador();
         
-        
-       MC.moverseMapa1( "");
+        Personaje x;
+       MovimientoCazador.moverseMapa1(x);
         
         
         
