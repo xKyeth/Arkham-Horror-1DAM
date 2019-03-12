@@ -17,7 +17,7 @@ public class CartaTextosMedicos extends Apoyo{
     RolandBanks roland;
 
     public CartaTextosMedicos(){
-        super(0, 0, 1, 0, 0, 0, 0, 2, 0, false);
+        super("Textos Medicos",false,0, 0, 1, 0, 0, 0, 0, 2, 0, false);
     }
     
     @Override

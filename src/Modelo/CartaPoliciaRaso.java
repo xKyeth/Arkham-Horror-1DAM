@@ -15,7 +15,7 @@ public class CartaPoliciaRaso extends Apoyo {
     
 
     public CartaPoliciaRaso(int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super(0, 0, 1, 0, 0, 2, 2, 4, 0, false);
+        super("Perro Guardian",false,0, 0, 1, 0, 0, 2, 2, 4, 0, false);
     }
 
     public void Accion(){

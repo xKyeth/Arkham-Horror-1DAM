@@ -13,7 +13,7 @@ public class CartaPrimerosAuxilios extends Apoyo{
     Scanner sc = new Scanner(System.in);
     
     public CartaPrimerosAuxilios(){
-        super(1, 0, 0, 0, 0, 0, 0, 2, 3, false);
+        super("Primeros Auxilios",false,1, 0, 0, 0, 0, 0, 0, 2, 3, false);
     }
     
     public void Accion(){

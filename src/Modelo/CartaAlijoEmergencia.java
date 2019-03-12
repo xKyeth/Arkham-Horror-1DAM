@@ -13,7 +13,7 @@ public class CartaAlijoEmergencia extends Evento{
     Scanner sc=new Scanner(System.in);
     
     public CartaAlijoEmergencia(){
-        super(0,0,0,0,0,0);
+        super("Alijo de Emergencia",false,0,0,0,0,0,0);
     }
     
     public void Accion(){
