@@ -7,10 +7,10 @@ import CartasInvestigador.Habilidad;
         
 public class CartaDeduccion extends Habilidad{
     
-    RolandBanks roland;
+    
     
     public CartaDeduccion(){
-        super("Deduccion",false,0, 1, 0, 0, 0);  
+        super("Deduccion",false,0 ,0, 1, 0, 0, 0);  
     }
     
     @Override
@@ -21,21 +21,18 @@ public class CartaDeduccion extends Habilidad{
         System.out.println("Sabía que había visto antes este símbolo. ¡Debo advertir a los demás antes de que sea demasiado tarde");
     }
     
-    @Override
-    public void Accion(){
+    
+    public void Accion(Investigador investigador){
         //if (pruebaHabilidad.exito==true){
             
-            if(roland.getLugar().pistas==0){
+            if(investigador.getLugar().pistas==0){
                 System.out.println("No quedan pistas");
             }else {
                 System.out.println("Obtienes pista extra");
-                roland.getLugar().pistas--;
-                roland.setNumeroPistas(roland.getNumeroPistas()+1);
+                investigador.getLugar().pistas--;
+                investigador.setNumeroPistas(investigador.getNumeroPistas()+1);
             }
         //}
-    }
-
-    
-        
+    }     
     
 }
