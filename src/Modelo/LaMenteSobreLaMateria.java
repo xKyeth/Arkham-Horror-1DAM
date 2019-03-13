@@ -40,7 +40,7 @@ public class LaMenteSobreLaMateria extends Evento {
 
     public void Accion(Investigador investigador) {
 
-        
+        Investigador inv = investigador;
         try{
         Scanner sc = new Scanner(System.in);
         System.out.println("Rápido. Juega esta carta sólo durante tu turno.");
@@ -51,34 +51,34 @@ public class LaMenteSobreLaMateria extends Evento {
 
         switch (respuesta) {
             case 1:
-                investigador.setIntelecto(investigador.getCombate());
-                investigador.setCombate(0);
+                inv.setIntelecto(inv.getCombate());
+                inv.setCombate(0);
                 System.out.println("Se ha cambiado con exito");
-                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
+                System.out.println("Intelecto "+inv.getIntelecto()+" Combate"+inv.getCombate()+ " Agilidad "+inv.getAgilidad());
                 break;
 
             case 2:
-                investigador.setIntelecto(investigador.getAgilidad());
-                investigador.setAgilidad(0);
+                inv.setIntelecto(inv.getAgilidad());
+                inv.setAgilidad(0);
                 System.out.println("Se ha cambiado con exito");
-                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
+                System.out.println("Intelecto "+inv.getIntelecto()+" Combate"+inv.getCombate()+ " Agilidad "+inv.getAgilidad());
                 break;
 
             case 3:
                 System.out.println("Usar valores por defecto"); 
-                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
+                System.out.println("Intelecto "+inv.getIntelecto()+" Combate"+inv.getCombate()+ " Agilidad "+inv.getAgilidad());
                 break;
 
             default:
                 System.out.println("Por favor introduzca correctamente los datos");
-              //  Accion(Investigador investigador);
+                Accion( inv);
                 break;
 
         }
     }
       catch(InputMismatchException e){
           System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
-        //  System.out.println(""); Accion(Investigador investigador);
+          System.out.println(""); Accion(inv);
       }  
     }
 

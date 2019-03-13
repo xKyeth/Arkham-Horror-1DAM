@@ -21,7 +21,7 @@ public abstract class QueEstaPasando extends CartaPlan {
     uso_descarte_cartas des = new uso_descarte_cartas();
     Random r = new Random();
     CartaPlan cp;
-     public QueEstaPasando(){
+    public QueEstaPasando(){
          
         titulo = "QueEstaPasando";
         
