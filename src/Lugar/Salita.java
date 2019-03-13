@@ -1,5 +1,7 @@
 package Lugar;
 
+import Modelo.Investigador;
+
 public class Salita extends Lugar {
 
     public Salita() {
@@ -13,6 +15,6 @@ public class Salita extends Lugar {
     }
 
     @Override
-    public void Accion() {
+    public void Accion(Investigador investigador) {
     }
 }

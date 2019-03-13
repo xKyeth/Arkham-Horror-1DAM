@@ -24,7 +24,7 @@ public class CartaCuchillo  extends Apoyo{
           "Descarta el Cuchillo: Combatir. Recibes +2  para este ataque. Este ataque inflige +1 de daño.");
      }
     
-    public void Accion(){
+    public void Accion(Investigador investigador){
         System.out.println("Arma cuerpo a cuerpo");
         System.out.println("Elige una opcion:");
         System.out.println("1-Combatir. Recibes +1 de combate para este ataque");
@@ -34,17 +34,17 @@ public class CartaCuchillo  extends Apoyo{
            switch (opcion){
                case 1:
                    if(descarte==false){
-                        roland.setCombate(roland.getCombate()+1);
-                        System.out.println("Combate actual: " +roland.getCombate());
+                        investigador.setCombate(investigador.getCombate()+1);
+                        System.out.println("Combate actual: " +investigador.getCombate());
                     }
                    
                 break;
                case 2: 
                     descarte=true;
-                    roland.setCombate(roland.getCombate()+2);
-                    System.out.println("Combate actual: " +roland.getCombate());
-                    roland.setDaño(roland.getDaño()+1);
-                    System.out.println("Daño actual: " +roland.getDaño());
+                    investigador.setCombate(investigador.getCombate()+2);
+                    System.out.println("Combate actual: " +investigador.getCombate());
+                    investigador.setDaño(investigador.getDaño()+1);
+                    System.out.println("Daño actual: " +investigador.getDaño());
                     break;
                        
            }

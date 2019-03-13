@@ -1,5 +1,6 @@
 package Modelo;
 import Lugar.Lugar;
+import Lugar.Lugares;
 import java.util.ArrayList;
 
 
@@ -42,9 +43,8 @@ public class Enemigo extends Personaje {
     }
     
     @Override
-    public void moverPersonaje(ArrayList<Lugar> lugares, int posicion, Personaje personaje) {
-        Lugar lugar=lugares.get(posicion);
-        personaje.setLugar(lugar);
+    public void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l) {
+       
     }
     
     
@@ -56,4 +56,6 @@ public class Enemigo extends Personaje {
       
       
 }
+
+   
 }

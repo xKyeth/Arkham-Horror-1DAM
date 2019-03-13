@@ -2,6 +2,7 @@ package Modelo;
 import Lugar.Lugar;
 import java.util.ArrayList;
 import java.util.Scanner;
+import Lugar.Lugares;
 
 public abstract class Investigador extends Personaje{
     
@@ -14,12 +15,55 @@ public abstract class Investigador extends Personaje{
     protected  String habilidadPropia;
     protected  MazoInvestigador mazo;
     protected int numeroRecursos = 5;
+    protected Lugares l;
 
     abstract int  efectoEstrella();
     
-    public void moverPersonaje(ArrayList<Lugar> lugares, int posicion, Personaje personaje) {
-       Lugar lugar=lugares.get(posicion);
-       personaje.setLugar(lugar);
+    @Override
+    public void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l) {
+       Scanner sn =new Scanner(System.in);
+       int opcion;
+       this.l=l;
+       Lugar lugaractual=investigador.getLugar();
+       Lugar lugarnuevo=null;
+        System.out.println("¿Dónde desea moverse?");
+        System.out.println("1-Estudio");
+        System.out.println("2-Pasillo");
+        System.out.println("3-Salita");
+        System.out.println("4-Sótano");
+        System.out.println("5-Ático");
+        opcion=sn.nextInt();
+        String nombrel="";
+        try{
+            switch(opcion){
+            case 1:nombrel="Estudio";
+            break;
+            case 2:nombrel="Pasillo";
+            break;
+            case 3:nombrel="Salita";
+            break;
+            case 4:nombrel="Sótano";
+            break;
+            case 5:nombrel="Ático";
+            break;
+            
+        }
+            
+          for(Lugar lugar:lugares){
+              if(nombrel.equals(lugar.getNombreCarta())){
+                  lugarnuevo=lugar;
+              }
+          }  
+         l.cambiarLugar(lugaractual, lugarnuevo);
+           
+            
+        }
+        catch(Exception e){
+            System.err.println("Error");
+        }
+        
+        
+   
     }
      
      public void getRecursoFase() {

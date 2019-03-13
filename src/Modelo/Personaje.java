@@ -1,5 +1,6 @@
 package Modelo;
 import Lugar.Lugar;
+import Lugar.Lugares;
 import java.util.ArrayList;
 
 
@@ -7,7 +8,7 @@ public abstract class  Personaje {
     protected int combate,agilidad,daño,vida,horror;
     protected Lugar lugar;
    
-    public abstract void moverPersonaje(ArrayList<Lugar> lugares,int posicion,Personaje personaje);
+    public abstract void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l);
  
     public Personaje(){
         

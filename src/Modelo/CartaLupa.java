@@ -7,7 +7,7 @@ import CartasInvestigador.Apoyo;
  * @author paula
  */
 public class CartaLupa extends Apoyo{
-    RolandBanks roland;
+   
     public CartaLupa() {
         super("Lupa",false,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
         
@@ -23,9 +23,9 @@ public class CartaLupa extends Apoyo{
      }
     
     @Override
-     public void Accion() {
+     public void Accion(Investigador investigador) {
          //Mientras se esté realizando la acción de investigar 
-        roland.setIntelecto(roland.getIntelecto()+1);
+        investigador.setIntelecto(investigador.getIntelecto()+1);
     }
     
 }
