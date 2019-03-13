@@ -10,15 +10,15 @@ import CartasInvestigador.Apoyo;
  * @author usuario
  */
 public class CartaPoliciaRaso extends Apoyo {
-    //Enemigo enemigo;
+    Enemigo enemigo;
     Investigador investigador;
     
 
     public CartaPoliciaRaso(int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super("Perro Guardian",false,0, 0, 1, 0, 0, 2, 2, 4, 0, false);
+        super("Policia Raso",false,0, 0, 1, 0, 0, 2, 2, 4, 0, false);
     }
 
-    public void Accion(){
+    public void Accion(Investigador investigador){
         int x ;
         x = investigador.getCombate() +1;
         investigador.setCombate(x);
@@ -27,15 +27,15 @@ public class CartaPoliciaRaso extends Apoyo {
     
     public void Habilidad(){
         //Si hay un enemigo en el lugar, se le inflige un punto de daño y se descarta
-        //if (investigador.getLugar()== //enemigo.getLugar()){
-            //enemigo.setSalud(enemigo.getSalud()- 1);
-        //}
-    //else{
-    /*
+        if (investigador.getLugar()== enemigo.getLugar()){
+            enemigo.setVida(enemigo.getVida()- 1);
+        }
+    else{
+    
         System.out.println(" No había ningún enemigo cerca...");
-    */
+    
         
-    //}
+    }
 }
 
     @Override
