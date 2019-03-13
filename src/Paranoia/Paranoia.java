@@ -7,6 +7,7 @@ package Paranoia;
 
 import CartasMito.Traicion;
 import Modelo.Investigador;
+import Modelo.RolandBanks;
 import java.util.ArrayList;
 
 /**
@@ -14,31 +15,22 @@ import java.util.ArrayList;
  * @author usuario
  */
 public class Paranoia extends Traicion {
-    ArrayList<Object> r;
-    private boolean preparado=true;
+    
+   
     public Paranoia(){
-    super("Paranoia",isPreparado());
+    super("Paranoia",false);
    }
-       @Override
-   public void Accion(Investigador Roland) {
+      
+   public void Accion(Investigador R) {
          System.out.println("¿Que ha sido ese ruido?"); 
          
-    Roland.setNumeroRecursos(0);
+    R.setNumeroRecursos(0);
     }
 
     /**
      * @return the preparado
      */
-    public boolean isPreparado() {
-        return preparado;
-    }
-
-    /**
-     * @param preparado the preparado to set
-     */
-    public void setPreparado(boolean preparado) {
-        this.preparado = preparado;
-    }
+  
 
    
     
