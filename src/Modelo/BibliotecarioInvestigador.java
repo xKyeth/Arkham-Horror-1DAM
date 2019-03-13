@@ -7,7 +7,7 @@ package Modelo;
 import CartasInvestigador.Apoyo;
 import ClaseMano.uso_descarte_cartas;
 import Modelo.Cartas.Mazo;
-import Modelo.Carta;
+import CartasInvestigador.Carta;
 /**
  *
  * @author usuario
@@ -15,7 +15,7 @@ import Modelo.Carta;
 public class BibliotecarioInvestigador extends Apoyo  {
     uso_descarte_cartas mano;
     Mazo mazo;
-
+    Carta carta; 
     public BibliotecarioInvestigador(String nombreCarta, boolean preparada, int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
         super("Bibliotecario Investigador", false, 0, 0, 0, 1, 0, 1, 1, 2, 0, false);
     }
@@ -25,8 +25,8 @@ public class BibliotecarioInvestigador extends Apoyo  {
         while (x<0){
             for (int i = 0; i < mazo.getC().size() ; i++) {
                 if ("Viejo Libro de Conocimiento".equals(mazo.getC().get(i).getNombreCarta())){
-                    Carta carta = mazo.getC().get(i);
-                    mano.getCartasmano().add(e);
+                    carta = mazo.getC().get(i);
+                    
                     
                 }
                 
