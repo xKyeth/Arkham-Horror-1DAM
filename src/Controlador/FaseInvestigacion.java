@@ -53,7 +53,6 @@ public class FaseInvestigacion extends Fase {
                 case 6: //Moverse
 
                     
-                    Roland.moverPersonaje(lugares.getLugares(), " ", Roland);
                     
                     
                        

@@ -39,13 +39,13 @@ public class ControlGeneral {
         FaseMantenimiento FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
         Ronda++;
         while (true != acabarPartida) {
-System.out.println(Ronda);
+        System.out.println(Ronda);
             FaseMito FaseMito=FaseMantenimiento.RealizaFaseMantenimiento();
             
             FaseInvestigacion=FaseMito.RealizaFaseMito();
             
              setInvestigacion((Boolean) true);
-            FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
+          FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
             setInvestigacion((Boolean) false);
             
             FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();

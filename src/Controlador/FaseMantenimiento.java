@@ -23,7 +23,7 @@ public class FaseMantenimiento extends Fase {
         UsoDeCartasInvestigador.robarCarta();
         Roland.setNumeroRecursos(Roland.getNumeroRecursos()+1);
         //si hay mas de 8 cartas elige y descarta 
-        
+        UsoDeCartasInvestigador.descartar8Cartas();
          
          
          
