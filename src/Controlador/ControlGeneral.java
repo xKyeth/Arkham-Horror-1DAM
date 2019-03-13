@@ -16,6 +16,7 @@ public class ControlGeneral {
 
     boolean acabarPartida = false;
     VistaFaseInvestigacion v;
+    int Ronda=1;
    
 
 
@@ -27,28 +28,28 @@ public class ControlGeneral {
     }
 
     public void ComenzarJuego() {
-
+        System.out.println(Ronda);
         FasePrepararPartida FasePrepararPartida=new FasePrepararPartida();
         
         setInvestigacion((Boolean) true);
-        FaseInvestigacion FaseInvestigacion=new FaseInvestigacion();
-        FaseEnemigos FaseEnemigos=FaseInvestigacion.RealizarFaseInvestigacion(v.MenuPrincipal());
+        ControlFaseInvestigacion FaseInvestigacion=new ControlFaseInvestigacion();
+        FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
         setInvestigacion((Boolean) false);
       
         FaseMantenimiento FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
-        
+        Ronda++;
         while (true != acabarPartida) {
-
+System.out.println(Ronda);
             FaseMito FaseMito=FaseMantenimiento.RealizaFaseMantenimiento();
             
             FaseInvestigacion=FaseMito.RealizaFaseMito();
             
              setInvestigacion((Boolean) true);
-            FaseEnemigos=FaseInvestigacion.RealizarFaseInvestigacion(v.MenuPrincipal());
+            FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
             setInvestigacion((Boolean) false);
             
             FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
-           
+           Ronda++;
         }
 
     }
