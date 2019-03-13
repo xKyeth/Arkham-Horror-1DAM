@@ -23,30 +23,29 @@ public abstract class QueEstaPasando extends CartaPlan {
     CartaPlan cp;
     public QueEstaPasando(){
          
-        titulo = "QueEstaPasando";
+        cp.setTitulo("QueEstaPasando");
         
-        texto ="La noche está muy avanzada. Estáis metidos en tu estudio, investigando "
+        cp.setTexto("La noche está muy avanzada. Estáis metidos en tu estudio, investigando "
                 + "las sangrientas desapariciones que han estado teniendo lugar en la "
                 + "región. Tras varias horas de investigación, oís un extraño cántico"
                 + " proveniente de la salita que hay al final del pasillo. Al mismo "
-                + "tiempo, se oye un movimiento de tierra, como si algo estuviera cavando bajo el suelo";
+                + "tiempo, se oye un movimiento de tierra, como si algo estuviera cavando bajo el suelo");
         
-        accion="Tu casa sigue cambiando ante tus ojos. Las paredes se descomponen,"
+        cp.setAccion("Tu casa sigue cambiando ante tus ojos. Las paredes se descomponen,"
                 + " y el suelo de muchas habitaciones se ha convertido en tierra. "
                 + "Es casi como si os hubieran transportado a un lugar totalmente"
-                + " distinto, aunque aquí y allí reconocéis elementos de tu antigua casa.";
+                + " distinto, aunque aquí y allí reconocéis elementos de tu antigua casa.");
         
         
-        perdicion = 3;
+        cp.setPerdicion(3);
    
      }
      
      public void usarCarta(){
          
-         //Si la perdicion que hay es mayor o igual al valor de la carta, se usara
-         
+         //Si la perdicion que hay es mayor o igual al valor de la carta, se usara         
          //Hace falta la perdicion que hay en juego para compararla con la carta
-         //if(perdiciongeneral >= cp.getPerdicion()){
+         if( cp.getPerdicionEnJuego() >= cp.getPerdicion()){
          System.out.println("Elija opcion");
          System.out.println("Cada investigador descarta una carta aleatoriamente");
          System.out.println("El investigador jefe recibe 2 puntos de horror");
@@ -64,7 +63,7 @@ public abstract class QueEstaPasando extends CartaPlan {
          
          
          
-     //}
+        }
          
          
      }

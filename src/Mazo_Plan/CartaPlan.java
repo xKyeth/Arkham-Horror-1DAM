@@ -15,10 +15,11 @@ import Modelo.PruebasCombate;
  */
 public abstract class CartaPlan {
     
-    String titulo;
-    String texto;
-    String accion;
-    int perdicion;
+    private String titulo;
+    private String texto;
+    private String accion;
+    private int perdicion;
+    private int perdicionEnJuego;
     
     
     
@@ -79,6 +80,20 @@ public abstract class CartaPlan {
      */
     public void setPerdicion(int perdicion) {
         this.perdicion = perdicion;
+    }
+
+    /**
+     * @return the perdicionEnJuego
+     */
+    public int getPerdicionEnJuego() {
+        return perdicionEnJuego;
+    }
+
+    /**
+     * @param perdicionEnJuego the perdicionEnJuego to set
+     */
+    public void setPerdicionEnJuego(int perdicionEnJuego) {
+        this.perdicionEnJuego = perdicionEnJuego;
     }
    
    

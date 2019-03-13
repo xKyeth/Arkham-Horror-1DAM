@@ -13,11 +13,19 @@ import java.util.ArrayList;
  */
 public class MazoPlan {
     
-    ArrayList<CartaPlan> cartasPlan = new ArrayList<>();
+    ArrayList<MazoPlan> mazoPlan = new ArrayList<>();
+    
+    
+    public MazoPlan(String nombre){
+        
+    }
+    
     
     public void CartasPlan(){
        
-       
+       mazoPlan.add(new MazoPlan("QueEstaPasando"));
+       mazoPlan.add(new MazoPlan("El asceso de los gules"));
+       mazoPlan.add(new MazoPlan("¡Están saliendo!")); 
        
    }
     
