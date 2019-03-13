@@ -10,32 +10,22 @@ import Modelo.RolandBanks;
  *
  * @author miguel
  */
-public class CartaTrentaYOchoEspecialRoland {
+public class CartaTrentaYOchoEspecialRoland extends Carta{
         RolandBanks inv;
-        
-      private  String clase;
-      private  String tipo;
-      private  boolean mano;
-      private  String objeto;
-      private  String subObjeto;
-      private  int coste=3;
+        Enemigo ene;
       private  int usos;
     public CartaTrentaYOchoEspecialRoland() {
-      clase="Neutral";
-      tipo="Apoyo";
-      objeto="Arma";
-      String subObjeto="Arma de fuego";
-      coste=3;
+      super("38 Especial de Roland", "Neutral", 3, "Arma", 1, 0, 0, 1, false, "Arma de fuego");
       usos=4;
     }
     public void usaCarta(){
-//        if(inv)
-//        if(/**hay pistas**/){
-//            inv.setDaño(inv.getDaño()+3);
-//        }else{
-//            inv.setDaño(inv.getDaño()+1);
-//        }
-//        usos--;
+       
+        if(inv.getLugar().getPistas()>0){
+            ene.setVida(ene.getVida()-(inv.getDaño()+3));
+        }else{
+            ene.setVida(ene.getVida()-(inv.getDaño()+1));
+        }
+        usos--;
     }
     
 }
