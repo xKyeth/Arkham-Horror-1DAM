@@ -6,6 +6,7 @@
 package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
+import Modelo.Enemigo;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -16,68 +17,48 @@ import java.util.LinkedList;
  */
 public class PruebaCombate extends PruebaHabilidad{
 
+     Enemigo enemigo;
+     LinkedList<Enemigo> pilaVictoria;
+    
     public PruebaCombate(int n, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
         super(n, inv, apoyos, bolsa);
-        iniciarPruebaCombate(n);
     }
     
-    public void iniciarPruebaCombate(int n){
-        vista.pruebaHabilidad(n);
-        prueba(n);
+    public void iniciarPruebaCombate(){
+        enfrenta();
+        combate();
+        
+    }
+    public void nuevoEnemigo(Enemigo ene){
+        this.enemigo=ene;
     }
     
-    public boolean prueba(int a){
-        boolean x = false;
-        return x;
+    public boolean enfrenta(){
+        //Si gana el investigador el resultado es true, si es el enemigo el resultado es false
+        boolean victoria=false;
+        if(inv.getCombate()>=enemigo.getCombate()){
+            victoria=true;
+        }else{
+            victoria=false;
+        }
+        return victoria;
     }
-        /**Me falta el enemigo y el investigador, he basado 
-     esta parte asumiendo que en los atributos de cada uno
-     se van a añadir (es importante) los atributos:
-     salud(int),valorCombate(int),modificadorDaño(int).
-     Tambien es importante crear para la clase Enemigo y Investigador
-     un enum para los estados VIVO y MUERTO (lo podriamos llamar estado o integridadPersonaje)
-     ahora mismo tengo controlados los estados con true o false de forma
-     que si hacemos lo del enum pueda modificarse facilmente
-     pero la otra forma me parece mas eficiente**/
+    public void combate(){
+        if(enfrenta()){
+           enemigo.setVida(enemigo.getVida()-(1+inv.getDaño()));
+        }else{
+            inv.setVida(inv.getVida()-enemigo.getDaño());
+        }
+    }
+ 
     
-//    Enemigo enemigo;
-//    LinkedList<Enemigo> pilaVictoria;
-    
-//    public void nuevoEnemigo(){
-//        this.enemigo=new Enemigo();
-//    }
-    
-    
-//    public void enfrenta(){
-//        int vidainv=inv.getVida();
-//        int vidaene=inv.getVida();
-//        if(inv.getDaño()>=enemigo.getDaño){
-//            enemigo.getVida()=enemigo.getVida()-(1+inv.getDaño());
-//        }else{
-//            vidainv=vidainv-enemigo.getDaño;
-//        }
-//    }
-//    public boolean muerteEnemigo(){
-//        boolean muerto=false;
-//        if(enemigo.getVida()<=0){
-//            muerto=true;
-//            /**if(Enemigo tiene puntos de victoria){
-//                pilaVictoria.push(enemigo);
-//            }**/
-//        }
-//        return muerto;
-//    }
-//    public boolean muerteInvestigador(){
-//        boolean muerto=false;
-//        if(inv.getVida()<=0){
-//            muerto=true;
-//        }
-//        return muerto;
-//    }
 
-//    public LinkedList<Enemigo> getPilaVictoria() {
-//        return pilaVictoria;
-//    }
+    
+
+    @Override
+    public boolean prueba(int a) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     
     
