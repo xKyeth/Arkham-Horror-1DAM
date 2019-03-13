@@ -5,24 +5,42 @@
  */
 package Paranoia;
 
+import CartasMito.Traicion;
+import Modelo.Investigador;
 import java.util.ArrayList;
 
 /**
  *
  * @author usuario
  */
-public class Paranoia {
+public class Paranoia extends Traicion {
     ArrayList<Object> r;
+    private boolean preparado=true;
     public Paranoia(){
-    
+    super("Paranoia",isPreparado());
    }
-    
-    public ArrayList<Object> Paranoia(ArrayList<Object> recurso){
-        System.out.println("¿Que ha sido ese ruido?");
-    this.r=recurso;
-    r.removeAll(r);
-    return r;
+       @Override
+   public void Accion(Investigador Roland) {
+         System.out.println("¿Que ha sido ese ruido?"); 
+         
+    Roland.setNumeroRecursos(0);
     }
+
+    /**
+     * @return the preparado
+     */
+    public boolean isPreparado() {
+        return preparado;
+    }
+
+    /**
+     * @param preparado the preparado to set
+     */
+    public void setPreparado(boolean preparado) {
+        this.preparado = preparado;
+    }
+
+   
     
     
     
