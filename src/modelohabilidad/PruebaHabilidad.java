@@ -24,27 +24,27 @@ public abstract class PruebaHabilidad {
     BolsaDelCaos bolsa;
     uso_descarte_cartas mano;
     MazoInvestigador mazo;
-    private int dificultad;
+    protected int dificultad;
     
-    public PruebaHabilidad(int prueba, RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
+    
+    public PruebaHabilidad(RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
         this.apoyos=apoyos;        
         this.bolsa=bolsa;
-        dificultad = 1; // Hay que poner la dificultad de la prueba con algún método.
         vista = new Vista_Habilidad(this);
-        switch(prueba){
-            case 1: PruebaHabilidad voluntad = new PruebaVoluntad(dificultad, inv, apoyos, bolsa);
-                    break;
-            case 2: PruebaHabilidad agilidad = new PruebaAgilidad(dificultad, inv, apoyos, bolsa);
-                    break;
-            case 3: PruebaHabilidad intelecto = new PruebaIntelecto(dificultad, inv, apoyos, bolsa);
-                    break;
-//            case "combate": PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
-//                    break;//            case 4: PruebaHabilidad combate = new PruebaCombate(dificultad, inv, apoyos, bolsa);
-//                    break;
-        }
     }
     
+    public boolean iniciarPrueba(int dificultad){
+        vista.pruebaHabilidad(dificultad);
+        boolean x = prueba(dificultad);
+        if(x == true){
+            vista.resultadoPruebaExito();
+        }else{
+            vista.resultadoPruebaFracaso();
+        }
+        return x;
+    }
+
     public abstract boolean prueba(int a);
     
     public int sumaApoyos(ArrayList<Apoyo> apoyos){

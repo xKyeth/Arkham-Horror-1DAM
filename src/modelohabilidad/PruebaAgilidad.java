@@ -16,25 +16,10 @@ import java.util.ArrayList;
  */
 public class PruebaAgilidad extends PruebaHabilidad{
     
-
-    public PruebaAgilidad(int dificultad, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(dificultad, inv, apoyos, bolsa);        
-        iniciarPruebaAgilidad(getDificultad());
-    }
-
-   
-
-    public boolean iniciarPruebaAgilidad(int n){
-        vista.pruebaHabilidad(n);
-        boolean x = prueba(n);
-        if(x == true){
-            vista.resultadoPruebaExito();
-        }else{
-            vista.resultadoPruebaFracaso();
-        }
-        return x;
-    }
     
+    public PruebaAgilidad(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(inv, apoyos, bolsa);        
+    }    
 
     public boolean prueba(int a) {
         boolean x = false;
