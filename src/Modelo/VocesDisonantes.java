@@ -12,6 +12,8 @@ public class VocesDisonantes extends Traicion{
 
     @Override
     public void Accion(Investigador investigador) {
+        
+        
       
     }
 

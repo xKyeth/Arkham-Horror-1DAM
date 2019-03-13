@@ -10,10 +10,12 @@ public abstract  class Carta {
     
     private String nombreCarta;
     private boolean preparada;
+    private int fichaPerdicion;
     
-    public Carta(String nombreCarta, boolean preparada){
+    public Carta(String nombreCarta, boolean preparada,int fichaPerdicion){
         this.nombreCarta = nombreCarta;
         this.preparada = preparada;
+        this.fichaPerdicion = fichaPerdicion;
     }
     
     public abstract void Accion(Investigador investigador);
@@ -35,6 +37,16 @@ public abstract  class Carta {
     public void setPreparada(boolean preparada) {
         this.preparada = preparada;
     }
+
+    public int getFichaPerdicion() {
+        return fichaPerdicion;
+    }
+
+    public void setFichaPerdicion(int fichaPerdicion) {
+        this.fichaPerdicion = fichaPerdicion;
+    }
+    
+    
     
     
     

@@ -6,8 +6,8 @@ import Modelo.Investigador;
 
 public abstract class Apoyo extends CartasInvestigador{
     
-    public Apoyo(String nombreCarta,boolean preparada,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super(nombreCarta,preparada,voluntad, intelecto, combate, habilidad, comodin, vida, cordura, coste, suministro, comprada);
+    public Apoyo(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
+        super(nombreCarta,preparada, fichaPerdicion,voluntad, intelecto, combate, habilidad, comodin, vida, cordura, coste, suministro, comprada);
     }
     
     @Override
