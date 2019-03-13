@@ -8,20 +8,21 @@ import java.util.Scanner;
 
 public class CartaHiperconsciencia extends Apoyo {
 
-    RolandBanks roland;
+
 
     public CartaHiperconsciencia() {
-        super("Hiperconsciencia",false,0, 1, 0, 1, 0, 0, 0, 2, 0, false);
+        super("Hiperconsciencia",false,0 ,0 , 1, 0, 1, 0, 0, 0, 2, 0, false);
     }
     
-    public void restablecerValoresRoland(){
-        roland.setAgilidad(2);
-        roland.setCombate(4);
-        roland.setIntelecto(3);
+    public void restablecerValoresRoland(Investigador investigador){
+        investigador.setAgilidad(2);
+        investigador.setCombate(4);
+        investigador.setIntelecto(3);
         System.out.println("Valores restablecidos.");
     }  
     
-    public void Accion() {
+    public void Accion(Investigador investigador) {
+        Investigador inv=investigador;
         try {
             Scanner sc = new Scanner(System.in);
             System.out.println("Elige una opcion");
@@ -32,21 +33,21 @@ public class CartaHiperconsciencia extends Apoyo {
             switch (respuesta) {
                 case 1:
                     System.out.println("Obtienes +1 de intelecto");
-                    roland.setIntelecto(roland.getIntelecto() + 1);
+                    inv.setIntelecto(inv.getIntelecto() + 1);
                     break;
                 case 2:
                     System.out.println("Obtienes +1 de agilidad");
-                    roland.setAgilidad(roland.getAgilidad() + 1);
+                    inv.setAgilidad(inv.getAgilidad() + 1);
                     break;
                 default:
                     System.out.println("No se ha introducido una opcion valida");
-                    Accion();
+                    Accion(inv);
                     break;
 
             }
         } catch (Exception e) {
             System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
-            Accion();
+            Accion(inv);
         }
 
     }

@@ -19,7 +19,7 @@ public abstract class DestrezaManual extends Habilidad {
     
     
     public DestrezaManual(){
-        super("Destreza Manual",false,0, 0, 2, 0, 0);
+        super("Destreza Manual",false,0,0, 0, 2, 0, 0);
     }
     
     

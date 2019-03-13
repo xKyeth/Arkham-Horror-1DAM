@@ -17,20 +17,21 @@ public class CartaTextosMedicos extends Apoyo{
     RolandBanks roland;
 
     public CartaTextosMedicos(){
-        super("Textos Medicos",false,0, 0, 1, 0, 0, 0, 0, 2, 0, false);
+        super("Textos Medicos",false, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, false);
     }
     
+    
     @Override
-    public void Accion(){
+    public void Accion(Investigador inv){
         
         System.out.println("Elige un investigador que esté en tu Lugar y realiza "
                 + "una prueba de intelecto(2). Si tienes éxito, cúrale 1 punto de daño a "
                 + "ese investigador. Si fracasas, inflígele 1 punto de daño a ese "
                 + "investigador.");
         if(prueba.prueba(prueba.getDificultad())== true){
-            roland.setDaño(roland.getDaño()+1);
+            inv.setDaño(inv.getDaño()+1);
         }else{
-            roland.setDaño(roland.getDaño()-1);
+            inv.setDaño(inv.getDaño()-1);
         }
     }
 
@@ -40,6 +41,7 @@ public class CartaTextosMedicos extends Apoyo{
     }
     
     //MÉTODO RESTABLECER
+
 
     
 }
