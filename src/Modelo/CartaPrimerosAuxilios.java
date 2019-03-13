@@ -16,7 +16,7 @@ public class CartaPrimerosAuxilios extends Apoyo{
         super("Primeros Auxilios",false,1, 0, 0, 0, 0, 0, 0, 2, 3, false);
     }
     
-    public void Accion(){
+    public void Accion(Investigador investigador){
         while(suministros>0){
             // Prueba de habilidad para voluntad
 

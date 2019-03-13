@@ -16,7 +16,7 @@ public class CartaAlijoEmergencia extends Evento{
         super("Alijo de Emergencia",false,0,0,0,0,0,0);
     }
     
-    public void Accion(){
+    public void Accion(Investigador investigador){
         System.out.println("Escribe 1 para utilizar solo 1 carta o 2 para utilizar las 2 cartas de alijo de emergencia que tienes en tu mano.");
         int respuesta=sc.nextInt();
         switch(respuesta){
