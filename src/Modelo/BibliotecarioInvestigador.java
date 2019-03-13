@@ -17,7 +17,7 @@ public class BibliotecarioInvestigador extends Apoyo  {
     Mazo mazo;
     Carta carta; 
     public BibliotecarioInvestigador(String nombreCarta, boolean preparada, int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super("Bibliotecario Investigador", false, 0, 0, 0, 1, 0, 1, 1, 2, 0, false);
+        super("Bibliotecario Investigador", false, 0, 0, 0, 1, 0, 1, 1, 2, 0, 0, false);
     }
     @Override
     public void Accion(Investigador investigador){
