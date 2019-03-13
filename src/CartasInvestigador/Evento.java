@@ -6,8 +6,8 @@ import Modelo.Investigador;
 
 public abstract class Evento extends CartasInvestigador{
     
-    public Evento(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
-        super(nombreCarta,preparada,voluntad, intelecto, habilidad, combate, comodin, coste);
+    public Evento(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
+        super(nombreCarta,preparada,fichaPerdicion,voluntad, intelecto, habilidad, combate, comodin, coste);
     }
     
     @Override

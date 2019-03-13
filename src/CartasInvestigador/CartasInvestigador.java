@@ -16,8 +16,8 @@ public abstract class CartasInvestigador extends Carta{
     protected int suministro;
     protected boolean comprada;
 
-    public CartasInvestigador(String nombreCarta,boolean preparada, int voluntad, int intelecto,int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super(nombreCarta,preparada);
+    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion, int voluntad, int intelecto,int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
+        super(nombreCarta,preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
@@ -30,8 +30,8 @@ public abstract class CartasInvestigador extends Carta{
         this.comprada = comprada;
     } //APOYO
 
-    public CartasInvestigador(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
-         super(nombreCarta,preparada);
+    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
+         super(nombreCarta,preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
@@ -40,8 +40,8 @@ public abstract class CartasInvestigador extends Carta{
         this.coste = coste;
     } //EVENTO
 
-    public CartasInvestigador(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
-        super(nombreCarta, preparada);
+    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
+        super(nombreCarta, preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
