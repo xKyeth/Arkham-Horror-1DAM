@@ -11,7 +11,7 @@ public class LaMenteSobreLaMateria extends Evento {
    Controlador.ControlGeneral investigar;
 
     public LaMenteSobreLaMateria() {
-        super("La Mente Sobre La Materia",false,0, 0, 1, 1, 0, 1);
+        super("La Mente Sobre La Materia",false,0,0, 0, 1, 1, 0, 1);
 
     }
     

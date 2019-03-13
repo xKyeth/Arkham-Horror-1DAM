@@ -11,8 +11,8 @@ public class uso_descarte_cartas {
     
     Scanner entrada = new Scanner(System.in);
     
-    LinkedList<Carta> descarte = new LinkedList<>();
-    LinkedList<Carta> cartasmano = new LinkedList<>();
+    private LinkedList<Carta> descarte = new LinkedList<>();
+    private LinkedList<Carta> cartasmano = new LinkedList<>();
     Carta c;
     MazoInvestigador mazo = new MazoInvestigador();
     
@@ -22,18 +22,18 @@ public class uso_descarte_cartas {
     }
     
     public int numeroCartasMano() {
-        return cartasmano.size();
+        return getCartasmano().size();
         
     }
     
     public void decartarCarta(int x) {
-        descarte.add(cartasmano.get(x));
+        getDescarte().add(getCartasmano().get(x));
         
     }
     
     public void robarCarta() {
         
-        cartasmano.addLast(c);
+        getCartasmano().addLast(c);
         mazo.eliminarCarta(c);
     }
         //Fernando               
@@ -58,8 +58,8 @@ public class uso_descarte_cartas {
             }
             System.out.println("Que carta quieres utilizar?");
             int x = entrada.nextInt();
-            cartasmano.add(mazo.getListaCartasMazo().get(x));
-            descarte.add(mazo.getListaCartasMazo().get(x));
+            getCartasmano().add(mazo.getListaCartasMazo().get(x));
+            getDescarte().add(mazo.getListaCartasMazo().get(x));
             mazo.getListaCartasMazo().get(x);
             contador++;
         }
@@ -73,7 +73,7 @@ public class uso_descarte_cartas {
         int contador = 0;
         while (contador<8) {
             mazo.getListaCartasMazo().remove(y);
-            descarte.add(mazo.getListaCartasMazo().get(y));
+            getDescarte().add(mazo.getListaCartasMazo().get(y));
             y = y-1;
             contador++;
         }
@@ -82,27 +82,27 @@ public class uso_descarte_cartas {
      
     //metodo de prueba para mostrar el linkedlist de descarte
     public void mostrarDescartes() {
-        for (int i = 0; i < descarte.size(); i++) {
-            System.out.println(descarte.get(i));
+        for (int i = 0; i < getDescarte().size(); i++) {
+            System.out.println(getDescarte().get(i));
         }
         
     }
     
     Investigador investigador;
-    LinkedList <Carta> cartasenmesa = new LinkedList();
+    private LinkedList <Carta> cartasenmesa = new LinkedList();
     
         //JACINTO
     int recursos = investigador.getNumeroRecursos();
     public void ComprarCartaActividad(){
         System.out.println("Selecciona la carta que quieres comprar: ");
         int y = entrada.nextInt();
-        if (cartasmano.get(y).getCoste()> investigador.getNumeroRecursos()){
+        if (getCartasmano().get(y).getCoste()> investigador.getNumeroRecursos()){
             System.out.println("No se dispone de los recursos suficientes");
         }
         else{         
-            recursos =  investigador.getNumeroRecursos() - cartasmano.get(y).getCoste();
-           cartasmano.get(y);
-           descarte.add(cartasmano.get(y)); 
+            recursos =  investigador.getNumeroRecursos() - getCartasmano().get(y).getCoste();
+            getCartasmano().get(y);
+            getDescarte().add(getCartasmano().get(y)); 
         
        }
         
@@ -115,17 +115,59 @@ public class uso_descarte_cartas {
        
          System.out.println("Selecciona la carta que quieres comprar: ");
             int y = entrada.nextInt();
-        if (cartasmano.get(y).getCoste()> investigador.getNumeroRecursos()){
+        if (getCartasmano().get(y).getCoste()> investigador.getNumeroRecursos()){
             System.out.println("No se dispone de los recursos suficientes");
         }
         else{       
-            recursos =  investigador.getNumeroRecursos() - cartasmano.get(y).getCoste();
-            cartasenmesa.add(cartasmano.get(y));
-            cartasmano.remove(y); 
+            recursos =  investigador.getNumeroRecursos() - getCartasmano().get(y).getCoste();
+            getCartasenmesa().add(getCartasmano().get(y));
+            getCartasmano().remove(y); 
         
         }
        
  }
+
+    /**
+     * @return the descarte
+     */
+    public LinkedList<Carta> getDescarte() {
+        return descarte;
+    }
+
+    /**
+     * @param descarte the descarte to set
+     */
+    public void setDescarte(LinkedList<Carta> descarte) {
+        this.descarte = descarte;
+    }
+
+    /**
+     * @return the cartasmano
+     */
+    public LinkedList<Carta> getCartasmano() {
+        return cartasmano;
+    }
+
+    /**
+     * @param cartasmano the cartasmano to set
+     */
+    public void setCartasmano(LinkedList<Carta> cartasmano) {
+        this.cartasmano = cartasmano;
+    }
+
+    /**
+     * @return the cartasenmesa
+     */
+    public LinkedList <Carta> getCartasenmesa() {
+        return cartasenmesa;
+    }
+
+    /**
+     * @param cartasenmesa the cartasenmesa to set
+     */
+    public void setCartasenmesa(LinkedList <Carta> cartasenmesa) {
+        this.cartasenmesa = cartasenmesa;
+    }
 }
    
 

@@ -6,8 +6,8 @@ import Modelo.Investigador;
 
 public abstract class Traicion extends Carta {
 
-    public Traicion(String nombreCarta,boolean preparada) {
-        super(nombreCarta,preparada);
+    public Traicion(String nombreCarta,boolean preparada,int fichaPerdicion) {
+        super(nombreCarta,preparada, fichaPerdicion);
 
     }
 
