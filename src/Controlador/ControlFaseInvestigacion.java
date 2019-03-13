@@ -11,7 +11,7 @@ import Modelo.RolandBanks;
 import Vista.VistaFaseInvestigacion;
 import java.util.Scanner;
 
-public class ControlFaseInvestigacion {
+public class ControlFaseInvestigacion extends Fase{
     
     private BD bd;
     private VistaFaseInvestigacion vista;
@@ -22,6 +22,7 @@ public class ControlFaseInvestigacion {
     uso_descarte_cartas uso;
     RolandBanks roland;
     Scanner sc=new Scanner(System.in);
+    FaseEnemigos Enemigos=new FaseEnemigos();
     
     public ControlFaseInvestigacion(){
         bd=new BD();
@@ -35,7 +36,7 @@ public class ControlFaseInvestigacion {
 //           System.out.println("7. Jugar una carta de apoyo o evento (pagando su precio en recursos).");
 //           System.out.println("9. Combatir a un enemigo. Si un enemigo no toma la iniciativa contra el enemigo. Este le atacará en lo que se llama un ataque de oportunidad.");
     
-    public void procesaOrden(int opcion){
+    public FaseEnemigos procesaOrden(int opcion){
         
         while(!salir){
             
@@ -51,29 +52,29 @@ public class ControlFaseInvestigacion {
                     break;
                     
                 case 3:
-                    // Activar carta
+                    /*NO EXISTE MÉTODO*/
                     vista.MenuPrincipal();
                     break;
                     
                 case 4:
-                    // Enfrentar 
+                    /*MIGUEL*/ 
                     vista.MenuPrincipal();
                     break;
                     
                 case 5:
-                    // No existe método para investigar un lugar
+                    /*NO EXISTE MÉTODO*/
                     vista.MenuPrincipal();
                     break;
                     
                 case 6:
                     System.out.println("Escribe el lugar a moverte:");
                     String lugar=sc.nextLine();
-                    investigador.moverPersonaje(lugar, opcion, roland);
+                    /*PAULA*/
                     vista.MenuPrincipal();
                     break;
                     
                 case 7:
-                    // Jugar una carta de apoyo o evento
+                    /*NO EXISTE MÉTODO*/
                     vista.MenuPrincipal();
                     break;
                     
@@ -89,7 +90,7 @@ public class ControlFaseInvestigacion {
                     break;
                     
                 case 9:
-                    // Combatir
+                    /*MIGUEL*/
                     vista.MenuPrincipal();
                     break;
 
@@ -99,5 +100,6 @@ public class ControlFaseInvestigacion {
                    break;
            }
         }
+        return Enemigos;
     }
 }
