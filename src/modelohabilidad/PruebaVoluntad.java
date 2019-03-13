@@ -16,21 +16,10 @@ import java.util.ArrayList;
 public class PruebaVoluntad extends PruebaHabilidad{
     
 
-    public PruebaVoluntad(int dificultad, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(dificultad, inv, apoyos, bolsa);
-        iniciarPruebaVoluntad(dificultad);
+    public PruebaVoluntad(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(inv, apoyos, bolsa);
     }
 
-   public boolean iniciarPruebaVoluntad(int n){
-       vista.pruebaHabilidad(n);
-       boolean x = prueba(n);
-        if(x == true){
-            vista.resultadoPruebaExito();
-        }else{
-            vista.resultadoPruebaFracaso();
-        }
-        return x;
-   }
 
     public boolean prueba(int a) {        
        boolean x = false;

@@ -12,20 +12,16 @@ import CartasInvestigador.Apoyo;
  */
 public class CartaDrMilanChristopher extends Apoyo{
     
-    RolandBanks roland;
-
     public CartaDrMilanChristopher() {
-        super("Dr Milan Christopher",false,0, 1, 0, 0, 0, 1, 2, 4, 0, false);
+        super("Dr Milan Christopher",false,0, 0, 1, 0, 0, 0, 1, 2, 4, 0, false);
     }
-
     
     @Override
-    public void Accion() {
+    public void Accion(Investigador inv) {
         System.out.println("Después de que investigues con éxito: Obtén 1 recurso.");
         //Hacer si investigar tiene éxito.
-//        roland.setNumeroRecursos(roland.getNumeroRecursos()+1);
-    }
-    
+        inv.setNumeroRecursos(inv.getNumeroRecursos()+1);
+    }    
     
     @Override
     public void verCarta() {
