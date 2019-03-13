@@ -21,6 +21,16 @@ public class uso_descarte_cartas {
         
     }
     
+    public int numeroCartasMano() {
+        return cartasmano.size();
+        
+    }
+    
+    public void decartarCarta(int x) {
+        descarte.add(cartasmano.get(x));
+        
+    }
+    
     public void robarCarta() {
         
         cartasmano.addLast(c);
@@ -30,8 +40,7 @@ public class uso_descarte_cartas {
     public void robar5cartas() {
         int c = 0;
         while(c<5) {
-            //aqui va el metodo de robar una carta
-            
+            this.robarCarta();
         }
     }
     //Fernando
@@ -42,12 +51,16 @@ public class uso_descarte_cartas {
         while(contador<n) {
             //utiliza la ultima carta de la lista carta, la mete en la lista de descartes
             //y la borra
+            int y = mazo.getListaCartasMazo().size();
+            for (int i = 0; i < mazo.getListaCartasMazo().size(); i++) {
+                System.out.println(mazo.getListaCartasMazo().get(y));
+                y--;
+            }
             System.out.println("Que carta quieres utilizar?");
             int x = entrada.nextInt();
+            cartasmano.add(mazo.getListaCartasMazo().get(x));
             descarte.add(mazo.getListaCartasMazo().get(x));
             mazo.getListaCartasMazo().get(x);
-            
-            
             contador++;
         }
     }

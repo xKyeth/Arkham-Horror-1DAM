@@ -10,11 +10,11 @@ package Controlador;
  * @author usuario
  */
 public class FaseMito extends Fase{
-    FaseInvestigacion Investigacion=new FaseInvestigacion();
+    ControlFaseInvestigacion Investigacion=new ControlFaseInvestigacion();
            public  FaseMito(){};
     
     
-     public FaseInvestigacion RealizaFaseMito(){
+     public ControlFaseInvestigacion RealizaFaseMito(){
          
          
             //Colocar 1 ficha de perdicion sirve el plan en curso
