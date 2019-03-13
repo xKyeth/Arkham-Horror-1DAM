@@ -21,6 +21,11 @@ public class uso_descarte_cartas {
         
     }
     
+    public void decartarCarta(int x) {
+        descarte.add(cartasmano.get(x));
+        
+    }
+    
     public void robarCarta() {
         
         cartasmano.addLast(c);
