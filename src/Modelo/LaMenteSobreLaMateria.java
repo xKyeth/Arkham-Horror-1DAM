@@ -31,14 +31,14 @@ public class LaMenteSobreLaMateria extends Evento {
 //        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
 //     }
     
-    public void restablecerValoresRoland(Roland roland){
-        roland.setAgilidad(2);
-        roland.setCombate(4);
-        roland.setIntelecto(3);
-        System.out.println("Intelecto "+roland.getIntelecto()+" Combate"+roland.getCombate()+ " Agilidad "+roland.getAgilidad());
+        public void restablecerValoresRoland(Investigador investigador){
+        investigador.setAgilidad(2);
+        investigador.setCombate(4);
+        investigador.setIntelecto(3);
+        System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
     }
 
-    public void Accion(Personaje personaje) {
+    public void Accion(Investigador investigador) {
 
         
         try{
@@ -51,34 +51,34 @@ public class LaMenteSobreLaMateria extends Evento {
 
         switch (respuesta) {
             case 1:
-                roland.setIntelecto(roland.getCombate());
-                roland.setCombate(0);
+                investigador.setIntelecto(investigador.getCombate());
+                investigador.setCombate(0);
                 System.out.println("Se ha cambiado con exito");
-                System.out.println("Intelecto "+roland.getIntelecto()+" Combate"+roland.getCombate()+ " Agilidad "+roland.getAgilidad());
+                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
                 break;
 
             case 2:
-                roland.setIntelecto(roland.getAgilidad());
-                roland.setAgilidad(0);
+                investigador.setIntelecto(investigador.getAgilidad());
+                investigador.setAgilidad(0);
                 System.out.println("Se ha cambiado con exito");
-                System.out.println("Intelecto "+roland.getIntelecto()+" Combate"+roland.getCombate()+ " Agilidad "+roland.getAgilidad());
+                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
                 break;
 
             case 3:
                 System.out.println("Usar valores por defecto"); 
-                System.out.println("Intelecto "+roland.getIntelecto()+" Combate"+roland.getCombate()+ " Agilidad "+roland.getAgilidad());
+                System.out.println("Intelecto "+investigador.getIntelecto()+" Combate"+investigador.getCombate()+ " Agilidad "+investigador.getAgilidad());
                 break;
 
             default:
                 System.out.println("Por favor introduzca correctamente los datos");
-                Accion(Personaje personaje);
+              //  Accion(Investigador investigador);
                 break;
 
         }
     }
       catch(InputMismatchException e){
           System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
-          System.out.println(""); Accion(Personaje personaje);
+        //  System.out.println(""); Accion(Investigador investigador);
       }  
     }
 
