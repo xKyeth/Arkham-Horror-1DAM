@@ -19,6 +19,11 @@ public abstract class CartaPlan {
     String texto;
     String accion;
     int perdicion;
+    
+    
+    
+    
+    
 
     /**
      * @return the titulo

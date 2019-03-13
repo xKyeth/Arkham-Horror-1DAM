@@ -16,15 +16,14 @@ public class CartaViejoLibroDeConocimiento extends Apoyo{
 
     
     public CartaViejoLibroDeConocimiento(){
-        super("Viejo Libro de Conocimiento",false,1, 0, 0, 0, 0, 0, 0, 3, 0, false);
+        super("Viejo Libro de Conocimiento",false, 0, 1, 0, 0, 0, 0, 0, 0, 3, 0, false);
     }
     
     @Override
-    public void Accion(){
+    public void Accion(Investigador inv){
         System.out.println("Agota el Viejo libro de conocimiento: Elige un investigador "
                 + "que esté en tu Lugar. Ese investigador busca 1 carta entre las 3 primeras "
                 + "cartas de su mazo, la roba, devuelve las cartas restantes a su mazo y lo baraja.");
-        
     }
 
     @Override

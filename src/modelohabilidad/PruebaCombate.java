@@ -20,8 +20,8 @@ public class PruebaCombate extends PruebaHabilidad{
      Enemigo enemigo;
      LinkedList<Enemigo> pilaVictoria;
     
-    public PruebaCombate(int n, RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(n, inv, apoyos, bolsa);
+    public PruebaCombate(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
+        super(inv, apoyos, bolsa);
     }
     
     public void iniciarPruebaCombate(){
