@@ -19,10 +19,10 @@ import java.util.LinkedList;
 
 /**
  *
- * @author Jesus Rosa
+ * @author Jesus Rosa Rodriguez
  */
 public class Escenario {
-            
+    
             vistaPlan vp;
             Mazo m;
     public void introEscenario(){
@@ -70,7 +70,6 @@ public class Escenario {
               vp.cartaPlan8();
               break;
             default:
-               //code block
           }
        
         
@@ -85,20 +84,20 @@ public class Escenario {
     
     // El escenario hace que avance plan y que avance mito
     
-        //Hacer un for para recorrer un arraylist de forma aleatoria, y los datos que
-        // saquemos de el lo añadiriamos a otro arraylist el cual comparariamos con el primero
-        // para saber que datos ya hemos sacado y cuales no (mediante un if) si se repiten
-        // sacariamos otro dato mediante un random,.
+        public void Avanzar(){
+            
+        }
+        
+//Hacer un for para recorrer un arraylist de forma aleatoria, y los datos que
+//saquemos de el lo añadiriamos a otro arraylist el cual comparariamos con el primero
+//para saber que datos ya hemos sacado y cuales no (mediante un if) si se repiten
+//sacariamos otro dato mediante un random,.
     
-    // Reunir las cartas : Ratas, Gules, Miedo Impactante, Antiguos males, Frío Helador
+    // Reunir las cartas : Ratas, Gules, Miedo Impactante, Antiguos males, Frío Helador (Aun no estan hechas.)
     
         
     
-    // Apartar las cartas Sacerdote Gul y Lita Chantler.
-    
-        
-    
-    // Si hay un enemigo Gul en tu Lugar, recibe 1 punto de daño.
+    // Si hay un enemigo Gul en tu Lugar, recibe 1 punto de daño. (Aun no estan hechos los enemigos Gul)
     
         
     
