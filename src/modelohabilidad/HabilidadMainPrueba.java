@@ -30,8 +30,14 @@ public class HabilidadMainPrueba {
         
         BolsaDelCaos bolsa = new BolsaDelCaos();
         
-        PruebaHabilidad prueba = new PruebaAgilidad(4, Roland, apoyosprueba, bolsa);
+        PruebaHabilidad agilidad = new PruebaAgilidad(Roland, apoyosprueba, bolsa);
+        PruebaHabilidad voluntad = new PruebaVoluntad(Roland, apoyosprueba, bolsa);
+        PruebaHabilidad intelecto = new PruebaIntelecto(Roland, apoyosprueba, bolsa);
         
+//        Algo manda iniciar prueba de Agilidad de dificultad 4
+        agilidad.iniciarPrueba(2);
+        
+  
         
         
         
