@@ -24,7 +24,7 @@ public abstract class DestrezaManual extends Habilidad {
     
     
     public void usarCarta(){
-        ph.procesarOrden(vida, this);
+        ph.prueba(vida);
         //if(prueba tiene exito);
         m.cogerCarta();
     }
