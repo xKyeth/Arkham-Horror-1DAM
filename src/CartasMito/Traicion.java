@@ -1,6 +1,8 @@
 package CartasMito;
 
 import CartasInvestigador.Carta;
+import Modelo.Investigador;
+
 
 public abstract class Traicion extends Carta {
 
@@ -9,7 +11,7 @@ public abstract class Traicion extends Carta {
 
     }
 
-    public abstract void Accion();
+    public abstract void Accion(Investigador investigador);
     
     
 

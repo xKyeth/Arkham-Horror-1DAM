@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class LaMenteSobreLaMateria extends Evento {
 
-    RolandBanks roland;
+    
    Controlador.ControlGeneral investigar;
 
     public LaMenteSobreLaMateria() {
@@ -31,14 +31,14 @@ public class LaMenteSobreLaMateria extends Evento {
 //        else System.out.println("No es posible hacer nada. No estas en Fase de Investigacion");
 //     }
     
-    public void restablecerValoresRoland(){
+    public void restablecerValoresRoland(Roland roland){
         roland.setAgilidad(2);
         roland.setCombate(4);
         roland.setIntelecto(3);
         System.out.println("Intelecto "+roland.getIntelecto()+" Combate"+roland.getCombate()+ " Agilidad "+roland.getAgilidad());
     }
 
-    public void Accion() {
+    public void Accion(Personaje personaje) {
 
         
         try{
@@ -71,14 +71,14 @@ public class LaMenteSobreLaMateria extends Evento {
 
             default:
                 System.out.println("Por favor introduzca correctamente los datos");
-                Accion();
+                Accion(Personaje personaje);
                 break;
 
         }
     }
       catch(InputMismatchException e){
           System.out.println("No se puede usar un caracter, vuelve a introducirlo bien"); 
-          System.out.println(""); Accion();
+          System.out.println(""); Accion(Personaje personaje);
       }  
     }
 

@@ -1,6 +1,9 @@
 
 package CartasInvestigador;
 
+import Modelo.Investigador;
+
+
 public abstract class Habilidad extends CartasInvestigador{
     
     public Habilidad(String nombreCarta,boolean preparada,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
@@ -11,7 +14,7 @@ public abstract class Habilidad extends CartasInvestigador{
     public abstract void verCarta();
     
     @Override
-    public abstract  void Accion();
+    public abstract  void Accion(Investigador investigador);
 
     public int getVoluntad() {
         return voluntad;

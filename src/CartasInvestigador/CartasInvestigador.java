@@ -1,5 +1,8 @@
 package CartasInvestigador;
 
+import Modelo.Investigador;
+
+
 public abstract class CartasInvestigador extends Carta{
 
     protected int voluntad;
@@ -51,7 +54,7 @@ public abstract class CartasInvestigador extends Carta{
     public abstract void verCarta();
     
     @Override
-    public void Accion() {
+    public void Accion(Investigador investigador) {
         
     }
     

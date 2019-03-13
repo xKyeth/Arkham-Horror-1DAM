@@ -1,6 +1,10 @@
 
 package CartasInvestigador;
 
+import Modelo.Investigador;
+
+
+
 
 public abstract  class Carta {
     
@@ -12,7 +16,7 @@ public abstract  class Carta {
         this.preparada = preparada;
     }
     
-    public abstract void Accion();
+    public abstract void Accion(Investigador investigador);
 
     
     
