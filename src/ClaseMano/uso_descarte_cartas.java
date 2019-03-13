@@ -21,6 +21,11 @@ public class uso_descarte_cartas {
         
     }
     
+    public int numeroCartasMano() {
+        return cartasmano.size();
+        
+    }
+    
     public void decartarCarta(int x) {
         descarte.add(cartasmano.get(x));
         
