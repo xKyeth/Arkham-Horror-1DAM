@@ -79,9 +79,9 @@ public abstract class PruebaHabilidad {
         else if(n == 6) a = -6;
         else if(n == 7) a = 1;
         else if(n == 8) a = -8;
-        else if(n == 9) a = 0;//calavera
-        else if(n == 10) a = 0;// capucha
-        else if(n == 11) a = 0;//piedra
+        else if(n == 9) a = 0;//efecto calavera
+        else if(n == 10) a = 0;//efecto capucha
+        else if(n == 11) a = 0;//efecto piedra
 //        else if(n == 12){
 //                switch(b){
 ////                    case 1: a = inv.getVoluntad(); break;
@@ -89,7 +89,7 @@ public abstract class PruebaHabilidad {
 ////                    case 3: a = inv.getIntelecto(); break;
 //                    case 4: a = inv.getCombate(); break; // Con Miguel.
 //                }
-//            }//tentáculo
+//            }//efecto tentáculo
         else if(n == 13) a = inv.efectoEstrella();
         return a;
         //Retorna ese valor obtenido
