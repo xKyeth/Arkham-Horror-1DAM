@@ -7,7 +7,7 @@ package Mazo_Plan;
 
 /**
  *
- * @author Themrsoyuncrack
+ * @author Imanol
  */
 public abstract class EstanSaliendo extends CartaPlan {
     

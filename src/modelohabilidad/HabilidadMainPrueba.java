@@ -9,6 +9,7 @@ import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 import CartasInvestigador.Apoyo;
+import java.util.LinkedList;
 
 /**
  *
@@ -34,7 +35,7 @@ public class HabilidadMainPrueba {
         PruebaHabilidad voluntad = new PruebaVoluntad(Roland, apoyosprueba, bolsa);
         PruebaHabilidad intelecto = new PruebaIntelecto(Roland, apoyosprueba, bolsa);
         
-//        Algo manda iniciar prueba de Agilidad de dificultad 4
+//        Algo manda iniciar prueba de agilidad de dificultad 2
         agilidad.iniciarPrueba(2);
         
   
