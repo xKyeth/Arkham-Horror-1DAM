@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Modelo.Personaje;
 import modelohabilidad.PruebaCombate;
 
 /**
@@ -20,8 +21,9 @@ public class FaseEnemigos extends Fase{
          
           //Mover a monstruos Cazador
         MovimientoCazador MovimientoCazador= new MovimientoCazador();
+       
         
-        Personaje x;
+      
        MovimientoCazador.moverseMapa1(x);
         
         
