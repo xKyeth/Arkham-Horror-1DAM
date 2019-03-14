@@ -8,9 +8,10 @@ public class CartaPerroGuardian extends Apoyo {
     
     Enemigo e;
     int v = 3;
-    
+    //nombreCarta,preparada, fichaPerdicion,voluntad, intelecto, 
+    //combate, habilidad, comodin, vida, cordura, coste, suministro, comprada
     public CartaPerroGuardian() {
-    super("PerroGuardian", false, 0, 0, 0, 0, 0, 3, 1, 3, 0, false);
+    super("Perro Guardian",false,0,0,0, 0, 0, 0, 3, 1, 3, 0, false);
         
     }
 
