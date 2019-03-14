@@ -13,8 +13,8 @@ public abstract class Lugar extends Carta{
     public String instruccionesR;
     private int id;
 
-    public Lugar(String nombreCarta, boolean preparada) {
-        super(nombreCarta, preparada);
+    public Lugar(String nombreCarta, boolean preparada, int fichaPerdicion) {
+        super(nombreCarta, preparada, fichaPerdicion);
     }
     
     

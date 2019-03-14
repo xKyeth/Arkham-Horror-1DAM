@@ -5,7 +5,7 @@ import Modelo.Investigador;
 public class Salita extends Lugar {
 
     public Salita() {
-        super("Salita", false);
+        super("Salita", false,0);
         super.descripcionNR = "No estáis seguros de qué pasaría si tratarais de cruzar el umbral de la extraña barrera, pero dado su extremo calor, estáis más que seguros de que no queréis intentarlo.";
         super.descripcionR = "";
         super.velo = 2;

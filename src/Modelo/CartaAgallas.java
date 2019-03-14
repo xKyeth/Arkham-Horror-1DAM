@@ -17,7 +17,7 @@ public class CartaAgallas extends Carta{
     uso_descarte_cartas udc = new uso_descarte_cartas();
     
     public CartaAgallas(){
-        super("Agallas", false);
+        super("Agallas", false,0);
     }
     
     public void instrucciones(){
