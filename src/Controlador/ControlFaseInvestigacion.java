@@ -12,6 +12,7 @@ import Modelo.RolandBanks;
 import Vista.VistaFaseInvestigacion;
 import java.util.Scanner;
 import modelohabilidad.PruebaCombate;
+import modelohabilidad.PruebaIntelecto;
 
 public class ControlFaseInvestigacion extends Fase{
     
@@ -27,7 +28,9 @@ public class ControlFaseInvestigacion extends Fase{
     FaseEnemigos Enemigos=new FaseEnemigos();
     PruebaCombate prueba;
     Lugares l;
+    Lugar lu;
     ArrayList<Lugar>lugar=l.getLugares();
+    PruebaIntelecto pruebaI;
     
     public ControlFaseInvestigacion(){
         bd=new BD();
@@ -36,7 +39,6 @@ public class ControlFaseInvestigacion extends Fase{
     }
     
 //           System.out.println("3. Activar una capacidad de alguna carta.");
-//           System.out.println("5. Investigar el lugar.");
 //           System.out.println("7. Jugar una carta de apoyo o evento (pagando su precio en recursos).");
     
     public FaseEnemigos procesaOrden(int opcion){
@@ -65,7 +67,7 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 5:
-                    /*NO EXISTE MÉTODO*/
+                    pruebaI.prueba(lu.getVelo());
                     vista.MenuPrincipal();
                     break;
                     
