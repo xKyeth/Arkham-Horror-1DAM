@@ -26,7 +26,7 @@ public class Vista_Habilidad {
         System.out.println("Se inicia la prueba de habilidad de dificultad "+n);    
         habilidad.prueba(n);
     }
-//
+
     public void resultadoPruebaExito() {        
         System.out.println("Prueba superada con éxito.");
     }
