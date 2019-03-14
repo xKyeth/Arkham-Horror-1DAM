@@ -8,7 +8,7 @@ public class CartaLinterna extends Apoyo{
     // Usos (3 usos/suministros. Si se queda sin suministros, descarta la carta.
     // Gasta 1 suministro (uso o munición): Investigar. Tu Lugar recibe -2 de velo para esta investigación.
     private int suministros=3;
-    RolandBanks investigador;
+    Investigador investigador;
     
     Lugar lugar; //(se cogerá de la clase Lugar el atributo velo)
         
