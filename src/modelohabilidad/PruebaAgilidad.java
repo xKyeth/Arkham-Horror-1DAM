@@ -6,9 +6,11 @@
 package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
-import Modelo.Carta;
+import CartasInvestigador.Carta;
+import Modelo.BDCarta;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -45,10 +47,6 @@ public class PruebaAgilidad extends PruebaHabilidad{
         
         
         return sumaApoyos(apoyos);
-    }
-    
-    public ArrayList<Carta> mostrarCartasMano(){
-        return mazo.getListaCartasMazo();
     }
     
     

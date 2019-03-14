@@ -11,6 +11,8 @@ import Modelo.RolandBanks;
 import ClaseMano.uso_descarte_cartas;
 import Modelo.MazoInvestigador;
 import CartasInvestigador.Apoyo;
+import CartasInvestigador.Carta;
+import java.util.LinkedList;
 
 /**
  *
@@ -92,6 +94,10 @@ public abstract class PruebaHabilidad {
         return a;
         //Retorna ese valor obtenido
     }
+    
+//    public LinkedList<Carta> mostrarCartasMano(){//        
+//        return mano.getCartasmano();
+//    }
 
     /**
      * @return the dificultad
