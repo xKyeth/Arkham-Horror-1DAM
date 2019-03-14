@@ -57,10 +57,10 @@ public abstract class PruebaHabilidad {
 
     public abstract boolean prueba(int a);
     
-    public int sumaApoyos(ArrayList<Apoyo> apoyos){
+    public int sumaApoyos(ArrayList<Apoyo> apoyos){ // Sólo suma agilidad.
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
-            n = n + apoyos.get(i).getHabilidad();
+            n = n + apoyos.get(i).getHabilidad() + apoyos.get(i).getComodin();
         }        
         return n;
     }    
