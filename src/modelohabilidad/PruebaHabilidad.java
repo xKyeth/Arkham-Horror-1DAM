@@ -25,7 +25,15 @@ public abstract class PruebaHabilidad {
     uso_descarte_cartas mano;
     MazoInvestigador mazo;
     protected int dificultad;
-    
+    private boolean x;
+
+    public boolean isX() {
+        return x;
+    }
+
+    public void setX(boolean x) {
+        this.x = x;
+    }
     
     public PruebaHabilidad(RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
@@ -36,7 +44,7 @@ public abstract class PruebaHabilidad {
     
     public boolean iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
-        boolean x = prueba(dificultad);
+        x = prueba(dificultad);
         if(x == true){
             vista.resultadoPruebaExito();
         }else{
