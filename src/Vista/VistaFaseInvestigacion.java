@@ -4,7 +4,7 @@ import Controlador.ControlFaseInvestigacion;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Modelo.BD;
-import Modelo.Carta;
+import Modelo.BDCarta;
 import Modelo.MazoInvestigador;
 
 public class VistaFaseInvestigacion {
@@ -50,8 +50,8 @@ public class VistaFaseInvestigacion {
         }
     }
     
-    public void mostrarCartas(ArrayList<Carta> cartas) {
-        for(Carta c: cartas){
+    public void mostrarCartas(ArrayList<BDCarta> cartas) {
+        for(BDCarta c: cartas){
             System.out.println(c.toString());
         }
     }

@@ -9,7 +9,7 @@ import CartasInvestigador.Apoyo;
 public class CartaLupa extends Apoyo{
    
     public CartaLupa() {
-        super("Lupa",false,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
+        super("Lupa",false,0,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
         
     }
     
