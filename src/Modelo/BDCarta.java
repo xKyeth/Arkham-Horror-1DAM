@@ -1,6 +1,6 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
-public class Carta {
+public class BDCarta {
     private String nombre;
     private String clase;
     private int coste;
@@ -13,7 +13,7 @@ public class Carta {
     private String rasgos;
     private MazoInvestigador mazo;
     
-    public Carta(String nombre, String clase, int coste, String tipo, int combate, int voluntad, int intelecto, int agilidad, boolean comodín, String rasgos) {
+    public BDCarta(String nombre, String clase, int coste, String tipo, int combate, int voluntad, int intelecto, int agilidad, boolean comodín, String rasgos) {
         this.nombre=nombre;
         this.clase=clase;
         this.coste=coste;
@@ -26,7 +26,7 @@ public class Carta {
         this.rasgos=rasgos;
     }
 
-    public Carta() {
+    public BDCarta() {
         
     }
     

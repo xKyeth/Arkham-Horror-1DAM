@@ -2,14 +2,16 @@ package Controlador;
 /**AUTOR ALEXANDRA**/
 import ClaseMano.uso_descarte_cartas;
 import Lugar.Lugar;
+import Lugar.Lugares;
 import java.util.ArrayList;
 import Modelo.BD;
-import Modelo.Carta;
+import Modelo.BDCarta;
 import Modelo.Investigador;
 import Modelo.MazoInvestigador;
 import Modelo.RolandBanks;
 import Vista.VistaFaseInvestigacion;
 import java.util.Scanner;
+import modelohabilidad.PruebaCombate;
 
 public class ControlFaseInvestigacion extends Fase{
     
@@ -23,6 +25,9 @@ public class ControlFaseInvestigacion extends Fase{
     RolandBanks roland;
     Scanner sc=new Scanner(System.in);
     FaseEnemigos Enemigos=new FaseEnemigos();
+    PruebaCombate prueba;
+    Lugares l;
+    ArrayList<Lugar>lugar=l.getLugares();
     
     public ControlFaseInvestigacion(){
         bd=new BD();
@@ -31,10 +36,8 @@ public class ControlFaseInvestigacion extends Fase{
     }
     
 //           System.out.println("3. Activar una capacidad de alguna carta.");
-//           System.out.println("4. Enfrentarse a un enemigo que esté en el lugar.");
 //           System.out.println("5. Investigar el lugar.");
 //           System.out.println("7. Jugar una carta de apoyo o evento (pagando su precio en recursos).");
-//           System.out.println("9. Combatir a un enemigo. Si un enemigo no toma la iniciativa contra el enemigo. Este le atacará en lo que se llama un ataque de oportunidad.");
     
     public FaseEnemigos procesaOrden(int opcion){
         
@@ -57,7 +60,7 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 4:
-                    /*MIGUEL*/ 
+                    prueba.enfrenta();
                     vista.MenuPrincipal();
                     break;
                     
@@ -67,9 +70,7 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 6:
-                    System.out.println("Escribe el lugar a moverte:");
-                    String lugar=sc.nextLine();
-                    /*PAULA*/
+                    investigador.moverPersonaje(lugar, investigador, l);
                     vista.MenuPrincipal();
                     break;
                     
@@ -90,7 +91,7 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 9:
-                    /*MIGUEL*/
+                    prueba.combate();
                     vista.MenuPrincipal();
                     break;
 

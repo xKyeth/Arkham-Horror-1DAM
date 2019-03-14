@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class MazoInvestigador implements IMazoInvestigador {
 
     private String nombre;
-    private ArrayList<Carta> listaCartasMazo=new ArrayList<>();
+    private ArrayList<BDCarta> listaCartasMazo=new ArrayList<>();
     
     @Override
     public String getNombre() {
@@ -31,22 +31,22 @@ public class MazoInvestigador implements IMazoInvestigador {
     }
     
     @Override
-    public ArrayList<Carta> getListaCartasMazo() {
+    public ArrayList<BDCarta> getListaCartasMazo() {
         return listaCartasMazo;
     }
 
     @Override
-    public void setListaMazo(ArrayList<Carta> listaCartasMazo) {
+    public void setListaMazo(ArrayList<BDCarta> listaCartasMazo) {
         this.listaCartasMazo = listaCartasMazo;
     }
     
     @Override
-    public void añadirCarta(Carta carta){
+    public void añadirCarta(BDCarta carta){
         getListaCartasMazo().add(carta);
     }
     
     
-    public void eliminarCarta(Carta carta){
+    public void eliminarCarta(BDCarta carta){
         
         getListaCartasMazo().remove(0);
     }
