@@ -29,7 +29,8 @@ public class CartaAutomaticaDel45 extends Apoyo{
         if(suministros>0){
             this.investigador.combate=+1;
             suministros--;
-            enemigo.vida--; //Inflige +1 daño (-1 de vida) al enemigo.
+            enemigo.vida--; //Inflige +1 daño (-1 de vida) al enemigo. Tiene que quitarle daño a un enemigo 
+            //concreto, no está referenciado en ningun lado. Ponerlo como un Array.
             }            
         }   
 
