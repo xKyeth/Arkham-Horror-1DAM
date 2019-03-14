@@ -13,7 +13,7 @@ public class CartaCuchillo  extends Apoyo{
     RolandBanks roland;
 
     public CartaCuchillo() {
-        super("Cuchillo",false,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
+        super("Cuchillo",false,0,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
     }
      public void verCarta(){
          System.out.println("Objeto. Arma. Cuerpo a cuerpo.\n" +
