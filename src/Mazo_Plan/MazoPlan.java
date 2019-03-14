@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Imanol G
+ * @author Imanol
  */
 public class MazoPlan {
     

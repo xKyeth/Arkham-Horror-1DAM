@@ -4,10 +4,11 @@ package Modelo;
 * Autor: Juan Martin Ayala
 */
 import CartasInvestigador.Habilidad;
+import modelohabilidad.PruebaHabilidad;
         
 public class CartaDeduccion extends Habilidad{
     
-    
+    PruebaHabilidad prueba;
     
     public CartaDeduccion(){
         super("Deduccion",false,0 ,0, 1, 0, 0, 0);  
@@ -21,10 +22,9 @@ public class CartaDeduccion extends Habilidad{
         System.out.println("Sabía que había visto antes este símbolo. ¡Debo advertir a los demás antes de que sea demasiado tarde");
     }
     
-    
+    @Override
     public void Accion(Investigador investigador){
-        //if (pruebaHabilidad.exito==true){
-            
+        if (prueba.isX()==true){
             if(investigador.getLugar().pistas==0){
                 System.out.println("No quedan pistas");
             }else {
@@ -32,7 +32,7 @@ public class CartaDeduccion extends Habilidad{
                 investigador.getLugar().pistas--;
                 investigador.setNumeroPistas(investigador.getNumeroPistas()+1);
             }
-        //}
+        }
     }     
     
 }
