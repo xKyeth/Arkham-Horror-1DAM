@@ -18,7 +18,7 @@ public class Paranoia extends Traicion {
     
    
     public Paranoia(){
-    super("Paranoia",false);
+    super("Paranoia",false,0);
    }
       
    public void Accion(Investigador R) {
