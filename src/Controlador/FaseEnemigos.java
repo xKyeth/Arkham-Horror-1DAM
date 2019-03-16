@@ -33,7 +33,13 @@ public class FaseEnemigos extends Fase{
         //Enemigo ataca 
         
          for (int i = 0; i < "arrayEnemigos.size"; i++) {
-              pruebaCombate.combate("array de enemigos".get(i));
+             if (arrayenemigo.get(i).getLugar=Roland.getLugar()){
+               pruebaCombate.combate("array de enemigos".get(i));
+             
+             }
+             
+             
+            
              
          }
        

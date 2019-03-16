@@ -11,21 +11,36 @@ package Controlador;
  */
 public class FaseMito extends Fase{
     ControlFaseInvestigacion Investigacion=new ControlFaseInvestigacion();
+    int PerdicionTotal;
            public  FaseMito(){};
     
     
      public ControlFaseInvestigacion RealizaFaseMito(){
          
          
-            //Colocar 1 ficha de perdicion sirve el plan en curso
-        
+            //Colocar 1 ficha de perdicion sobre el plan en curso
+        MazoPlan.setPlanEnCurso(MazoPlan.getPlanEnCurso()+1);
         
         //Compara umbral de perdicion
+         for (int i = 0; i < CartasEscenario.size(); i++) {
+             PerdicionTotal= PerdicionTotal+CartasEscenario.get(i).getFichaPerdicion();
+             
+         }
+       
         
+         if (MazoPlan.getUmbralPerdicionAvance()<PerdicionTotal) {
+             
+         } else {
+             MazoPlan.avanzarPlan();
+             
+             
+         }
+        
+       
 
         //robar una carta encuentro
 
-        UsoDeCartasInvestigador.robarCarta();
+        MazoEncuentro.cogerCarta();
          
          
          
