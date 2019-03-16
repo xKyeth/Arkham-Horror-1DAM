@@ -24,30 +24,27 @@ public class PruebaCombate extends PruebaHabilidad{
         super(inv, apoyos, bolsa);
     }
     
-    public void iniciarPruebaCombate(){
-        enfrenta();
-        combate();
+    public void iniciarPruebaCombate(Enemigo e){
+        enfrenta(e);
+        combate(e);
         
     }
-    public void nuevoEnemigo(Enemigo ene){
-        this.enemigo=ene;
-    }
     
-    public boolean enfrenta(){
+    public boolean enfrenta(Enemigo e){
         //Si gana el investigador el resultado es true, si es el enemigo el resultado es false
         boolean victoria=false;
-        if(inv.getCombate()>=enemigo.getCombate()){
+        if(inv.getCombate()>=e.getCombate()){
             victoria=true;
         }else{
             victoria=false;
         }
         return victoria;
     }
-    public void combate(){
-        if(enfrenta()){
-           enemigo.setVida(enemigo.getVida()-(1+inv.getDaño()));
+    public void combate(Enemigo e){
+        if(enfrenta(e)){
+           e.setVida(e.getVida()-(1+inv.getDaño()));
         }else{
-            inv.setVida(inv.getVida()-enemigo.getDaño());
+            inv.setVida(inv.getVida()-e.getDaño());
         }
     }
  
