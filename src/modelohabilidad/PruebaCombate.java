@@ -6,6 +6,7 @@
 package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
+import CartasInvestigador.Apoyo;
 import Modelo.Enemigo;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
@@ -13,53 +14,42 @@ import java.util.LinkedList;
 
 /**
  *
- * @author cristian
+ * @author Miguel
  */
-public class PruebaCombate extends PruebaHabilidad{
+public class PruebaCombate {
 
-     Enemigo enemigo;
-     LinkedList<Enemigo> pilaVictoria;
-    
-    public PruebaCombate(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(inv, apoyos, bolsa);
+    public PruebaCombate() {
     }
     
-    public void iniciarPruebaCombate(Enemigo e){
-        enfrenta(e);
-        combate(e);
-        
-    }
-    
-    public boolean enfrenta(Enemigo e){
+    //
+    public boolean enfrenta(Enemigo enemigo ,RolandBanks investigador,ArrayList<Apoyo> apoyo){
         //Si gana el investigador el resultado es true, si es el enemigo el resultado es false
         boolean victoria=false;
-        if(inv.getCombate()>=e.getCombate()){
+        int puntosApoyo=0;
+        for(Apoyo elem:apoyo){
+            puntosApoyo=elem.getCombate();
+        }
+        
+        if(investigador.getCombate()+puntosApoyo>enemigo.getCombate()){
             victoria=true;
-        }else{
-            victoria=false;
         }
         return victoria;
     }
-    public void combate(Enemigo e){
-        if(enfrenta(e)){
-           e.setVida(e.getVida()-(1+inv.getDaño()));
-        }else{
-            inv.setVida(inv.getVida()-e.getDaño());
+    
+    
+    public int calculaDañoInvestigador(Enemigo enemigo ){
+      return enemigo.getDaño();
+    }
+   public int calculaDañoEnemigo(RolandBanks investigador,ArrayList<Apoyo> apoyo ){
+        int puntosDaño=0;
+        for(Apoyo elem:apoyo){
+            puntosDaño=elem.getDaño;
         }
+        puntosDaño+=investigador.getDaño();
+      return puntosDaño;
     }
  
     
-
-    
-
-    @Override
-    public boolean prueba(int a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    
-
     
     
 }
