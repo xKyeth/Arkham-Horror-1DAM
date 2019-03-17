@@ -22,7 +22,7 @@ public class PruebaCombate {
     }
     
     //
-    public boolean enfrenta(Enemigo enemigo ,RolandBanks investigador,ArrayList<Apoyo> apoyo){
+    public boolean enfrenta(Enemigo enemigo ,RolandBanks investigador,ArrayList<Apoyo> apoyo,int fichaCaos){
         //Si gana el investigador el resultado es true, si es el enemigo el resultado es false
         boolean victoria=false;
         int puntosApoyo=0;
@@ -30,7 +30,7 @@ public class PruebaCombate {
             puntosApoyo=elem.getCombate();
         }
         
-        if(investigador.getCombate()+puntosApoyo>enemigo.getCombate()){
+        if(investigador.getCombate()+puntosApoyo>enemigo.getCombate()+fichaCaos){
             victoria=true;
         }
         return victoria;
