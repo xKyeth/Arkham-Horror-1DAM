@@ -40,6 +40,7 @@ public class PruebaCombate {
     public int calculaDañoInvestigador(Enemigo enemigo ){
       return enemigo.getDaño();
     }
+    
    public int calculaDañoEnemigo(RolandBanks investigador,ArrayList<Apoyo> apoyo ){
         int puntosDaño=0;
         for(Apoyo elem:apoyo){
