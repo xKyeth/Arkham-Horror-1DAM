@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public interface IMazoInvestigador {
 
-    void añadirCarta(Carta carta);
+    void añadirCarta(BDCarta carta);
 
-    ArrayList<Carta> getListaCartasMazo();
+    ArrayList<BDCarta> getListaCartasMazo();
 
     String getNombre();
 
-    void setListaMazo(ArrayList<Carta> listaCartasMazo);
+    void setListaMazo(ArrayList<BDCarta> listaCartasMazo);
 
     void setNombre(String nombre);
 

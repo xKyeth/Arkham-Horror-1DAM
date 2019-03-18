@@ -11,6 +11,8 @@ import Modelo.RolandBanks;
 import ClaseMano.uso_descarte_cartas;
 import Modelo.MazoInvestigador;
 import CartasInvestigador.Apoyo;
+import CartasInvestigador.Carta;
+import java.util.LinkedList;
 
 /**
  *
@@ -25,7 +27,15 @@ public abstract class PruebaHabilidad {
     uso_descarte_cartas mano;
     MazoInvestigador mazo;
     protected int dificultad;
-    
+    private boolean x;
+
+    public boolean isX() {
+        return x;
+    }
+
+    public void setX(boolean x) {
+        this.x = x;
+    }
     
     public PruebaHabilidad(RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
@@ -36,7 +46,7 @@ public abstract class PruebaHabilidad {
     
     public boolean iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
-        boolean x = prueba(dificultad);
+        x = prueba(dificultad);
         if(x == true){
             vista.resultadoPruebaExito();
         }else{
@@ -47,10 +57,10 @@ public abstract class PruebaHabilidad {
 
     public abstract boolean prueba(int a);
     
-    public int sumaApoyos(ArrayList<Apoyo> apoyos){
+    public int sumaApoyos(ArrayList<Apoyo> apoyos){ // Sólo suma agilidad.
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
-            n = n + apoyos.get(i).getHabilidad();
+            n = n + apoyos.get(i).getHabilidad() + apoyos.get(i).getComodin();
         }        
         return n;
     }    
@@ -69,9 +79,9 @@ public abstract class PruebaHabilidad {
         else if(n == 6) a = -6;
         else if(n == 7) a = 1;
         else if(n == 8) a = -8;
-        else if(n == 9) a = 0;//calavera
-        else if(n == 10) a = 0;// capucha
-        else if(n == 11) a = 0;//piedra
+        else if(n == 9) a = 0;//efecto calavera
+        else if(n == 10) a = 0;//efecto capucha
+        else if(n == 11) a = 0;//efecto piedra
 //        else if(n == 12){
 //                switch(b){
 ////                    case 1: a = inv.getVoluntad(); break;
@@ -79,11 +89,15 @@ public abstract class PruebaHabilidad {
 ////                    case 3: a = inv.getIntelecto(); break;
 //                    case 4: a = inv.getCombate(); break; // Con Miguel.
 //                }
-//            }//tentáculo
+//            }//efecto tentáculo
         else if(n == 13) a = inv.efectoEstrella();
         return a;
         //Retorna ese valor obtenido
     }
+    
+//    public LinkedList<Carta> mostrarCartasMano(){//        
+//        return mano.getCartasmano();
+//    }
 
     /**
      * @return the dificultad

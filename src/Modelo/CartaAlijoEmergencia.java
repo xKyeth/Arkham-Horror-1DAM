@@ -11,9 +11,9 @@ public class CartaAlijoEmergencia extends Evento{
     RolandBanks roland;
     int numVeces=2; //Ya que tiene 2 veces la carta en el mazo
     Scanner sc=new Scanner(System.in);
-    
+
     public CartaAlijoEmergencia(){
-        super("Alijo de Emergencia",false,0,0,0,0,0,0);
+        super("Alijo de Emergencia",false,0,0,0,0,0,0,0);
     }
     
     public void Accion(Investigador investigador){

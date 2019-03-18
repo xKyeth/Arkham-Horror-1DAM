@@ -55,7 +55,7 @@ public class MazoEncuentros {
         } catch (Exception e) {
             
             System.out.println("Introduce un número por favor");
-            cogerNCartas(x);
+           
             
         }
       return null;
@@ -75,7 +75,7 @@ public class MazoEncuentros {
           String nombre= sc.next();
           
             for (int i = 0; i < getC().size(); i++) {
-            if (getC().get(i).getNombreCarta()==nombre){
+            if (getC().get(i).getNombreCarta().equals(nombre)){
             return getC().get(i);
             }else System.out.println("Esa carta no existe");
          

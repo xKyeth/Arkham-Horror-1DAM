@@ -6,9 +6,11 @@
 package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
-import Modelo.Carta;
+import CartasInvestigador.Carta;
+import Modelo.BDCarta;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 /**
  *
@@ -16,13 +18,14 @@ import java.util.ArrayList;
  */
 public class PruebaAgilidad extends PruebaHabilidad{
     
+    private boolean x;
     
     public PruebaAgilidad(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
         super(inv, apoyos, bolsa);        
     }    
 
     public boolean prueba(int a) {
-        boolean x = false;
+        x = false;
         int n = inv.getAgilidad() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
             return x;
@@ -42,11 +45,8 @@ public class PruebaAgilidad extends PruebaHabilidad{
         //Método para elegir cartas y obtener un array de cartas que luego es el que 
         //se pasa por parámetros en sumaApoyos.
         
+        
         return sumaApoyos(apoyos);
-    }
-    
-    public ArrayList<Carta> mostrarCartasMano(){
-        return mazo.getListaCartasMazo();
     }
     
     

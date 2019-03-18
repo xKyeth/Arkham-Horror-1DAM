@@ -10,7 +10,7 @@ import Lugar.Pasillo;
 //import Modelo.Investigador;
 import Modelo.Personaje;
 import Modelo.RolandBanks;
-//import java.util.ArrayList;
+import java.util.ArrayList;
 
 //import java.util.LinkedList;
 
@@ -30,20 +30,33 @@ Lugar pasillo=new Pasillo();
       //  personajes=p;
     }
     
-public void moverseMapa1(Personaje p){
-    
-   if (p.getLugar()==pasillo && RB.getLugar()!=pasillo){
-   p.setLugar(RB.getLugar());
-   } else if (p.getLugar()==RB.getLugar()){
+public void moverseMapa1(ArrayList<Personaje> p){
+   
+    for (int i = 0; i < p.size(); i++) {
+      if (p.get(i).getLugar()==pasillo && RB.getLugar()!=pasillo){
+   p.get(i).setLugar(RB.getLugar());
+   } else if (p.get(i).getLugar()==RB.getLugar()){
 
    }else if(RB.getLugar()==pasillo){
-    p.setLugar(pasillo);
+    p.get(i).setLugar(pasillo);
     
-    }else if(RB.getLugar()!=pasillo && p.getLugar()!=RB.getLugar()){
+    }else if(RB.getLugar()!=pasillo && p.get(i).getLugar()!=RB.getLugar()){
     
-    p.setLugar(pasillo);
+    p.get(i).setLugar(pasillo);
     
     }}}
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+  
 
 
 //    public void Moverse(Personaje e, boolean[][] l){

@@ -24,7 +24,7 @@ import java.util.LinkedList;
 public class Escenario {
     
             vistaPlan vp;
-            Mazo m;
+            MazoEncuentros m;
     public void introEscenario(){
      System.out.println("Tus compañeros y tú habéis estado investigando los extraños sucesos que "
              + "\n están teniendo lugar en vuestra ciudad natal de Arkham, en Massachussets. Durante "

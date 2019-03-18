@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Escenarios.Escenario;
 import Vista.VistaFaseInvestigacion;
 
 
@@ -17,11 +18,8 @@ public class ControlGeneral {
     boolean acabarPartida = false;
     VistaFaseInvestigacion v;
     int Ronda=1;
-   
-
-
     private Boolean investigacion=false;
-
+    Escenario escenario=new Escenario();
     public ControlGeneral() {
         v = new VistaFaseInvestigacion(this);
 
@@ -29,28 +27,37 @@ public class ControlGeneral {
 
     public void ComenzarJuego() {
         System.out.println(Ronda);
+        
         FasePrepararPartida FasePrepararPartida=new FasePrepararPartida();
         
         setInvestigacion((Boolean) true);
+        
         ControlFaseInvestigacion FaseInvestigacion=new ControlFaseInvestigacion();
         FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
+        
         setInvestigacion((Boolean) false);
       
         FaseMantenimiento FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
+       
         Ronda++;
+        
         while (true != acabarPartida) {
-System.out.println(Ronda);
+        System.out.println(Ronda);
+        
             FaseMito FaseMito=FaseMantenimiento.RealizaFaseMantenimiento();
             
             FaseInvestigacion=FaseMito.RealizaFaseMito();
             
-             setInvestigacion((Boolean) true);
-            FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
+            setInvestigacion((Boolean) true);
+            FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
             setInvestigacion((Boolean) false);
             
             FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
            Ronda++;
+           
         }
+        
+        escenario.resultado();
 
     }
 

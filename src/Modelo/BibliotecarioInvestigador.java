@@ -17,7 +17,7 @@ public class BibliotecarioInvestigador extends Apoyo  {
     Mazo mazo;
     Carta carta; 
     public BibliotecarioInvestigador(String nombreCarta, boolean preparada, int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super("Bibliotecario Investigador", false, 0, 0, 0, 1, 0, 1, 1, 2, 0, false);
+        super("Bibliotecario Investigador", false, 0, 0, 0, 1, 0, 1, 1, 2, 0, 0, false);
     }
     @Override
     public void Accion(Investigador investigador){
@@ -26,7 +26,7 @@ public class BibliotecarioInvestigador extends Apoyo  {
             for (int i = 0; i < mazo.getC().size() ; i++) {
                 if ("Viejo Libro de Conocimiento".equals(mazo.getC().get(i).getNombreCarta())){
                     carta = mazo.getC().get(i);
-                    
+                    //mano.getCartasmano().add(carta);
                     
                 }
                 
@@ -36,7 +36,7 @@ public class BibliotecarioInvestigador extends Apoyo  {
 
     @Override
     public void verCarta() {
-        throw new UnsupportedOperationException("Después de que el Bibliotecario investigador entre en juego: Busca en tu mazo un Apoyo Tomo y añádelo a tu mano. Baraja tu mazo."); 
+        System.out.println("Después de que el Bibliotecario investigador entre en juego: Busca en tu mazo un Apoyo Tomo y añádelo a tu mano. Baraja tu mazo."); 
     }
 
   

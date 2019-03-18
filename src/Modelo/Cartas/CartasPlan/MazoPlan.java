@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Mazo_Plan;
+package Modelo.Cartas.CartasPlan;
 import java.util.ArrayList;
 
 

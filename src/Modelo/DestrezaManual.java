@@ -5,7 +5,7 @@
  */
 package Modelo;
 import CartasInvestigador.Habilidad;
-import Modelo.Cartas.Mazo;
+import Modelo.Cartas.MazoEncuentros;
 import modelohabilidad.PruebaHabilidad;
 /**
  *
@@ -14,7 +14,7 @@ import modelohabilidad.PruebaHabilidad;
 public abstract class DestrezaManual extends Habilidad {
     
     PruebaHabilidad ph;
-    Mazo m;
+    MazoEncuentros m;
 
     
     

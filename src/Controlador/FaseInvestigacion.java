@@ -5,7 +5,10 @@
  */
 package Controlador;
 
+import CartasInvestigador.Carta;
 import java.util.InputMismatchException;
+import java.util.Iterator;
+import java.util.Scanner;
 
 /**
  *
@@ -35,7 +38,29 @@ public class FaseInvestigacion extends Fase {
                     break;
 
                 case 3:  //Acivar una capacidad
-
+                   Scanner sr=new Scanner(System.in);
+                    Iterator iterator=CartasEscenario.iterator();
+                    System.out.println("Estas son tus cartas");
+                    
+                    while(iterator.hasNext()){
+                    Carta c=CartasEscenario.poll();
+                        System.out.println(c.getNombreCarta());
+                    } 
+                    
+                    System.out.println("Que carta del escenario quieres activar?");
+                    
+                    String n=sr.next();
+                    
+                    while(iterator.hasNext()){
+                    Carta c=CartasEscenario.poll();
+                        if(n==c.getNombreCarta()){
+                        c.Accion(Roland);
+                        
+                        }
+                    }
+                    
+                        
+                    
                     
                     
                     break;
@@ -53,7 +78,6 @@ public class FaseInvestigacion extends Fase {
                 case 6: //Moverse
 
                     
-                    Roland.moverPersonaje(lugares.getLugares(), " ", Roland);
                     
                     
                        

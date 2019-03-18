@@ -4,13 +4,14 @@ package Modelo;
 * Autor: Juan Martin Ayala
 */
 import CartasInvestigador.Habilidad;
+import modelohabilidad.PruebaHabilidad;
         
 public class CartaDeduccion extends Habilidad{
     
-    RolandBanks roland;
+    PruebaHabilidad prueba;
     
     public CartaDeduccion(){
-        super("Deduccion",false,0, 1, 0, 0, 0);  
+        super("Deduccion",false,0 ,0, 1, 0, 0, 0);  
     }
     
     @Override
@@ -22,20 +23,16 @@ public class CartaDeduccion extends Habilidad{
     }
     
     @Override
-    public void Accion(){
-        //if (pruebaHabilidad.exito==true){
-            
-            if(roland.getLugar().pistas==0){
+    public void Accion(Investigador investigador){
+        if (prueba.isX()==true){
+            if(investigador.getLugar().pistas==0){
                 System.out.println("No quedan pistas");
             }else {
                 System.out.println("Obtienes pista extra");
-                roland.getLugar().pistas--;
-                roland.setNumeroPistas(roland.getNumeroPistas()+1);
+                investigador.getLugar().pistas--;
+                investigador.setNumeroPistas(investigador.getNumeroPistas()+1);
             }
-        //}
-    }
-
-    
-        
+        }
+    }     
     
 }
