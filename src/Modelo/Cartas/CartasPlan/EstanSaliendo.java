@@ -17,9 +17,7 @@ public abstract class EstanSaliendo extends CartaPlan {
     CartaPlan cp;
     
     
-    //Preguntar en clase como saber en que acto te encuentras, preguntar 
-    //sobre el enemigo goul, como saber cuantos enemigos goul hay, saber que sitio
-    //es el pasillo o la salita y como saber cuandop termina la ronda.
+    
     
     
     public EstanSaliendo(){
@@ -56,16 +54,17 @@ public abstract class EstanSaliendo extends CartaPlan {
 
         if(ca.getTitulo()=="Atrapados" || ca.getTitulo()=="La barrera"){
             
+            //Mueren todos los investigadores
             //GameOver
             
             
         }else{
-            
+            //Trauma fisico no esta implementado
             //+1 Trauma fisico
             
         }
         
-        
+        cp.setPerdicionEnJuego(cp.getPerdicionEnJuego()-10);
     }
     
     }
