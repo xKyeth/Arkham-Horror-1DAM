@@ -22,6 +22,7 @@ import Modelo.MazoInvestigador;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 import Escenarios.Escenario;
+import java.util.LinkedList;
 import modelohabilidad.*;
 /**
  *
@@ -44,7 +45,7 @@ public class Fase {
     MazoInvestigador MazoInvestigador = new MazoInvestigador();
     uso_descarte_cartas UsoDeCartasInvestigador=new uso_descarte_cartas();
   ArrayList<CartasInvestigador.Apoyo> Apoyo=new ArrayList();
-    ArrayList<Carta> CartasEscenario=new ArrayList();
+    LinkedList<Carta> CartasEscenario=new LinkedList();
     
     
     
