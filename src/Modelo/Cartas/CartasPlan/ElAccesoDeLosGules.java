@@ -14,7 +14,6 @@ import Modelo.Cartas.MazoEncuentros;
 public abstract class ElAccesoDeLosGules extends CartaPlan {
  
     
-    //Preguntar en clase sobre la pila de descartes, la carta de enmigo goul
     
     
     CartaPlan cp;
