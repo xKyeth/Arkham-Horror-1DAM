@@ -97,7 +97,11 @@ public class FaseInvestigacion extends Fase {
 
                     break;
                 case 9:    //Combatir con un enemigo
-
+                    pruebaCombate.enfrenta(enemigo, Roland, Apoyo, opcion);
+                    
+                    
+                    
+                    
                     break;
 
             }
