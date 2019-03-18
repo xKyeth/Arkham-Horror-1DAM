@@ -19,6 +19,7 @@ import java.util.Scanner;
 public class MazoEncuentros {
 
   private LinkedList<Carta> c;
+  private LinkedList<Carta> d=new LinkedList();
   
   
     public MazoEncuentros(){
@@ -31,6 +32,10 @@ public class MazoEncuentros {
    
         
         System.out.println("cojo la primera carta");
+        getD().add(getC().peek());
+        
+        
+      
         return getC().getFirst();
         
       
@@ -48,6 +53,7 @@ public class MazoEncuentros {
     
     }else for (int i=0; i<x; i++){
         System.out.println("cojo una carta");
+                getD().add(getC().peek());
         return getC().getFirst();
         
       }
@@ -76,6 +82,7 @@ public class MazoEncuentros {
           
             for (int i = 0; i < getC().size(); i++) {
             if (getC().get(i).getNombreCarta().equals(nombre)){
+                getD().add(getC().get(i));
             return getC().get(i);
             }else System.out.println("Esa carta no existe");
          
@@ -116,6 +123,26 @@ public class MazoEncuentros {
     }
     
     
+    public void restaurarMazo(){
+        for (int i = 0; i < d.size(); i++) {
+          c.add(d.get(i));
+             
+        }
+  
+    
+    
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * @return the c
      */
@@ -128,6 +155,20 @@ public class MazoEncuentros {
      */
     public void setC(LinkedList<Carta> c) {
         this.c = c;
+    }
+
+    /**
+     * @return the d
+     */
+    public LinkedList<Carta> getD() {
+        return d;
+    }
+
+    /**
+     * @param d the d to set
+     */
+    public void setD(LinkedList<Carta> d) {
+        this.d = d;
     }
     
     
