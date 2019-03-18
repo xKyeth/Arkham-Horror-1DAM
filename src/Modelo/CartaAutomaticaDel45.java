@@ -9,7 +9,7 @@ public class CartaAutomaticaDel45 extends Apoyo{
     // Usos (4 suministros (municiones más específico). Si se queda sin suministros, descarta la carta.
     // Gasta 1 suministro (uso o munición): Combatir. Recibe +1 de combate para este ataque. Este ataque inflige +1 de daño.
     private int suministros=4;
-    RolandBanks investigador;
+    Investigador investigador;
     Enemigo enemigo;
     /* Implementar el atributo apoyo.Hand? Por ej. int hand=0,1 ó 2. 0=no es objeto de mano.
     1=Ocupa una mano. 2=ocupa las dos manos. Esto para en el tablero controlar el número de objetos
@@ -29,7 +29,8 @@ public class CartaAutomaticaDel45 extends Apoyo{
         if(suministros>0){
             this.investigador.combate=+1;
             suministros--;
-            enemigo.vida--; //Inflige +1 daño (-1 de vida) al enemigo.
+            enemigo.vida--; //Inflige +1 daño (-1 de vida) al enemigo. Tiene que quitarle daño a un enemigo 
+            //concreto, no está referenciado en ningun lado. Ponerlo como un Array.
             }            
         }   
 

@@ -20,7 +20,7 @@ public class CartaDrMilanChristopher extends Apoyo{
     public void Accion(Investigador inv) {
         System.out.println("Después de que investigues con éxito: Obtén 1 recurso.");
         //Hacer si investigar tiene éxito.
-        inv.setNumeroRecursos(inv.getNumeroRecursos()+1);
+//        inv.setNumeroRecursos(inv.getNumeroRecursos()+1);
     }    
     
     @Override

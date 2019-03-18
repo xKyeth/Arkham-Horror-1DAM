@@ -21,7 +21,7 @@ public class PruebaIntelecto extends PruebaHabilidad{
 
     public boolean prueba(int a) {
         boolean x = false;
-        int n = inv.getIntelecto() + seleccionaApoyo() + bolsa.BolsaDelCaos();
+        int n = inv.getIntelecto() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
             return x;
         }
@@ -32,6 +32,11 @@ public class PruebaIntelecto extends PruebaHabilidad{
     
     public int seleccionaApoyo(){
         //Seleccionar apoyo de las cartas disponibles. Hay que implementarlo.
+//        mostrarCartasMano();
+
+        //Método para elegir cartas y obtener un array de cartas que luego es el que 
+        //se pasa por parámetros en sumaApoyos.
+        
         return sumaApoyos(apoyos);
     }
     

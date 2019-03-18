@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Mazo_Plan;
+package Modelo.Cartas.CartasPlan;
+
+import Modelo.Cartas.MazoEncuentros;
 
 /**
  *
@@ -16,6 +18,8 @@ public abstract class ElAccesoDeLosGules extends CartaPlan {
     
     
     CartaPlan cp;
+    MazoEncuentros me;
+    
     
     public ElAccesoDeLosGules(){
          
@@ -38,4 +42,19 @@ public abstract class ElAccesoDeLosGules extends CartaPlan {
      }
     
     
+     public void usarCarta(){
+        if( cp.getPerdicionEnJuego() >= cp.getPerdicion()){
+            
+            //Juntar la pila de descartes del Mazo de encuentro con el mazo de encuentro
+            me.barajar();
+            
+            //if(me.cogerCarta()=enemigo tipo gul){
+            
+            //El investigador roba dicha carta enemigo
+        //}
+        
+        cp.setPerdicionEnJuego(cp.getPerdicionEnJuego()-7);
+        
+        }
+     }
 }
