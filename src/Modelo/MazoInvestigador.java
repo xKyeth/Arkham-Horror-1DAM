@@ -1,10 +1,12 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 
 public class MazoInvestigador implements IMazoInvestigador {
 
     private String nombre;
+    private ArrayList<CartasInvestigador> listaCartasInvestigador;
     private ArrayList<BDCarta> listaCartasMazo=new ArrayList<>();
     
     @Override
@@ -44,10 +46,8 @@ public class MazoInvestigador implements IMazoInvestigador {
     public void añadirCarta(BDCarta carta){
         getListaCartasMazo().add(carta);
     }
-    
-    
+
     public void eliminarCarta(BDCarta carta){
-        
         getListaCartasMazo().remove(0);
     }
 }
