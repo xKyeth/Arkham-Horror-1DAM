@@ -12,14 +12,16 @@ public class Enemigo extends Personaje {
    
    
    protected boolean cazador;
+   protected boolean gul;
 
    public Enemigo(boolean cazador){
        super();
        this.cazador=cazador;
+       this.gul=gul;
    }
    
    
-   public Enemigo (int combate, int vida, int agilidad, int daño, int horror, Lugar lugar, boolean cazador){
+   public Enemigo (int combate, int vida, int agilidad, int daño, int horror, Lugar lugar, boolean cazador, boolean gul){
       this.combate=combate;
       this.vida=vida;
       this.agilidad=agilidad;
@@ -27,6 +29,7 @@ public class Enemigo extends Personaje {
       this.horror=horror;
       this.lugar=lugar; 
       this.cazador=cazador;
+      this.gul=gul;
    }
     /**
      * @return the cazador

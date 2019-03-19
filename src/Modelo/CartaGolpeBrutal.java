@@ -24,5 +24,10 @@ public abstract class CartaGolpeBrutal extends Habilidad{
                + ", pero siguió atacando una y otra vez… hasta que al final, dejó de moverse.");
    
    }
+
+    @Override
+    public void verCarta() {
+        System.out.print("Si esta prueba de habilidad tiene éxito durante un ataque, dicho ataque inflige +1 de daño");
+    }
     
 }
