@@ -1,5 +1,6 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 
 public class BD {
@@ -62,8 +63,8 @@ public class BD {
         this.mazoRoland = mazoRoland;
     }
         
-    public ArrayList<BDCarta> verCartas(MazoInvestigador mazo){
-        ArrayList<BDCarta> carta=mazo.getListaCartasMazo();
-        return carta;
+    public ArrayList<CartasInvestigador> verCartas(MazoInvestigador mazo){
+        ArrayList<CartasInvestigador> cartas=mazo.getListaCartasMazo();
+        return cartas;
     }
 }
