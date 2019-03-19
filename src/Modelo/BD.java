@@ -1,12 +1,14 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+/**BD actúa como un array donde se puede ver en cualquier momento a través del
+ método verCartas todas las cartas existentes en el mazo de Roland.**/
 import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 
 public class BD {
-    private ArrayList<BDCarta> listaCartas = new ArrayList<BDCarta>();
-    private ArrayList<MazoInvestigador> mazoRoland = new ArrayList<MazoInvestigador>();
-    // COMBATE VOLUNTAD INTELECTO AGILIDAD
+    private ArrayList<BDCarta> listaCartas = new ArrayList<>();
+    private ArrayList<MazoInvestigador> mazoRoland = new ArrayList<>();
+    // ORDEN ATRIBUTOS: COMBATE VOLUNTAD INTELECTO AGILIDAD
     
     public BD(){
     this.listaCartas=new ArrayList<>();
