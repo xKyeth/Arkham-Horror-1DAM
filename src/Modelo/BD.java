@@ -2,6 +2,7 @@ package Modelo;
 /**AUTOR ALEXANDRA**/
 /**BD actúa como un array donde se puede ver en cualquier momento a través del
  método verCartas todas las cartas existentes en el mazo de Roland.**/
+
 import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 

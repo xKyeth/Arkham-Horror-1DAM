@@ -1,6 +1,7 @@
 package Controlador;
 /**AUTOR ALEXANDRA**/
 import CartasInvestigador.Carta;
+import CartasInvestigador.CartasInvestigador;
 import ClaseMano.uso_descarte_cartas;
 import Lugar.Lugar;
 import Lugar.Lugares;
@@ -37,6 +38,7 @@ public class ControlFaseInvestigacion extends Fase{
     ArrayList<Lugar>lugar=l.getLugares();
     CartaPlan plan;
     PruebaIntelecto pruebaI;
+    ArrayList<CartasInvestigador> listaCartas;
     
     public ControlFaseInvestigacion(){
         bd=new BD();
@@ -109,6 +111,14 @@ public class ControlFaseInvestigacion extends Fase{
                     
                 case 7:
                     /*NO EXISTE MÉTODO*/
+                    /*For para recorrer las cartas*/
+                    /*Si la carta extiende de apoyo o evento, mostrar y preguntar si la quiere usar*/
+                    /*Devolver la clase con class.forName(clase)*/
+                    /*nombreCarta.getsuperclass()*/
+                    for(int i=0; i<=mazo.verCartas(mazo).size(); i++){
+                    
+                    }
+                    
                     vista.MenuPrincipal();
                     break;
                     
