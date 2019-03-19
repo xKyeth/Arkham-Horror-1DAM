@@ -37,6 +37,7 @@ public class HabilidadMainPrueba {
         PruebaHabilidad intelecto = new PruebaIntelecto(Roland, apoyosprueba, bolsa);
         
 //        Algo manda iniciar prueba de agilidad de dificultad 2
+//Da error porque se ha modificado a Roland y hay un error en su clase!!
         agilidad.iniciarPrueba(2);
         
   
