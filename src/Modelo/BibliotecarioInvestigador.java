@@ -10,7 +10,7 @@ import CartasInvestigador.CartasInvestigador;
 
 /**
  *
- * @author usuario
+ * @author JACINTO
  */
 public class BibliotecarioInvestigador extends Apoyo  {
     uso_descarte_cartas mano;
