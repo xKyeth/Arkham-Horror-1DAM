@@ -2,8 +2,6 @@
 package ClaseMano;
 import java.util.Scanner;
 import java.util.LinkedList;
-import CartasInvestigador.Apoyo;
-import CartasInvestigador.Habilidad;
 import CartasInvestigador.CartasInvestigador;
 import Modelo.MazoInvestigador;
 import Modelo.Investigador;
@@ -43,6 +41,7 @@ public class uso_descarte_cartas {
         int c = 0;
         while(c<5) {
             this.robarCarta();
+            c++;
         }
     }
     //Fernando
@@ -51,7 +50,7 @@ public class uso_descarte_cartas {
         int n = entrada.nextInt();
         int contador = 0;
         while(contador<n) {
-            //utiliza la ultima carta de la lista carta, la mete en la lista de descartes
+            //utiliza la ultima carta de la lista carta,
             //y la borra
             int y = mazo.getListaCartasMazo().size();
             for (int i = 0; i < mazo.getListaCartasMazo().size(); i++) {
@@ -60,8 +59,9 @@ public class uso_descarte_cartas {
             }
             System.out.println("Que carta quieres utilizar?");
             int x = entrada.nextInt();
+            
             getCartasmano().add(mazo.getListaCartasMazo().get(x));
-            getDescarte().add(mazo.getListaCartasMazo().get(x));
+            
             mazo.getListaCartasMazo().get(x);
             contador++;
         }
@@ -71,14 +71,21 @@ public class uso_descarte_cartas {
         //Se eliminan 8 cartas del linkedList baraja y se añaden al linkedList 
         //descarte
         
-        int y = mazo.getListaCartasMazo().size();
-        int contador = 0;
-        while (contador<8) {
-            mazo.getListaCartasMazo().remove(y);
-            getDescarte().add(mazo.getListaCartasMazo().get(y));
-            y = y-1;
-            contador++;
+        if(cartasmano.size()>8) {
+            while(cartasmano.size()>8) {
+                for (int i = 0; i < cartasmano.size(); i++) {
+                    System.out.println(cartasmano.get(i));
+                }
+                System.out.println("Que carta quieres descartar?");
+                int y = entrada.nextInt();
+                descarte.add(cartasmano.get(y));
+                cartasmano.remove(y);
+            }
         }
+        else {
+            System.out.println("Hay menos de 8 cartas en la mano");
+        }
+        
         
     }
      

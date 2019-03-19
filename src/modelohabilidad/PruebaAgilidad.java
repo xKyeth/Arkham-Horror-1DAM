@@ -46,7 +46,7 @@ public class PruebaAgilidad extends PruebaHabilidad{
         //se pasa por parámetros en sumaApoyos.
         
         
-        return sumaApoyos(apoyos);
+        return sumaApoyosAgilidad(apoyos);
     }
     
     

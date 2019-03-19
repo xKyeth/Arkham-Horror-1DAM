@@ -14,7 +14,7 @@ public class Enemigo extends Personaje {
    protected boolean cazador;
    protected boolean gul;
 
-   public Enemigo(boolean cazador){
+   public Enemigo(boolean cazador, boolean gul){
        super();
        this.cazador=cazador;
        this.gul=gul;
@@ -45,20 +45,23 @@ public class Enemigo extends Personaje {
         this.cazador = cazador;
     }
     
+    // no puedo override el método porque está en parámetro Investigador en vez de Personaje
+    // y no veo la utilidad de Lugares l
     @Override
-    public void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l) {
-       
+    public void moverPersonaje(ArrayList<Lugar> lugares, Personaje personaje,Lugares l) {
+       ArrayList<Lugar> lugarEnemigo=l.getLugares();
+        personaje.setLugar(lugar);
     }
     
     
       public void ataque (ArrayList<Lugar> lugares, int posicion, Investigador investigador, Enemigo enemigo){
-            if(investigador.getLugar()==enemigo.getLugar()){
-                
-}
-  
-      
-      
+            if(enemigo.combate>investigador.combate && investigador.getLugar()==enemigo.getLugar()){
+           investigador.daño=(investigador.daño) - (enemigo.getDaño());
+              }
+        else if(enemigo.combate<=investigador.combate && investigador.getLugar()==enemigo.getLugar()){
+            enemigo.daño=(enemigo.daño) - (investigador.getDaño());     
 }
 
    
+}
 }
