@@ -6,7 +6,6 @@ import Lugar.Lugar;
 import Lugar.Lugares;
 import java.util.ArrayList;
 import Modelo.BD;
-import Modelo.BDCarta;
 import Modelo.Cartas.CartasPlan.CartaPlan;
 import Modelo.Enemigo;
 import Modelo.Investigador;
