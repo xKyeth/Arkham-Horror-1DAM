@@ -41,7 +41,7 @@ public class PruebaVoluntad extends PruebaHabilidad{
         //Método para elegir cartas y obtener un array de cartas que luego es el que 
         //se pasa por parámetros en sumaApoyos.
         
-        return sumaApoyos(apoyos);
+        return sumaApoyosVoluntad(apoyos);
     }
 
     
