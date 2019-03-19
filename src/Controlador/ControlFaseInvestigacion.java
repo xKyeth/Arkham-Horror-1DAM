@@ -6,7 +6,6 @@ import Lugar.Lugar;
 import Lugar.Lugares;
 import java.util.ArrayList;
 import Modelo.BD;
-import Modelo.BDCarta;
 import Modelo.Cartas.CartasPlan.CartaPlan;
 import Modelo.Enemigo;
 import Modelo.Investigador;
@@ -54,11 +53,13 @@ public class ControlFaseInvestigacion extends Fase{
             switch(opcion){
                 case 1:
                     uso.robarCarta();
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 2:
                     investigador.getRecursoFase();
+                    
                     vista.MenuPrincipal();
                     break;
                     
@@ -84,21 +85,25 @@ public class ControlFaseInvestigacion extends Fase{
                         
                         }
                     }
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 4:
                     prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego());
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 5:
                     pruebaI.prueba(lu.getVelo());
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 6:
                     investigador.moverPersonaje(lugar, investigador, l);
+                    
                     vista.MenuPrincipal();
                     break;
                     
@@ -119,18 +124,14 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 9:
-                    if(prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego())==true){
-                        prueba.calculaDañoEnemigo(Roland, Apoyo);
-                    }
-                    else{
-                        prueba.calculaDañoInvestigador(enemigo);
-                    }
+                    prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego());
                     
                     vista.MenuPrincipal();
                     break;
 
                 default:
                    System.out.println("Opción incorrecta.");
+                   
                    vista.MenuPrincipal();
                    break;
            }
