@@ -6,7 +6,7 @@ import Modelo.Investigador;
 public class Sótano extends Lugar{
     
     public Sótano(){
-        super("Sótano",false);
+        super("Sótano",false,0);
         super.descripcionNR = "Las escaleras que bajan al sótano están resbaladizas y brillan con una fina capa de hielo…";
         super.descripcionR = "El sótano parece haber quedado sustituido por una red subterránea de helados túneles y cavernas. El frío os hiela hasta el tuétano.";
         super.velo = 4;

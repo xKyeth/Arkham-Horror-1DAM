@@ -6,63 +6,66 @@
 package modelohabilidad;
 
 import BolsaDelCaos.BolsaDelCaos;
+import CartasInvestigador.Apoyo;
 import Modelo.Enemigo;
 import Modelo.RolandBanks;
+import Vista.Vista;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
  *
- * @author cristian
+ * @author Miguel
  */
-public class PruebaCombate extends PruebaHabilidad{
-
-     Enemigo enemigo;
-     LinkedList<Enemigo> pilaVictoria;
-    
-    public PruebaCombate(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
-        super(inv, apoyos, bolsa);
+public class PruebaCombate {
+    Vista mensaje=new Vista();
+    public PruebaCombate() {
     }
     
-    public void iniciarPruebaCombate(){
-        enfrenta();
-        combate();
+    //
+    public boolean enfrenta(Enemigo enemigo ,RolandBanks investigador,ArrayList<Apoyo> apoyo,int fichaCaos){
+        //Si gana el investigador el resultado es true y le resta la vida al enemigo, si es el enemigo el resultado es false y le resta vida al investigador
+        boolean victoria;
+        int puntosApoyo=0;
+        for(Apoyo elem:apoyo){
+            puntosApoyo=elem.getCombate();
+        }
         
-    }
-    public void nuevoEnemigo(Enemigo ene){
-        this.enemigo=ene;
-    }
-    
-    public boolean enfrenta(){
-        //Si gana el investigador el resultado es true, si es el enemigo el resultado es false
-        boolean victoria=false;
-        if(inv.getCombate()>=enemigo.getCombate()){
+        if(investigador.getCombate()+puntosApoyo>enemigo.getCombate()+fichaCaos){
+            mensaje.muestraMensaje("El investigador vence en este combate.");
+            int dañoInvestigador=calculaDañoEnemigo(investigador, apoyo);
+            enemigo.setVida(enemigo.getVida()-dañoInvestigador);
+            mensaje.muestraMensaje("Tu golpe asesta a tu enemigo un daño de "+dañoInvestigador+" puntos de daño.");
             victoria=true;
         }else{
+            mensaje.muestraMensaje("El enemigo vence este combate...");
+            int dañoEnemigo=calculaDañoInvestigador(enemigo);
+            investigador.setVida(investigador.getVida()-dañoEnemigo);
+            mensaje.muestraMensaje("El enemigo te asesta un terrible golpe y pierdes "+dañoEnemigo+" puntos de vida...");
+            
             victoria=false;
         }
+        
         return victoria;
     }
-    public void combate(){
-        if(enfrenta()){
-           enemigo.setVida(enemigo.getVida()-(1+inv.getDaño()));
-        }else{
-            inv.setVida(inv.getVida()-enemigo.getDaño());
+    
+    //devuelve el daño que el monstruo le hace al investigador
+    public int calculaDañoInvestigador(Enemigo enemigo ){
+      return enemigo.getDaño();
+      
+    }
+    //devuelve el daño acumulado junto con las cartas de apoyo que el investigador le hace al enemigo
+    
+   public int calculaDañoEnemigo(RolandBanks investigador,ArrayList<Apoyo> apoyo ){
+        int puntosDaño=0;
+        for(Apoyo elem:apoyo){
+            puntosDaño=elem.getDaño;
         }
+        puntosDaño+=investigador.getDaño();
+      return puntosDaño;
     }
  
     
-
-    
-
-    @Override
-    public boolean prueba(int a) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    
-
     
     
 }

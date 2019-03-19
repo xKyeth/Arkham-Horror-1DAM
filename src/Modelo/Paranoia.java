@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Paranoia;
+package Modelo;
 
 import CartasMito.Traicion;
 import Modelo.Investigador;
@@ -18,7 +18,7 @@ public class Paranoia extends Traicion {
     
    
     public Paranoia(){
-    super("Paranoia",false);
+    super("Paranoia",false,0);
    }
       
    public void Accion(Investigador R) {

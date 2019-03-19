@@ -1,11 +1,13 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 
 public class MazoInvestigador implements IMazoInvestigador {
 
     private String nombre;
-    private ArrayList<BDCarta> listaCartasMazo=new ArrayList<>();
+    private ArrayList<CartasInvestigador> listaCartasInvestigador;
+    //private ArrayList<BDCarta> listaCartasMazo=new ArrayList<>();
     
     @Override
     public String getNombre() {
@@ -18,7 +20,7 @@ public class MazoInvestigador implements IMazoInvestigador {
     }
     
     public MazoInvestigador(){
-        this.listaCartasMazo = new ArrayList<>();
+        this.listaCartasInvestigador = new ArrayList<>();
     }
     
     public MazoInvestigador(String nombreMazo) {
@@ -31,23 +33,21 @@ public class MazoInvestigador implements IMazoInvestigador {
     }
     
     @Override
-    public ArrayList<BDCarta> getListaCartasMazo() {
-        return listaCartasMazo;
+    public ArrayList<CartasInvestigador> getListaCartasMazo() {
+        return listaCartasInvestigador;
     }
 
     @Override
-    public void setListaMazo(ArrayList<BDCarta> listaCartasMazo) {
-        this.listaCartasMazo = listaCartasMazo;
+    public void setListaMazo(ArrayList<CartasInvestigador> listaCartasInvestigador) {
+        this.listaCartasInvestigador = listaCartasInvestigador;
     }
     
     @Override
-    public void añadirCarta(BDCarta carta){
+    public void añadirCarta(CartasInvestigador carta){
         getListaCartasMazo().add(carta);
     }
-    
-    
-    public void eliminarCarta(BDCarta carta){
-        
+
+    public void eliminarCarta(CartasInvestigador carta){
         getListaCartasMazo().remove(0);
     }
 }

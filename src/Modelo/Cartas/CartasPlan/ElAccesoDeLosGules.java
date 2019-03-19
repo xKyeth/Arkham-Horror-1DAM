@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Mazo_Plan;
+package Modelo.Cartas.CartasPlan;
+
+import Modelo.Cartas.MazoEncuentros;
 
 /**
  *
@@ -12,10 +14,11 @@ package Mazo_Plan;
 public abstract class ElAccesoDeLosGules extends CartaPlan {
  
     
-    //Preguntar en clase sobre la pila de descartes, la carta de enmigo goul
     
-    
+    private boolean robar=true;
     CartaPlan cp;
+    MazoEncuentros me;
+    
     
     public ElAccesoDeLosGules(){
          
@@ -38,4 +41,21 @@ public abstract class ElAccesoDeLosGules extends CartaPlan {
      }
     
     
+     public void usarCarta(){
+        if( cp.getPerdicionEnJuego() >= cp.getPerdicion()){
+
+            me.restaurarMazo();
+            me.barajar();
+            
+            while(robar==true){
+            
+            //if(me.cogerCarta()=enemigo tipo gul){
+            
+            //El investigador roba dicha carta enemigo
+          //}
+            }
+        cp.setPerdicionEnJuego(cp.getPerdicionEnJuego()-7);
+        
+        }
+     }
 }

@@ -15,13 +15,15 @@ import Lugar.Salita;
 import Lugar.Sótano;
 import Lugar.Ático;
 import Mazo_Plan.MazoPlan;
-import Modelo.Carta;
+import CartasInvestigador.Carta;
 import Modelo.Cartas.Cartas_Acto.MazoActo;
 import Modelo.Cartas.MazoEncuentros;
 import Modelo.MazoInvestigador;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
-
+import Escenarios.Escenario;
+import java.util.LinkedList;
+import modelohabilidad.*;
 /**
  *
  * @author usuario
@@ -38,12 +40,12 @@ public class Fase {
     Lugares lugares = new Lugares(Estudio, Pasillo, Salita, Sotano, Atico);
     BolsaDelCaos BolsaDelCaos = new BolsaDelCaos();
     MazoActo MazoActo = new MazoActo();
-    MazoPlan MazoPlan = new MazoPlan();
+   // MazoPlan MazoPlan = new MazoPlan();
     MazoEncuentros MazoEncuentro = new MazoEncuentros();
     MazoInvestigador MazoInvestigador = new MazoInvestigador();
     uso_descarte_cartas UsoDeCartasInvestigador=new uso_descarte_cartas();
-  
-    ArrayList<Carta> CartasEscenario=new ArrayList();
+  ArrayList<CartasInvestigador.Apoyo> Apoyo=new ArrayList();
+    LinkedList<Carta> CartasEscenario=new LinkedList();
     
     
     
