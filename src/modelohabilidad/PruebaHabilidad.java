@@ -27,13 +27,6 @@ public abstract class PruebaHabilidad {
     protected int dificultad;
     private boolean x;
 
-    public boolean isX() {
-        return x;
-    }
-
-    public void setX(boolean x) {
-        this.x = x;
-    }
     
     public PruebaHabilidad(RolandBanks inv, ArrayList<Apoyo> apoyos, BolsaDelCaos bolsa){      
         this.inv=inv;
@@ -42,6 +35,7 @@ public abstract class PruebaHabilidad {
         vista = new Vista_Habilidad(this);
     }
     
+    //Método para iniciar la prueba.
     public boolean iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
         x = prueba(dificultad);
@@ -53,8 +47,10 @@ public abstract class PruebaHabilidad {
         return x;
     }
 
+    //Método abstracto para hacer la prueba.
     public abstract boolean prueba(int a);
     
+    //Devuelve el valor de apoyos de Agilidad
     public int sumaApoyosAgilidad(ArrayList<Apoyo> apoyos){ // Sólo suma agilidad.
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
@@ -63,6 +59,7 @@ public abstract class PruebaHabilidad {
         return n;
     }
     
+    //Devuelve el valor de apoyos de voluntad.
     public int sumaApoyosVoluntad(ArrayList<Apoyo> apoyos){
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
@@ -71,6 +68,7 @@ public abstract class PruebaHabilidad {
         return n;
     }
     
+    //Devuelve el valor de apoyos de intelecto.
     public int sumaApoyosIntelecto(ArrayList<Apoyo> apoyos){
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
@@ -79,6 +77,7 @@ public abstract class PruebaHabilidad {
         return n;
     }
         
+    //Método que selecciona la ficha de Caos y devuelve el valor de la ficha.
     public int seleccionaCaos(){ //ESTE MÉTODO SALE 2 VECES
         //Usar valor de la ficha del caos si sale un número
         //Usar valor de la estrella del investigador si sale estrella
@@ -96,38 +95,34 @@ public abstract class PruebaHabilidad {
         else if(n == 9) a = 0;//efecto calavera
         else if(n == 10) a = 0;//efecto capucha
         else if(n == 11) a = 0;//efecto piedra
-//        else if(n == 12){
-//                switch(b){
-////                    case 1: a = inv.getVoluntad(); break;
-//                    case 2: a = inv.getAgilidad(); break;
-////                    case 3: a = inv.getIntelecto(); break;
-//                    case 4: a = inv.getCombate(); break; // Con Miguel.
-//                }
-//            }//efecto tentáculo
+        else if(n == 12) a = 100;//efecto tentáculo. Prueba perdida. 
         else if(n == 13) a = inv.efectoEstrella();
         return a;
         //Retorna ese valor obtenido
     }
     
+    //Mostrar las cartas de la mano
     public LinkedList<CartasInvestigador> mostrarCartasMano(){//        
         return mano.getCartasmano();
     }
 
-    /**
-     * @return the dificultad
-     */
+    //Métodos set y get de dificultad
     public int getDificultad() {
         return dificultad;
     }
 
-    /**
-     * @param dificultad the dificultad to set
-     */
     public void setDificultad(int dificultad) {
         this.dificultad = dificultad;
     }
     
-    
+    //Métodos set y get del booleano
+    public boolean isX() {
+        return x;
+    }
+
+    public void setX(boolean x) {
+        this.x = x;
+    }
     
 
 }

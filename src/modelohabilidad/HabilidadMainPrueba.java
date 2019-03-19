@@ -9,6 +9,7 @@ import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 import CartasInvestigador.Apoyo;
+import Modelo.Enemigo;
 import java.util.LinkedList;
 
 /**
