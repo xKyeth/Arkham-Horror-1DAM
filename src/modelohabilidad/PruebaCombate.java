@@ -41,6 +41,7 @@ public class PruebaCombate {
             mensaje.muestraMensaje("El enemigo vence este combate...");
             int dañoEnemigo=calculaDañoInvestigador(enemigo);
             investigador.setVida(investigador.getVida()-dañoEnemigo);
+            investigador.setHorror(investigador.getHorror()-enemigo.getHorror());
             mensaje.muestraMensaje("El enemigo te asesta un terrible golpe y pierdes "+dañoEnemigo+" puntos de vida...");
             
             victoria=false;
