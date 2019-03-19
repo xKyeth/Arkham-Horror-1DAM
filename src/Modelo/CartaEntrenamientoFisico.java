@@ -14,10 +14,11 @@ public abstract class CartaEntrenamientoFisico extends Apoyo {
     RolandBanks roland;
     
     public CartaEntrenamientoFisico (){
-     super ("Carta de Entrenamiento fisico",false,1, 0, 1, 0, 0, 0, 0, 2, 0, false);
+      super("Carta de Entrenamiento fisico",false , 0,1, 0, 1, 0,0 , 0, 0, 2, 0, false);
   }
     
-    public void Accion (){
+    @Override
+    public void Accion (Investigador inv){
         
         roland.voluntad=roland.voluntad+1;
         roland.combate=roland.combate+1;
