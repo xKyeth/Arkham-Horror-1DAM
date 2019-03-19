@@ -7,6 +7,7 @@ package Controlador;
 
 import ClaseMano.uso_descarte_cartas;
 import CartasInvestigador.Carta;
+import CartasInvestigador.CartasInvestigador;
 import Escenarios.Escenario;
 import Modelo.BDCarta;
 import Modelo.RolandBanks;
@@ -28,7 +29,7 @@ public class FasePrepararPartida extends Fase{
         Roland = new RolandBanks();
         //Crear y barajar mazo Jugador
 
-        ArrayList<BDCarta> MazoInvestigadorFinal = new ArrayList();
+        ArrayList<CartasInvestigador> MazoInvestigadorFinal = new ArrayList();
        MazoInvestigadorFinal= MazoInvestigador.getListaCartasMazo();
         Collections.shuffle(MazoInvestigador.getListaCartasMazo());
         MazoInvestigador.setListaMazo(MazoInvestigadorFinal);
