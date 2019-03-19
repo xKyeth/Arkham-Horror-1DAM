@@ -1,11 +1,12 @@
 
 package Modelo;
-
+import java.util.Scanner;
 import CartasMito.Traicion;
 import modelohabilidad.PruebaVoluntad;
 import Modelo.RolandBanks;
 import ClaseMano.uso_descarte_cartas;
 public class cartaFrioCripta extends Traicion {
+    Scanner entrada = new Scanner(System.in);
     uso_descarte_cartas mano;
     RolandBanks roland;
     PruebaVoluntad voluntad;
@@ -21,10 +22,16 @@ public class cartaFrioCripta extends Traicion {
             
         }
         else{
-            //como no hay una lista de cartas de apoyo, se suma automaticamente
-            //2 de d de daño
-           
+            if(mano.getCartasmano().size()>0) {
+                System.out.println("Selecciona una carta de apoyo");
+                System.out.println(mano.getCartasmano());
+                int c = entrada.nextInt();
+                mano.decartarCarta(c);
+                
+            }
+            else {
             roland.daño = roland.daño+2;
+            }
         }
     }
     
