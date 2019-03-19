@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
-import Modelo.Carta;
+import Modelo.BDCarta;
 import Modelo.PruebasCombate;
 
 /**
  *
  * @author pecorte
  */
-public abstract class Carta_Acto extends Carta {
+public abstract class Carta_Acto extends BDCarta {
     int coste;
     boolean add;
     String titulo;

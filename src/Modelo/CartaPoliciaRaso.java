@@ -14,10 +14,11 @@ public class CartaPoliciaRaso extends Apoyo {
     Investigador investigador;
     
 
-    public CartaPoliciaRaso(int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super("Policia Raso",false,0, 0, 1, 0, 0, 2, 2, 4, 0, false);
+    public CartaPoliciaRaso(String nombreCarta, boolean preparada, int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
+        super("Policia Raso",false,0, 0, 1, 0, 0, 2, 2, 4, 0,0, false);
     }
 
+    @Override
     public void Accion(Investigador investigador){
         int x ;
         x = investigador.getCombate() +1;

@@ -55,6 +55,7 @@ public class PruebaCombate {
       
     }
     //devuelve el daño acumulado junto con las cartas de apoyo que el investigador le hace al enemigo
+    
    public int calculaDañoEnemigo(RolandBanks investigador,ArrayList<Apoyo> apoyo ){
         int puntosDaño=0;
         for(Apoyo elem:apoyo){

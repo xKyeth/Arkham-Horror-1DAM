@@ -2,7 +2,9 @@
 package ClaseMano;
 import java.util.Scanner;
 import java.util.LinkedList;
-import Modelo.Carta;
+import CartasInvestigador.Apoyo;
+import CartasInvestigador.Habilidad;
+import CartasInvestigador.CartasInvestigador;
 import Modelo.MazoInvestigador;
 import Modelo.Investigador;
 public class uso_descarte_cartas {
@@ -11,9 +13,9 @@ public class uso_descarte_cartas {
     
     Scanner entrada = new Scanner(System.in);
     
-    private LinkedList<Carta> descarte = new LinkedList<>();
-    private LinkedList<Carta> cartasmano = new LinkedList<>();
-    Carta c;
+    private LinkedList<CartasInvestigador> descarte = new LinkedList<>();
+    private LinkedList<CartasInvestigador> cartasmano = new LinkedList<>();
+    CartasInvestigador c;
     MazoInvestigador mazo = new MazoInvestigador();
     
 
@@ -89,7 +91,7 @@ public class uso_descarte_cartas {
     }
     
     Investigador investigador;
-    private LinkedList <Carta> cartasenmesa = new LinkedList();
+    private LinkedList <CartasInvestigador> cartasenmesa = new LinkedList();
     
         //JACINTO
     int recursos = investigador.getNumeroRecursos();
@@ -126,51 +128,53 @@ public class uso_descarte_cartas {
         }
        
  }
+    public void añadirCartaAMano(CartasInvestigador carta){
+        cartasmano.add(carta);
+    }
 
     /**
      * @return the descarte
      */
-    public LinkedList<Carta> getDescarte() {
+    public LinkedList<CartasInvestigador> getDescarte() {
         return descarte;
     }
 
     /**
      * @param descarte the descarte to set
      */
-    public void setDescarte(LinkedList<Carta> descarte) {
+    public void setDescarte(LinkedList<CartasInvestigador> descarte) {
         this.descarte = descarte;
     }
 
     /**
      * @return the cartasmano
      */
-    public LinkedList<Carta> getCartasmano() {
+    public LinkedList<CartasInvestigador> getCartasmano() {
         return cartasmano;
     }
 
     /**
      * @param cartasmano the cartasmano to set
      */
-    public void setCartasmano(LinkedList<Carta> cartasmano) {
+    public void setCartasmano(LinkedList<CartasInvestigador> cartasmano) {
         this.cartasmano = cartasmano;
     }
 
     /**
      * @return the cartasenmesa
      */
-    public LinkedList <Carta> getCartasenmesa() {
+    public LinkedList <CartasInvestigador> getCartasenmesa() {
         return cartasenmesa;
     }
 
     /**
      * @param cartasenmesa the cartasenmesa to set
      */
-    public void setCartasenmesa(LinkedList <Carta> cartasenmesa) {
+    public void setCartasenmesa(LinkedList <CartasInvestigador> cartasenmesa) {
         this.cartasenmesa = cartasenmesa;
     }
+   
+      
+    
 }
    
-
-
-  
-

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Imanol
  */
-public class MazoPlan {
+public abstract class MazoPlan extends CartaPlan {
     
     ArrayList<MazoPlan> mazoPlan = new ArrayList<>();
     
@@ -23,9 +23,9 @@ public class MazoPlan {
     
     public void CartasPlan(){
        
-       mazoPlan.add(new MazoPlan("QueEstaPasando"));
-       mazoPlan.add(new MazoPlan("El asceso de los gules"));
-       mazoPlan.add(new MazoPlan("¡Están saliendo!")); 
+       mazoPlan.add(new MazoPlan("QueEstaPasando") {});
+       mazoPlan.add(new MazoPlan("El asceso de los gules") {});
+       mazoPlan.add(new MazoPlan("¡Están saliendo!") {}); 
        
    }
     
