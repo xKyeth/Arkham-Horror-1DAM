@@ -3,6 +3,7 @@ package ClaseMano;
 import java.util.Scanner;
 import java.util.LinkedList;
 import CartasInvestigador.Apoyo;
+import CartasInvestigador.Carta;
 import CartasInvestigador.Habilidad;
 import CartasInvestigador.CartasInvestigador;
 import Modelo.MazoInvestigador;
