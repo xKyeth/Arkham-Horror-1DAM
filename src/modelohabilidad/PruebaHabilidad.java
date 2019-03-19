@@ -9,9 +9,8 @@ import vista_habilidad.Vista_Habilidad;
 import java.util.ArrayList;
 import Modelo.RolandBanks;
 import ClaseMano.uso_descarte_cartas;
-import Modelo.MazoInvestigador;
 import CartasInvestigador.Apoyo;
-import CartasInvestigador.Carta;
+import CartasInvestigador.CartasInvestigador;
 import java.util.LinkedList;
 
 /**
@@ -25,7 +24,6 @@ public abstract class PruebaHabilidad {
     Vista_Habilidad vista;
     BolsaDelCaos bolsa;
     uso_descarte_cartas mano;
-    MazoInvestigador mazo;
     protected int dificultad;
     private boolean x;
 
@@ -57,13 +55,29 @@ public abstract class PruebaHabilidad {
 
     public abstract boolean prueba(int a);
     
-    public int sumaApoyos(ArrayList<Apoyo> apoyos){ // Sólo suma agilidad.
+    public int sumaApoyosAgilidad(ArrayList<Apoyo> apoyos){ // Sólo suma agilidad.
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getHabilidad() + apoyos.get(i).getComodin();
         }        
         return n;
-    }    
+    }
+    
+    public int sumaApoyosVoluntad(ArrayList<Apoyo> apoyos){
+        int n = 0;
+        for(int i = 0;i < apoyos.size();i++){
+            n = n + apoyos.get(i).getVoluntad() + apoyos.get(i).getComodin();
+        }
+        return n;
+    }
+    
+    public int sumaApoyosIntelecto(ArrayList<Apoyo> apoyos){
+        int n = 0;
+        for(int i = 0;i < apoyos.size();i++){
+            n = n + apoyos.get(i).getIntelecto() + apoyos.get(i).getComodin();
+        }
+        return n;
+    }
         
     public int seleccionaCaos(){ //ESTE MÉTODO SALE 2 VECES
         //Usar valor de la ficha del caos si sale un número
@@ -95,9 +109,9 @@ public abstract class PruebaHabilidad {
         //Retorna ese valor obtenido
     }
     
-//    public LinkedList<Carta> mostrarCartasMano(){//        
-//        return mano.getCartasmano();
-//    }
+    public LinkedList<CartasInvestigador> mostrarCartasMano(){//        
+        return mano.getCartasmano();
+    }
 
     /**
      * @return the dificultad
