@@ -1,5 +1,8 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+/**No puede ser borrada ya que BD necesita de BDCarta para su funcionamiento**/
+/**En otro caso, debería borrarse ambos (BD y BDCarta)**/
+
 public class BDCarta {
     private String nombre;
     private String clase;
