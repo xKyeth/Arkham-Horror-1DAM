@@ -33,9 +33,6 @@ public class CartaPerroGuardian extends Apoyo {
             v--;
         }
         
-            
-        
-        
         
     }
     

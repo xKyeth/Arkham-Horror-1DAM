@@ -6,9 +6,8 @@
 package Modelo;
 import CartasInvestigador.Apoyo;
 import ClaseMano.uso_descarte_cartas;
-import CartasInvestigador.Carta;
 import CartasInvestigador.CartasInvestigador;
-import Modelo.MazoInvestigador;
+
 /**
  *
  * @author usuario
@@ -22,18 +21,27 @@ public class BibliotecarioInvestigador extends Apoyo  {
     }
     @Override
     public void Accion(Investigador investigador){
-    /*    int x=0;
+        int x=0;
         while (x<0){
             for (int i = 0; i < mazo.getListaCartasMazo().size() ; i++) {
-                if ("Viejo Libro de Conocimiento".equals(mazo.getListaCartasMazo().get(i).getNombre()){
+                if ("Viejo Libro de Conocimiento".equals(carta.getNombreCarta())){
                     carta = mazo.getListaCartasMazo().get(i);
                     mano.añadirCartaAMano(carta);
                     System.out.println("Has robado: Viejo Libro de Conocimiento");
-                }
+                }else{
+                    if ("Textos Médicos".equals(carta.getNombreCarta())){
+                    carta = mazo.getListaCartasMazo().get(i);
+                    mano.añadirCartaAMano(carta);
+                    System.out.println("Has robado: Textos Médicos");
+                    }else{
+                        System.out.println("No quedan mas tomos en tu mazo...");
+                    }     
+        }
                 
             }
        
-*/}
+}
+    }
     
 
     @Override
@@ -59,4 +67,4 @@ public class BibliotecarioInvestigador extends Apoyo  {
     
     
     
-}
+
