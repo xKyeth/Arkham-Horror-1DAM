@@ -39,7 +39,7 @@ public class HabilidadMainPrueba {
         
 //        Algo manda iniciar prueba de agilidad de dificultad 2
 //Da error porque se ha modificado a Roland y hay un error en su clase!!
-        intelecto.iniciarPrueba(2);
+        agilidad.iniciarPrueba(2);
         
   
         

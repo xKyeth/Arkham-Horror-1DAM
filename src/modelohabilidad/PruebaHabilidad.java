@@ -38,7 +38,7 @@ public abstract class PruebaHabilidad {
     //Método para iniciar la prueba. Devuelve true 
     public boolean iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
-        x = prueba(dificultad);
+        boolean x = prueba(dificultad);
         if(x == true){
             vista.resultadoPruebaExito();
         }else{
