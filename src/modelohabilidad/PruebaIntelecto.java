@@ -21,6 +21,7 @@ public class PruebaIntelecto extends PruebaHabilidad{
 
     public boolean prueba(int a) {
         boolean x = false;
+        System.out.println("Intelecto del investigador: "+inv.getIntelecto());
         int n = inv.getIntelecto() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
             return x;

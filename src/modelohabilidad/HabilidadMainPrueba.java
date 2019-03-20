@@ -9,6 +9,7 @@ import BolsaDelCaos.BolsaDelCaos;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 import CartasInvestigador.Apoyo;
+import Modelo.*;
 import Modelo.Enemigo;
 import java.util.LinkedList;
 
@@ -26,9 +27,9 @@ public class HabilidadMainPrueba {
         RolandBanks Roland = new RolandBanks();        
         
         ArrayList<Apoyo> apoyosprueba = new ArrayList();
-//        Apoyo apoyo1 = new Apoyo(0,0,0,0,0,0,0,0,0,false) {
-//            
-//        apoyosprueba.add(apoyo1);
+
+        CartaDrMilanChristopher apoyo1 = new CartaDrMilanChristopher();
+        apoyosprueba.add(apoyo1);
         
         BolsaDelCaos bolsa = new BolsaDelCaos();
         
@@ -38,7 +39,7 @@ public class HabilidadMainPrueba {
         
 //        Algo manda iniciar prueba de agilidad de dificultad 2
 //Da error porque se ha modificado a Roland y hay un error en su clase!!
-        agilidad.iniciarPrueba(2);
+        intelecto.iniciarPrueba(2);
         
   
         

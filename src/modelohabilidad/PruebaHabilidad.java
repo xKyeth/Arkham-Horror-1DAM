@@ -56,7 +56,8 @@ public abstract class PruebaHabilidad {
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getHabilidad() + apoyos.get(i).getComodin();
-        }        
+        }
+        System.out.println("Apoyo: "+n);
         return n;
     }
     
@@ -66,6 +67,7 @@ public abstract class PruebaHabilidad {
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getVoluntad() + apoyos.get(i).getComodin();
         }
+        System.out.println("Apoyo: "+n);
         return n;
     }
     
@@ -75,6 +77,7 @@ public abstract class PruebaHabilidad {
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getIntelecto() + apoyos.get(i).getComodin();
         }
+        System.out.println("Apoyo: "+n);
         return n;
     }
         
