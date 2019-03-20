@@ -4,18 +4,18 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
-
-import Modelo.PruebasCombate;
+import Lugar.Lugar;
+import Modelo.Investigador;
 
 /**
  *
- * @author alumno
+ * @author pecorte
  */
 public class Atrapados extends Carta_Acto {
     public Atrapados() {
+        super("Atrapados", false, 0);
         coste=2;
         add=false;
-        titulo="Atrapados";
         pretexto="Tampoco era un verdadero hogar. ¡Quemémoslo!";
         accion="Pon en juego el Pasillo, el Sótano, el Ático y la Salita que habías puesto aparte.\n" +
 "\n" +
@@ -30,7 +30,13 @@ public class Atrapados extends Carta_Acto {
     }
 
     @Override
-    public boolean usarCarta(int pistas, Object obj, PruebasCombate pr) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void Accion(Investigador inv) {
+        Lugar l = null;
+        for(int x=0; x>(inv.getLugares()).getLugares().size(); x++){
+            if ("Pasillo".equals((inv.getLugares()).getLugares().get(x).getNombreCarta()))
+                l=(inv.getLugares()).getLugares().get(x);
+        }
+        inv.setLugar(l);
     }
+
 }

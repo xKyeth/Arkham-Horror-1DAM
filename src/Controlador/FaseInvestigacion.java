@@ -6,13 +6,14 @@
 package Controlador;
 
 import CartasInvestigador.Carta;
+
 import java.util.InputMismatchException;
 import java.util.Iterator;
 import java.util.Scanner;
 
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class FaseInvestigacion extends Fase {
     
@@ -97,7 +98,25 @@ public class FaseInvestigacion extends Fase {
 
                     break;
                 case 9:    //Combatir con un enemigo
-
+                    
+                    for (int i = 0; i < "array enemigos".length; i++) {
+                      
+                        System.out.println("\"arrayEnemigos\".getNombre");
+                    }
+                    
+                    System.out.println("Elige el enemigo con el que quieras luchar");
+                    String Enemigo = sr.next();
+                    Enemigo enemigo;
+                     for (int i = 0; i < "array enemigos".length; i++) {
+                      if ("array enemigo"[i].getNombre== Enemigo){
+                        enemigo="array enemigo"[i]}
+                    }
+                    
+                    pruebaCombate.enfrenta(enemigo, Roland, Apoyo, opcion);
+                    
+                    
+                    
+                    
                     break;
 
             }
