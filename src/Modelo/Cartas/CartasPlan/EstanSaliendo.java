@@ -5,7 +5,8 @@
  */
 package Modelo.Cartas.CartasPlan;
 
-import Modelo.Cartas.Cartas_Acto.Carta_Acto;
+
+import CartasInvestigador.Carta;
 
 /**
  *
@@ -13,7 +14,7 @@ import Modelo.Cartas.Cartas_Acto.Carta_Acto;
  */
 public abstract class EstanSaliendo extends CartaPlan {
     
-    Carta_Acto ca;
+    Carta ca;
     CartaPlan cp;
     
     
@@ -39,7 +40,7 @@ public abstract class EstanSaliendo extends CartaPlan {
     
     public void pasivaCarta(){
         
-        
+        //No esta implementado el control de saber cuando es el final de una fase o ronda
         //Al final de la fase enemigos los GUL se mueven 1 lugar hacia el investigador
         //Al final de cada ronda se suma 1 ficha de perdicion por cada GUL que haya en el pasillo o salita
         
@@ -52,7 +53,7 @@ public abstract class EstanSaliendo extends CartaPlan {
         
         if( cp.getPerdicionEnJuego() >= cp.getPerdicion()){
 
-        if(ca.getTitulo()=="Atrapados" || ca.getTitulo()=="La barrera"){
+        if(ca.getNombreCarta()=="Atrapados" || ca.getNombreCarta()=="La barrera"){
             
             //Mueren todos los investigadores
             //GameOver

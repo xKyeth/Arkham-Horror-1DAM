@@ -6,6 +6,8 @@
 package Modelo.Cartas.CartasPlan;
 
 import Modelo.Cartas.MazoEncuentros;
+import ClaseMano.uso_descarte_cartas;
+import Modelo.Enemigo;
 
 /**
  *
@@ -18,7 +20,8 @@ public abstract class ElAccesoDeLosGules extends CartaPlan {
     private boolean robar=true;
     CartaPlan cp;
     MazoEncuentros me;
-    
+    uso_descarte_cartas dc;
+    Enemigo e;
     
     public ElAccesoDeLosGules(){
          
@@ -49,10 +52,16 @@ public abstract class ElAccesoDeLosGules extends CartaPlan {
             
             while(robar==true){
             
-            //if(me.cogerCarta()=enemigo tipo gul){
+                
+            me.cogerCarta();
+                
+            if(e.isGul()==true){
+              robar=false;
             
-            //El investigador roba dicha carta enemigo
-          //}
+          }else{
+                  dc.decartarCarta(dc.getCartasmano().size());
+            }
+         
             }
         cp.setPerdicionEnJuego(cp.getPerdicionEnJuego()-7);
         
