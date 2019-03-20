@@ -10,7 +10,7 @@ import modelohabilidad.PruebaCombate;
 
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class FaseEnemigos extends Fase{
       FaseMantenimiento Mantenimiento=new FaseMantenimiento();
