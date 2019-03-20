@@ -12,7 +12,7 @@ public abstract class Traicion extends Carta {
     }
 
     public abstract void Accion(Investigador investigador);
-    
+     public abstract void verCarta();
     
 
 }

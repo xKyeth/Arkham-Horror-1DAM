@@ -27,7 +27,7 @@ import modelohabilidad.*;
 import Modelo.Enemigo;
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class Fase {
     

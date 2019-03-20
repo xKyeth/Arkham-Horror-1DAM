@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class FaseInvestigacion extends Fase {
     
