@@ -21,22 +21,18 @@ public class UnaPrueba extends Evento{
                  +" Combate "+getCombate()
                  +" Comodin "+getComodin()
                  +" Coste "+getCoste()
-                 +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
+                 +" Informacion de la carta:  Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar. ");
     }
     
     public void Accion(Investigador investigador){
-       
-        Investigador inv = investigador;
-        
-        System.out.println("Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar.");
-        
-        if((muerteEnemigo==true) && (inv.getLugar().pistas!=0)){
-            inv.getLugar().pistas--;
-            inv.setNumeroPistas(inv.getNumeroPistas()+1);
-        }
-        else{
-            System.out.println("Este lugar no tiene pistas");
-        }
+            
+//        if((muerteEnemigo==true) && (inv.getLugar().pistas!=0)){
+//            inv.getLugar().pistas--;
+//            inv.setNumeroPistas(inv.getNumeroPistas()+1);
+//        }
+//        else{
+//            System.out.println("Este lugar no tiene pistas");
+//        }
         
     } //fin del accion
     
