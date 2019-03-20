@@ -20,7 +20,7 @@ public class VocesDisonantes extends Traicion {
     @Override
     public void verCarta() {
          System.out.println("Nombre: "+getNombreCarta()
-                 +" Informacion de la carta: Descubre 1 pista en tu Lugar. ");
+                 +" Informacion de la carta: No puedes jugar Apoyos ni Eventos. Al final de la ronda: Descarta las Voces disonantes. ");
     }
     
 
@@ -28,19 +28,17 @@ public class VocesDisonantes extends Traicion {
 
     @Override
     public void Accion(Investigador investigador) {
-      
-
-        for (int i = 0; i < cartasmano.size(); i++) {
+      for (int i = 0; i < cartasmano.size(); i++) {
             if ((cartasmano.get(i) instanceof Apoyo) || (cartasmano.get(i) instanceof Evento)) {
                 cartasmano.get(i).setPreparada(false);
             }
         }
 
-    }
+    }//fin del accion
 
     
     
-    public void restablecerCartasMazo() {
+    public void restablecerCartas() {
         for (int i = 0; i < cartasmano.size(); i++) {
             if ((cartasmano.get(i) instanceof Apoyo) || (cartasmano.get(i) instanceof Evento)) {
                 cartasmano.get(i).setPreparada(true);

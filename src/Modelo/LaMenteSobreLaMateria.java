@@ -12,28 +12,19 @@ public class LaMenteSobreLaMateria extends Evento {
         super("La Mente Sobre La Materia", false, 0, 0, 0, 1, 1, 0, 1);
 
     }
-    
-     @Override
-    public void verCarta() {
-         System.out.println("Nombre: "+getNombreCarta()
-                 + "Preparada: " +isPreparada()
-                 + "Ficha de Perdicion: " +getFichaPerdicion()
-                 + "Voluntad "+getVoluntad()
-                 +" Intelecto "+getIntelecto()
-                 +" Habilidad "+getHabilidad()
-                 +" Combate "+getCombate()
-                 +" Comodin "+getComodin()
-                 +" Coste "+getCoste()
-                 +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
-    }
 
-   
-    
-    public void restablecerValoresRoland(Investigador investigador) {
-        investigador.setAgilidad(2);
-        investigador.setCombate(4);
-        investigador.setIntelecto(3);
-        System.out.println("Intelecto " + investigador.getIntelecto() + " Combate" + investigador.getCombate() + " Agilidad " + investigador.getAgilidad());
+    @Override
+    public void verCarta() {
+        System.out.println("Nombre: " + getNombreCarta()
+                + "Preparada: " + isPreparada()
+                + "Ficha de Perdicion: " + getFichaPerdicion()
+                + "Voluntad " + getVoluntad()
+                + " Intelecto " + getIntelecto()
+                + " Habilidad " + getHabilidad()
+                + " Combate " + getCombate()
+                + " Comodin " + getComodin()
+                + " Coste " + getCoste()
+                + " Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
     }
 
     public void Accion(Investigador investigador) {
@@ -99,4 +90,13 @@ public class LaMenteSobreLaMateria extends Evento {
         }
 
     } //fin metodo usarCarta
+    
+    public void restablecerValoresRoland(Investigador investigador) {
+        investigador.setAgilidad(2);
+        investigador.setCombate(4);
+        investigador.setIntelecto(3);
+        System.out.println("Intelecto " + investigador.getIntelecto() + " Combate" + investigador.getCombate() + " Agilidad " + investigador.getAgilidad());
+    }
+
+   
 }
