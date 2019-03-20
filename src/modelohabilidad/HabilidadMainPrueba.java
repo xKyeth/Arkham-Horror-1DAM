@@ -38,7 +38,7 @@ public class HabilidadMainPrueba {
         PruebaHabilidad intelecto = new PruebaIntelecto(Roland, apoyosprueba, bolsa);
         
 //        Algo manda iniciar prueba de agilidad de dificultad 2
-        agilidad.iniciarPrueba(2);
+        voluntad.iniciarPrueba(2);
         
   
         

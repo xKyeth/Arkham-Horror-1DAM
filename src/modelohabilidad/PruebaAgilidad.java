@@ -29,9 +29,11 @@ public class PruebaAgilidad extends PruebaHabilidad{
         System.out.println("Agilidad del investigador: "+inv.getAgilidad());
         int n = inv.getAgilidad() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
+            vista.resultadoPruebaExito();
             return x;
         }
         else{
+            vista.resultadoPruebaFracaso();
             return x = true;
         }
     }

@@ -26,11 +26,12 @@ public class PruebaVoluntad extends PruebaHabilidad{
        System.out.println("Voluntad del investigador: "+inv.getVoluntad());
         int n = inv.getVoluntad() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
+            vista.resultadoPruebaExito();
             return x;
         }
         else{
-            x = true;
-            return x;
+            vista.resultadoPruebaFracaso();
+            return x = true;
         }
     }
     

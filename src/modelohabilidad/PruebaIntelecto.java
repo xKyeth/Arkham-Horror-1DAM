@@ -24,9 +24,11 @@ public class PruebaIntelecto extends PruebaHabilidad{
         System.out.println("Intelecto del investigador: "+inv.getIntelecto());
         int n = inv.getIntelecto() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
+            vista.resultadoPruebaExito();
             return x;
         }
         else{
+            vista.resultadoPruebaFracaso();
             return x = true;
         }
     }
