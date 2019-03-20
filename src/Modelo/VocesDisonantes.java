@@ -17,10 +17,18 @@ public class VocesDisonantes extends Traicion {
     }
     
     
+    @Override
+    public void verCarta() {
+         System.out.println("Nombre: "+getNombreCarta()
+                 +" Informacion de la carta: Descubre 1 pista en tu Lugar. ");
+    }
+    
+
+    
 
     @Override
     public void Accion(Investigador investigador) {
-        setPreparada(true);
+      
 
         for (int i = 0; i < cartasmano.size(); i++) {
             if ((cartasmano.get(i) instanceof Apoyo) || (cartasmano.get(i) instanceof Evento)) {
@@ -41,4 +49,7 @@ public class VocesDisonantes extends Traicion {
         }
 
     }
+
+    
+    
 }

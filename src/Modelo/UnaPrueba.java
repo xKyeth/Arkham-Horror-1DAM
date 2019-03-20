@@ -10,6 +10,7 @@ public class UnaPrueba extends Evento{
     }
     
     
+     @Override
     public void verCarta() {
          System.out.println("Nombre: "+getNombreCarta()
                  + "Preparada: " +isPreparada()
@@ -20,7 +21,7 @@ public class UnaPrueba extends Evento{
                  +" Combate "+getCombate()
                  +" Comodin "+getComodin()
                  +" Coste "+getCoste()
-                 +" Informacion de la carta: Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar.");
+                 +" Informacion de la carta: Rápido. Juega esta carta sólo durante tu turno.\n Hasta el final de la ronda, puedes usar tu intelecto\nen lugar de tu combate o de tu habilidad. ");
     }
     
     public void Accion(Investigador investigador){
