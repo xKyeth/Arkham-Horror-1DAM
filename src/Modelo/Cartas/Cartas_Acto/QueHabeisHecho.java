@@ -4,20 +4,19 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
-
-import Modelo.PruebasCombate;
+import Modelo.Investigador;
 
 /**
  *
- * @author alumno
+ * @author pecorte
  */
 public class QueHabeisHecho extends Carta_Acto {
     String opc1="Tampoco era un verdadero hogar. ¡Quemémoslo!";
-    String opc2="Tampoco era un verdadero hogar. ¡Quemémoslo!";
+    String opc2="¡Este \"pozo infernal\" es mi hogar! ¡Ni hablar de quemarlo! ";
     public QueHabeisHecho() {
+        super("¿Qué habéis hecho?", false, 0);
         coste=0;
         add=true;
-        titulo="¿Qué habéis hecho?";
         pretexto="En la salita hay una mujer con una antorcha y un brillo de odio en los ojos. —¿Qué le habéis hecho a mi barrera? —grita con furia. Antes de que podáis contestar, un espectral alarido suena a vuestra espalda, y una criatura vestida con túnica y una máscara hecha con el cráneo de un ciervo atraviesa la pared y avanza hacia vosotros.";
         accion="Avanza el acto";
         objetivo="Si el Sacerdote gul es derrotado, haz avanzar el acto.";
@@ -35,7 +34,7 @@ public class QueHabeisHecho extends Carta_Acto {
     }
     
     @Override
-    public boolean usarCarta(int pistas, Object obj, PruebasCombate pr) {
+    public void Accion(Investigador investigador) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
