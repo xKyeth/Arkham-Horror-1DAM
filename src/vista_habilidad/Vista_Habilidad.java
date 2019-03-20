@@ -5,9 +5,6 @@
  */
 package vista_habilidad;
 import modelohabilidad.PruebaHabilidad;
-//import arkhamhorror.Investigador;
-//import arkhamhorror.Apoyo;
-//import arkhamhorror.Caos;
 import java.util.Scanner;
 import modelohabilidad.PruebaVoluntad;
 /**
@@ -23,7 +20,8 @@ public class Vista_Habilidad {
     }
     
     public void pruebaHabilidad(int n){        
-        System.out.println("Se inicia la prueba de habilidad de dificultad "+n);    
+        System.out.println("Se inicia la prueba de habilidad de dificultad "+n);
+        System.out.println("Voluntad del investigador: ");
         habilidad.prueba(n);
     }
 
