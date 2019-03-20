@@ -55,20 +55,18 @@ public class LaMenteSobreLaMateria extends Evento {
                     case 1:
                         inv.setIntelecto(inv.getCombate());
                         inv.setCombate(0);
-                        System.out.println("Se ha cambiado con exito");
-                        System.out.println("Intelecto " + inv.getIntelecto() + " Combate" + inv.getCombate() + " Agilidad " + inv.getAgilidad());
+
                         break;
 
                     case 2:
                         inv.setIntelecto(inv.getAgilidad());
                         inv.setAgilidad(0);
-                        System.out.println("Se ha cambiado con exito");
-                        System.out.println("Intelecto " + inv.getIntelecto() + " Combate" + inv.getCombate() + " Agilidad " + inv.getAgilidad());
+
                         break;
 
                     case 3:
                         System.out.println("Usar valores por defecto");
-                        System.out.println("Intelecto " + inv.getIntelecto() + " Combate" + inv.getCombate() + " Agilidad " + inv.getAgilidad());
+
                         break;
 
                     default:
@@ -78,6 +76,7 @@ public class LaMenteSobreLaMateria extends Evento {
 
                 }//fin switch
             } //fin try
+            
             catch (InputMismatchException e) {
                 System.out.println("No se puede usar un caracter, vuelve a introducirlo bien");
                 System.out.println("");
@@ -90,7 +89,7 @@ public class LaMenteSobreLaMateria extends Evento {
         }
 
     } //fin metodo usarCarta
-    
+
     public void restablecerValoresRoland(Investigador investigador) {
         investigador.setAgilidad(2);
         investigador.setCombate(4);
@@ -98,5 +97,4 @@ public class LaMenteSobreLaMateria extends Evento {
         System.out.println("Intelecto " + investigador.getIntelecto() + " Combate" + investigador.getCombate() + " Agilidad " + investigador.getAgilidad());
     }
 
-   
 }
