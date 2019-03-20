@@ -50,4 +50,9 @@ public class MazoInvestigador implements IMazoInvestigador {
     public void eliminarCarta(CartasInvestigador carta){
         getListaCartasMazo().remove(0);
     }
+    
+    public ArrayList<CartasInvestigador> verCartas(MazoInvestigador mazo){
+        ArrayList<CartasInvestigador> cartas=mazo.getListaCartasMazo();
+        return cartas;
+    }
 }

@@ -16,7 +16,7 @@ import java.util.Collections;
 
 /**
  *
- * @author Zero
+ * @author jose
  */
 public class FasePrepararPartida extends Fase{
     

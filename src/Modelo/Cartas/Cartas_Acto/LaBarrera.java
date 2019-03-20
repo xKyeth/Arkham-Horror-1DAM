@@ -5,7 +5,7 @@
  */
 package Modelo.Cartas.Cartas_Acto;
 
-import Modelo.PruebasCombate;
+import Modelo.Investigador;
 
 /**
  *
@@ -13,9 +13,9 @@ import Modelo.PruebasCombate;
  */
 public class LaBarrera extends Carta_Acto {
     public LaBarrera() {
+        super("La barrera", false, 0);
         coste=3;
         add=false;
-        titulo="La barrera";
         pretexto="Una brillante barrera os bloquea el paso hacia la salita. Al acercaros, un intenso calor os obliga a retroceder. Cogéis algo de tierra y la lanzáis contra la barrera, donde para vuestro horror queda totalmente incinerada. Puede que en el sótano o el ático haya algo que os sirva de ayuda.";
         accion="La barrera que bloqueaba el paso hacia la Salita se ha desvanecido. Revela la Salita.\n" +
 "\n" +
@@ -25,8 +25,9 @@ public class LaBarrera extends Carta_Acto {
         objetivo="Cuando acabe la ronda, los investigadores que estén en el Pasillo pueden, como grupo, gastar la cantidad necesaria de pistas para hacer avanzar el acto.";
         texto="Usáis el barril del ático para transportar hielo y nieve del sótano y lanzarlo contra la barrera. Ésta chisporrotea y vibra al consumir el hielo, para después desvanecerse con un siseo.";
     }
+
     @Override
-    public boolean usarCarta(int pistas, Object obj, PruebasCombate pr) {
+    public void Accion(Investigador investigador) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

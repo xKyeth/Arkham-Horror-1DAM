@@ -28,6 +28,7 @@ public class uso_descarte_cartas {
     
     public void decartarCarta(int x) {
         getDescarte().add(getCartasmano().get(x));
+        cartasmano.remove(x);
         
     }
     
