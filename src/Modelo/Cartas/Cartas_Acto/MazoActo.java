@@ -6,7 +6,6 @@
 package Modelo.Cartas.Cartas_Acto;
 import Modelo.Investigador;
 import java.util.ArrayList;
-import java.util.Collections;
 /**
  *
  * @author pecorte
