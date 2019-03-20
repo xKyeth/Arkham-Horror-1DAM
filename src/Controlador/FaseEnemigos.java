@@ -15,7 +15,7 @@ import modelohabilidad.PruebaCombate;
 public class FaseEnemigos extends Fase{
       FaseMantenimiento Mantenimiento=new FaseMantenimiento();
       
-      PruebaCombate pruebaCombate=new PruebaCombate(Roland, Apoyo, BolsaDelCaos);
+      PruebaCombate pruebaCombate=new PruebaCombate();
        public  FaseEnemigos(){};
     
     
@@ -34,7 +34,7 @@ public class FaseEnemigos extends Fase{
         
          for (int i = 0; i < "arrayEnemigos.size"; i++) {
              if (arrayenemigo.get(i).getLugar=Roland.getLugar()){
-               pruebaCombate.combate("array de enemigos".get(i));
+               pruebaCombate.combate("array de enemigos".get(i),Roland,Apoyo,BolsaDelCaos.BolsaDelCaos());
              
              }
              
