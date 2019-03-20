@@ -10,26 +10,32 @@ public class UnaPrueba extends Evento{
     }
     
     
+     @Override
     public void verCarta() {
-         System.out.println("Voluntad "+getVoluntad()
+         System.out.println("Nombre: "+getNombreCarta()
+                 + "Preparada: " +isPreparada()
+                 + "Ficha de Perdicion: " +getFichaPerdicion()
+                 + "Voluntad "+getVoluntad()
                  +" Intelecto "+getIntelecto()
                  +" Habilidad "+getHabilidad()
                  +" Combate "+getCombate()
                  +" Comodin "+getComodin()
-                 +" Coste "+getComodin()
-                 +" Informacion de la carta: Rápido. Después de que derrotes a un Enemigo.\n Descubre 1 pista en tu Lugar. ");
+                 +" Coste "+getCoste()
+                 +" Informacion de la carta:  Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar. ");
     }
     
     public void Accion(Investigador investigador){
-        System.out.println("Después de que derrotes a un Enemigo, descubre 1 pista en tu Lugar.");
-        
-//        if((muerteEnemigo==true) && (roland.getLugar().pistas!=0)){
-//            roland.getLugar().pistas--;
-//            roland.setNumeroPistas(roland.getNumeroPistas()+1);
+            
+//        if((muerteEnemigo==true) && (inv.getLugar().pistas!=0)){
+//            inv.getLugar().pistas--;
+//            inv.setNumeroPistas(inv.getNumeroPistas()+1);
 //        }
 //        else{
 //            System.out.println("Este lugar no tiene pistas");
 //        }
-    }
+        
+    } //fin del accion
+    
+    
     
 }

@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
+import Modelo.Investigador;
 import java.util.ArrayList;
-import java.util.Collections;
 /**
  *
  * @author pecorte
@@ -29,16 +29,13 @@ public class MazoActo {
         return cartasused;
     }
     
-    public void usarCarta(Carta_Acto c){
+    public void usarCarta(Carta_Acto c, Investigador inv){
+        c.Accion(inv);
         int i=mazo.indexOf(c);
         cartasused.add(mazo.remove(i));
     }
     
     public Carta_Acto getCarta(int x){
         return mazo.get(x);
-    }
-    
-    public void barajar(){
-        Collections.shuffle(mazo);
     }
 }

@@ -4,25 +4,25 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
-import Modelo.BDCarta;
-import Modelo.PruebasCombate;
+import CartasInvestigador.Carta;
 
 /**
  *
  * @author pecorte
  */
-public abstract class Carta_Acto extends BDCarta {
+public abstract class Carta_Acto extends Carta {
     int coste;
     boolean add;
-    String titulo;
     String pretexto;
     String accion;
     String objetivo;
     String texto;    
-    
-    public String getTitulo() {
-        return titulo;
+
+    public Carta_Acto(String nombreCarta, boolean preparada, int fichaPerdicion) {
+        super(nombreCarta, preparada, fichaPerdicion);
     }
+
+    
 
     public String getPretexto() {
         return pretexto;
@@ -39,6 +39,5 @@ public abstract class Carta_Acto extends BDCarta {
     public String getTexto() {
         return texto;
     }
-    
-    abstract public boolean usarCarta(int pistas, Object obj, PruebasCombate pr);
+   
 }

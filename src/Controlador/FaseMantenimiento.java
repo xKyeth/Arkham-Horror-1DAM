@@ -7,7 +7,7 @@ package Controlador;
 
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class FaseMantenimiento extends Fase {
     FaseMito Mito=new FaseMito();
