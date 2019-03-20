@@ -4,20 +4,18 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.CartasMitos;
+import CartasMito.Traicion;
+import Modelo.Investigador;
 
 /**
  *
  * @author pecorte
  */
-public class ParalizadoPorElMiedo {
-    String nombre="Paralizado por el miedo";
-    String accion="La primera vez que realices una de las siguientes acciones (moverte, combatir o evitar) cada ronda, te cuesta 1 acción adicional.\n" +
-                    "\n" +
-                    "Obligado - Al final de tu turno: Realiza una prueba de  (3). Si tienes éxito, descarta Paralizado por el miedo.";
+public class ParalizadoPorElMiedo extends Traicion {
     boolean activo=false;
 
-    public ParalizadoPorElMiedo() {
-        
+    public ParalizadoPorElMiedo(String nombreCarta, boolean preparada, int fichaPerdicion) {
+        super("Paralizado por el miedo", false, 0);
     }
     
     public void activarCarta(){
@@ -30,6 +28,18 @@ public class ParalizadoPorElMiedo {
 
     public boolean isActivo() {
         return activo;
+    }
+
+    @Override
+    public void Accion(Investigador investigador) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void verCarta() {
+        System.out.println("La primera vez que realices una de las siguientes acciones (moverte, combatir o evitar) cada ronda, te cuesta 1 acción adicional.\n" +
+                    "\n" +
+                    "Obligado - Al final de tu turno: Realiza una prueba de  (3). Si tienes éxito, descarta Paralizado por el miedo.");
     }
     
 }
