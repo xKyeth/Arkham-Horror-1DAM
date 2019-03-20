@@ -12,7 +12,7 @@ import CartasInvestigador.Carta;
  *
  * @author Imanol
  */
-public abstract class EstanSaliendo extends CartaPlan {
+public class EstanSaliendo extends CartaPlan {
     
     Carta ca;
     CartaPlan cp;
@@ -57,9 +57,11 @@ public abstract class EstanSaliendo extends CartaPlan {
             
             //Mueren todos los investigadores
             //GameOver
-            
+            System.out.println("Los investigadores mueren. Fin de partida");
+            System.exit(0);
             
         }else{
+            
             //Trauma fisico no esta implementado
             //+1 Trauma fisico
             

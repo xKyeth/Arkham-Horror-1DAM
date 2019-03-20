@@ -13,7 +13,7 @@ import Modelo.Enemigo;
  *
  * @author Imanol
  */
-public abstract class ElAccesoDeLosGules extends CartaPlan {
+public  class ElAccesoDeLosGules extends CartaPlan {
  
     
     
