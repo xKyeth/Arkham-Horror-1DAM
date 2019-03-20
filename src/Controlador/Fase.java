@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import Escenarios.Escenario;
 import java.util.LinkedList;
 import modelohabilidad.*;
+import Modelo.Enemigo;
 /**
  *
  * @author usuario
@@ -47,7 +48,7 @@ public class Fase {
   ArrayList<CartasInvestigador.Apoyo> Apoyo=new ArrayList();
     LinkedList<Carta> CartasEscenario=new LinkedList();
     
-    
+    PruebaCombate pruebaCombate=new PruebaCombate();
     
     
 }
