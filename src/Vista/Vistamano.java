@@ -5,7 +5,7 @@
  */
 package Vista;
 import ClaseMano.uso_descarte_cartas;
-import Modelo.BDCarta;
+import CartasInvestigador.Carta;
 import java.util.LinkedList;
 
 /**
@@ -16,9 +16,9 @@ public class Vistamano {
     public Vistamano(){
     
     }
-    public void vistaCartas(LinkedList<BDCarta> mano){
+    public void vistaCartas(LinkedList<Carta> mano){
         for(int x=0; x<mano.size(); x++){
-            BDCarta carta=mano.get(x);
+            Carta carta=mano.get(x);
             
         }
             
