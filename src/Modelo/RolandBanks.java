@@ -1,5 +1,6 @@
 package Modelo;
 import Lugar.Lugar;
+import Lugar.Lugares;
 import Lugar.Salita;
 import java.util.ArrayList;
 
@@ -30,6 +31,11 @@ public class RolandBanks extends Investigador {
         return l.getPistas();
         
        
+    }
+
+    @Override
+    public void moverPersonaje(ArrayList<Lugar> lugares, Personaje personaje, Lugares l) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
  
