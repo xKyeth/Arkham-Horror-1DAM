@@ -20,6 +20,7 @@ public class VocesDisonantes extends Traicion {
     @Override
     public void verCarta() {
          System.out.println("Nombre: "+getNombreCarta()
+                 + "Ficha de Perdicion: " +getFichaPerdicion()
                  +" Informacion de la carta: No puedes jugar Apoyos ni Eventos. Al final de la ronda: Descarta las Voces disonantes. ");
     }
     
