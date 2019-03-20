@@ -227,4 +227,7 @@ public abstract class Investigador extends Personaje{
     public void setNumeroRecursos(int numeroRecursos) {
         this.numeroRecursos = numeroRecursos;
     }
+    public Lugares getLugares(){
+        return l;
+    }
 }
