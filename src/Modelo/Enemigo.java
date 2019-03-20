@@ -13,21 +13,13 @@ public class Enemigo extends Personaje {
    
    protected boolean cazador;
    private boolean gul;
-
-   public Enemigo(boolean cazador, boolean gul){
-       super();
-       this.cazador=cazador;
-       this.gul=gul;
-   }
-   
-   
-   public Enemigo (int combate, int vida, int agilidad, int daño, int horror, Lugar lugar, boolean cazador, boolean gul){
+    
+   public Enemigo (int combate, int vida, int agilidad, int daño, int horror, boolean cazador, boolean gul){
       this.combate=combate;
       this.vida=vida;
       this.agilidad=agilidad;
       this.daño=daño;
       this.horror=horror;
-      this.lugar=lugar; 
       this.cazador=cazador;
       this.gul=gul;
    }

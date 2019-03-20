@@ -18,7 +18,7 @@ public class AntiguosMales extends Traicion {
 
     @Override
     public void Accion(Investigador inv) {
-        //No estan implementados todabia las fichas de perdicion
+        //No esta Soportado Todabia
     }
     @Override
     public void verCarta() {
