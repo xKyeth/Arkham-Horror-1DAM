@@ -21,7 +21,6 @@ public class Vista_Habilidad {
     
     public void pruebaHabilidad(int n){        
         System.out.println("Se inicia la prueba de habilidad de dificultad "+n);
-        System.out.println("Voluntad del investigador: ");
         habilidad.prueba(n);
     }
 
