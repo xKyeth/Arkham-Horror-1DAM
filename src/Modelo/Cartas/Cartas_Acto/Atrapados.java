@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Modelo.Cartas.Cartas_Acto;
+import Lugar.Lugar;
 import Modelo.Investigador;
 
 /**
@@ -29,8 +30,13 @@ public class Atrapados extends Carta_Acto {
     }
 
     @Override
-    public void Accion(Investigador investigador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void Accion(Investigador inv) {
+        Lugar l = null;
+        for(int x=0; x>(inv.getLugares()).getLugares().size(); x++){
+            if ("Pasillo".equals((inv.getLugares()).getLugares().get(x).getNombreCarta()))
+                l=(inv.getLugares()).getLugares().get(x);
+        }
+        inv.setLugar(l);
     }
 
 }

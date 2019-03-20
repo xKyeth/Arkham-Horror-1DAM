@@ -23,6 +23,7 @@ public class PruebaVoluntad extends PruebaHabilidad{
 
     public boolean prueba(int a) {        
        boolean x = false;
+       System.out.println("Voluntad del investigador: "+inv.getVoluntad());
         int n = inv.getVoluntad() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
             return x;

@@ -35,15 +35,16 @@ public abstract class PruebaHabilidad {
         vista = new Vista_Habilidad(this);
     }
     
-    //Método para iniciar la prueba.
+    //Método para iniciar la prueba. Devuelve true 
     public boolean iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
-        x = prueba(dificultad);
+        boolean x = prueba(dificultad);
         if(x == true){
             vista.resultadoPruebaExito();
         }else{
             vista.resultadoPruebaFracaso();
         }
+        System.out.println(x);
         return x;
     }
 
@@ -55,7 +56,8 @@ public abstract class PruebaHabilidad {
         int n = 0;
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getHabilidad() + apoyos.get(i).getComodin();
-        }        
+        }
+        System.out.println("Apoyo: "+n);
         return n;
     }
     
@@ -65,6 +67,7 @@ public abstract class PruebaHabilidad {
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getVoluntad() + apoyos.get(i).getComodin();
         }
+        System.out.println("Apoyo: "+n);
         return n;
     }
     
@@ -74,6 +77,7 @@ public abstract class PruebaHabilidad {
         for(int i = 0;i < apoyos.size();i++){
             n = n + apoyos.get(i).getIntelecto() + apoyos.get(i).getComodin();
         }
+        System.out.println("Apoyo: "+n);
         return n;
     }
         

@@ -20,11 +20,11 @@ public abstract class Investigador extends Personaje{
     abstract int  efectoEstrella();
     
     @Override
-    public void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l) {
+    public void moverPersonaje(ArrayList<Lugar> lugares, Personaje personaje,Lugares l) {
        Scanner sn =new Scanner(System.in);
        int opcion;
        this.l=l;
-       Lugar lugaractual=investigador.getLugar();
+       Lugar lugaractual=personaje.getLugar();
        Lugar lugarnuevo=null;
         System.out.println("¿Dónde desea moverse?");
         System.out.println("1-Estudio");
@@ -226,5 +226,8 @@ public abstract class Investigador extends Personaje{
      */
     public void setNumeroRecursos(int numeroRecursos) {
         this.numeroRecursos = numeroRecursos;
+    }
+    public Lugares getLugares(){
+        return l;
     }
 }

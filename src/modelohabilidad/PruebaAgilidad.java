@@ -26,6 +26,7 @@ public class PruebaAgilidad extends PruebaHabilidad{
 
     public boolean prueba(int a) {
         x = false;
+        System.out.println("Agilidad del investigador: "+inv.getAgilidad());
         int n = inv.getAgilidad() + seleccionaApoyo() + seleccionaCaos();
         if (n < a){
             return x;

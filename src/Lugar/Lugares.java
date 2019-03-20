@@ -54,7 +54,22 @@ public class Lugares {
             System.out.println("No puedes moverte.");
         }
     }
-
+    
+    public ArrayList<Lugar> getConexiones(Lugar a){
+        
+        ArrayList <Lugar> conexionesLugar = new ArrayList();
+        int x = a.getId();
+        System.out.println("Puedes moverte a: ");
+        for(int i=0; i<5; i++){
+            if(conexion[x][i]){
+                Lugar b = lugares.get(i);
+                conexionesLugar.add(b);
+                System.out.println(b.getNombreCarta());
+            }
+        }
+        return conexionesLugar;
+    }
+    
     /**
      * @return the conexion
      */
