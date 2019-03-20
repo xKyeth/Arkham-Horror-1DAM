@@ -12,7 +12,7 @@ public class Enemigo extends Personaje {
    
    
    protected boolean cazador;
-   protected boolean gul;
+   private boolean gul;
 
    public Enemigo(boolean cazador, boolean gul){
        super();
@@ -47,5 +47,19 @@ public class Enemigo extends Personaje {
 
     @Override
     public void moverPersonaje(ArrayList<Lugar> lugares, Personaje personaje, Lugares l) {
+    }
+
+    /**
+     * @return the gul
+     */
+    public boolean isGul() {
+        return gul;
+    }
+
+    /**
+     * @param gul the gul to set
+     */
+    public void setGul(boolean gul) {
+        this.gul = gul;
     }
 }
