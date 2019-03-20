@@ -25,7 +25,7 @@ public abstract class DestrezaManual extends Habilidad {
     
     public void usarCarta(){
         ph.iniciarPrueba(voluntad);
-        //if(prueba tiene exito);
+        if(ph.isX()==true);
         m.cogerCarta();
     }
     
