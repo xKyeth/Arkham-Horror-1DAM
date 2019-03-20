@@ -1,12 +1,12 @@
 package Controlador;
 /**AUTOR ALEXANDRA**/
 import CartasInvestigador.Carta;
+import CartasInvestigador.CartasInvestigador;
 import ClaseMano.uso_descarte_cartas;
 import Lugar.Lugar;
 import Lugar.Lugares;
 import java.util.ArrayList;
 import Modelo.BD;
-import Modelo.BDCarta;
 import Modelo.Cartas.CartasPlan.CartaPlan;
 import Modelo.Enemigo;
 import Modelo.Investigador;
@@ -38,6 +38,7 @@ public class ControlFaseInvestigacion extends Fase{
     ArrayList<Lugar>lugar=l.getLugares();
     CartaPlan plan;
     PruebaIntelecto pruebaI;
+    ArrayList<CartasInvestigador> listaCartas;
     
     public ControlFaseInvestigacion(){
         bd=new BD();
@@ -54,11 +55,13 @@ public class ControlFaseInvestigacion extends Fase{
             switch(opcion){
                 case 1:
                     uso.robarCarta();
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 2:
                     investigador.getRecursoFase();
+                    
                     vista.MenuPrincipal();
                     break;
                     
@@ -84,26 +87,38 @@ public class ControlFaseInvestigacion extends Fase{
                         
                         }
                     }
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 4:
                     prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego());
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 5:
                     pruebaI.prueba(lu.getVelo());
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 6:
                     investigador.moverPersonaje(lugar, investigador, l);
+                    
                     vista.MenuPrincipal();
                     break;
                     
                 case 7:
                     /*NO EXISTE MÉTODO*/
+                    /*For para recorrer las cartas*/
+                    /*Si la carta extiende de apoyo o evento, mostrar y preguntar si la quiere usar*/
+                    /*Devolver la clase con class.forName(clase)*/
+                    /*nombreCarta.getsuperclass()*/
+                    for(int i=0; i<=mazo.verCartas(mazo).size(); i++){
+                    
+                    }
+                    
                     vista.MenuPrincipal();
                     break;
                     
@@ -119,18 +134,14 @@ public class ControlFaseInvestigacion extends Fase{
                     break;
                     
                 case 9:
-                    if(prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego())==true){
-                        prueba.calculaDañoEnemigo(Roland, Apoyo);
-                    }
-                    else{
-                        prueba.calculaDañoInvestigador(enemigo);
-                    }
+                    prueba.enfrenta(enemigo, Roland, Apoyo, plan.getPerdicionEnJuego());
                     
                     vista.MenuPrincipal();
                     break;
 
                 default:
                    System.out.println("Opción incorrecta.");
+                   
                    vista.MenuPrincipal();
                    break;
            }

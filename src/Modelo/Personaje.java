@@ -8,7 +8,7 @@ public abstract class  Personaje {
     protected int combate,agilidad,daño,vida,horror;
     protected Lugar lugar;
    
-    public abstract void moverPersonaje(ArrayList<Lugar> lugares, Investigador investigador,Lugares l);
+    public abstract void moverPersonaje(ArrayList<Lugar> lugares, Personaje personaje,Lugares l);
  
     public Personaje(){
         

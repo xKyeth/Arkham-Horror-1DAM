@@ -7,7 +7,7 @@ package Modelo;
 import CartasInvestigador.Apoyo;
 /**
  *
- * @author usuario
+ * @author Jacinto
  */
 public class CartaPoliciaRaso extends Apoyo {
     Enemigo enemigo;

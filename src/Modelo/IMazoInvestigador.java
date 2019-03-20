@@ -1,16 +1,17 @@
 package Modelo;
 /**AUTOR ALEXANDRA**/
+import CartasInvestigador.CartasInvestigador;
 import java.util.ArrayList;
 
 public interface IMazoInvestigador {
 
-    void añadirCarta(BDCarta carta);
+    void añadirCarta(CartasInvestigador carta);
 
-    ArrayList<BDCarta> getListaCartasMazo();
+    ArrayList<CartasInvestigador> getListaCartasMazo();
 
     String getNombre();
 
-    void setListaMazo(ArrayList<BDCarta> listaCartasMazo);
+    void setListaMazo(ArrayList<CartasInvestigador> listaCartasInvestigador);
 
     void setNombre(String nombre);
 
