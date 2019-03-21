@@ -34,9 +34,8 @@ public class FasePrepararPartida extends Fase{
 
         //Robar mano inicial
         
-        uso_descarte_cartas UDC=new uso_descarte_cartas();
         
-        UDC.robar5cartas();
+        getUsoDeCartasInvestigador().robar5cartas();
         
 
         //Poner investigador en el Estudio

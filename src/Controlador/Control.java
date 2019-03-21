@@ -17,11 +17,11 @@ public class Control {
 
     boolean acabarPartida = false;
     VistaFaseInvestigacion v;
-    int Ronda=1;
+
     private Boolean investigacion=false;
     Escenario escenario=new Escenario();
     public Control() {
-        v = new VistaFaseInvestigacion(this);
+    v = new VistaFaseInvestigacion(this);
 
     }
 
@@ -43,7 +43,7 @@ public class Control {
       
         FaseMantenimiento FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
        
-        Ronda++;
+   
         
         while (true != acabarPartida) {
             
