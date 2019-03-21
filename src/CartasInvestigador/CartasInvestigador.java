@@ -1,5 +1,6 @@
 package CartasInvestigador;
 
+import Controlador.Fase;
 import Modelo.Investigador;
 
 
@@ -16,8 +17,8 @@ public abstract class CartasInvestigador extends Carta{
     protected int suministro;
     protected boolean comprada;
 
-    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion, int voluntad, int intelecto,int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
-        super(nombreCarta,preparada,fichaPerdicion);
+    public CartasInvestigador(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion, int voluntad, int intelecto,int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada) {
+        super(fase,nombreCarta,preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
@@ -30,8 +31,8 @@ public abstract class CartasInvestigador extends Carta{
         this.comprada = comprada;
     } //APOYO
 
-    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
-         super(nombreCarta,preparada,fichaPerdicion);
+    public CartasInvestigador(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
+         super(fase,nombreCarta,preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
@@ -40,8 +41,8 @@ public abstract class CartasInvestigador extends Carta{
         this.coste = coste;
     } //EVENTO
 
-    public CartasInvestigador(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
-        super(nombreCarta, preparada,fichaPerdicion);
+    public CartasInvestigador(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
+        super(fase,nombreCarta, preparada,fichaPerdicion);
         this.voluntad = voluntad;
         this.intelecto = intelecto;
         this.combate = combate;
