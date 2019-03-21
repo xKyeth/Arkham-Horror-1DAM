@@ -1,13 +1,14 @@
 
 package CartasInvestigador;
 
+import Controlador.Fase;
 import Modelo.Investigador;
 
 
 public abstract class Evento extends CartasInvestigador{
     
-    public Evento(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
-        super(nombreCarta,preparada,fichaPerdicion,voluntad, intelecto, habilidad, combate, comodin, coste);
+    public Evento(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin, int coste) {
+        super( fase,nombreCarta,preparada,fichaPerdicion,voluntad, intelecto, habilidad, combate, comodin, coste);
     }
     
     @Override
