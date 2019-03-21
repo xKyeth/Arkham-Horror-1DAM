@@ -5,6 +5,7 @@
  */
 package Modelo;
 import CartasInvestigador.Apoyo;
+import Controlador.Fase;
 import Vista.Vista;
 import java.util.ArrayList;
 import modelohabilidad.PruebaCombate;
@@ -13,19 +14,18 @@ import modelohabilidad.PruebaCombate;
  * @author miguel
  */
 public class CartaTrentaYOchoEspecialRoland extends Apoyo{
-        RolandBanks inv;
-        Enemigo ene;
         Exception exception;
-      private  int usos;
         Vista mensaje=new Vista();
         PruebaCombate prueba=new PruebaCombate();
 // public Apoyo(String nombreCarta,boolean preparada,
 //      int fichaPerdicion,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro,
 //      boolean comprada
-    public CartaTrentaYOchoEspecialRoland() {
-        super(".38 Especial De Roland", true, 0, 0, 0, 1, 1, 1, 0, 0, 3, 4, false);
-        usos=4;
+
+    public CartaTrentaYOchoEspecialRoland(Fase fase,boolean preparada, boolean comprada) {
+        super(fase,".38 Especial De Roland", true, 0, 0, 0, 1, 1, 1, 0, 0, 3, 4, false);
+        
     }
+   
     
     @Override
     public void verCarta() {
@@ -42,18 +42,27 @@ public class CartaTrentaYOchoEspecialRoland extends Apoyo{
 
     @Override
     public void Accion(Investigador investigador) {
+        
         if(investigador.getLugar().getPistas()>0&&this.getSuministro()>0){
+            
             investigador.setCombate(investigador.getCombate()+3);
             investigador.setDaño(investigador.getDaño()+1);
             this.setSuministro(this.getSuministro()-1);
+            
         }else if(investigador.getLugar().getPistas()<=0&&this.getSuministro()>0){
+            
             investigador.setCombate(investigador.getCombate()+1);
             investigador.setDaño(investigador.getDaño()+1);
             this.setSuministro(this.getSuministro()-1);
+            
         }else{
             mensaje.muestraMensaje("No te quedan municiones");
         }
+        
+        
+        
     }
+    
     
 }
 
