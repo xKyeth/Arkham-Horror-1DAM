@@ -102,7 +102,8 @@ public class FaseInvestigacion extends Fase {
                       
                           
                           //Da error porque no existe El nombre de los Enemigos
-                    //     System.out.println(getEnemigos().get(i).getNombre);
+                          
+                            //System.out.println(getEnemigos().get(i).getNombre);
                       
                       }
                   
@@ -124,9 +125,9 @@ public class FaseInvestigacion extends Fase {
                         if (getEvitar().EvitarEnemigo(getRoland().getAgilidad(), getEnemigos().get(i).getAgilidad() ) == true) {
                         System.out.println("Has Evitado al enemigo");
 
-                    } else {
-                        System.out.println("No has evitado al enemigo");
-                    }
+                        } else {
+                            System.out.println("No has evitado al enemigo");
+                        }
                       
                          
                          
@@ -145,7 +146,7 @@ public class FaseInvestigacion extends Fase {
                     //Te devuelve los Enemigos con los que puedes luchar en este turno
                     
                      for (int i = 0; i < getEnemigos().size(); i++) {
-                      if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
+                        if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
                       
                           
                           //Da error porque no existe El nombre de los Enemigos
@@ -162,7 +163,7 @@ public class FaseInvestigacion extends Fase {
                     String NombreEnemigoLucha = getSr().next();
                   
                      for (int i = 0; i < getEnemigos().size(); i++) {
-                   //   if (getEnemigos().get(i).getNombre==NombreEnemigoLucha){
+                        //if (getEnemigos().get(i).getNombre==NombreEnemigoLucha){
                        
                           
                           //Realiza la prueba de combate con el enemigo que se ha pedido por teclado

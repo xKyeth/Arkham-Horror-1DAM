@@ -51,7 +51,9 @@ public class Fase {
     private PruebaCombate pruebaCombate=new PruebaCombate();
     private Scanner sr=new Scanner(System.in);
     private EvitarEnemigo evitar = new EvitarEnemigo();
-     ArrayList<CartasInvestigador> MazoInvestigadorFinal = new ArrayList();
+    private ArrayList<CartasInvestigador> MazoInvestigadorFinal = new ArrayList();
+    private MovimientoCazador MovimientoCazador= new MovimientoCazador();
+
     /**
      * @return the Roland
      */
@@ -316,6 +318,34 @@ public class Fase {
      */
     public void setEvitar(EvitarEnemigo evitar) {
         this.evitar = evitar;
+    }
+
+    /**
+     * @return the MazoInvestigadorFinal
+     */
+    public ArrayList<CartasInvestigador> getMazoInvestigadorFinal() {
+        return MazoInvestigadorFinal;
+    }
+
+    /**
+     * @param MazoInvestigadorFinal the MazoInvestigadorFinal to set
+     */
+    public void setMazoInvestigadorFinal(ArrayList<CartasInvestigador> MazoInvestigadorFinal) {
+        this.MazoInvestigadorFinal = MazoInvestigadorFinal;
+    }
+
+    /**
+     * @return the MovimientoCazador
+     */
+    public MovimientoCazador getMovimientoCazador() {
+        return MovimientoCazador;
+    }
+
+    /**
+     * @param MovimientoCazador the MovimientoCazador to set
+     */
+    public void setMovimientoCazador(MovimientoCazador MovimientoCazador) {
+        this.MovimientoCazador = MovimientoCazador;
     }
     
 }

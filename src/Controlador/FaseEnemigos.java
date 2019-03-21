@@ -12,19 +12,20 @@ import modelohabilidad.PruebaCombate;
  * @author jose
  */
 public class FaseEnemigos extends Fase{
+    
       FaseMantenimiento Mantenimiento=new FaseMantenimiento();
       
       PruebaCombate pruebaCombate=new PruebaCombate();
-       public  FaseEnemigos(){};
-    
-    
-     public FaseMantenimiento RealizaFaseEnemigos(){
-         
-          //Mover a monstruos Cazador
-        MovimientoCazador MovimientoCazador= new MovimientoCazador();
        
+      
+      public  FaseEnemigos(){};
+    
+    
+      public FaseMantenimiento RealizaFaseEnemigos(){
+         
+        //Mover a monstruos Cazador
         
-      MovimientoCazador.moverseMapa1(getEnemigos(), getRoland());
+        getMovimientoCazador().moverseMapa1(getEnemigos(), getRoland());
       
         
         
@@ -35,17 +36,9 @@ public class FaseEnemigos extends Fase{
              if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
                pruebaCombate.enfrenta(getEnemigos().get(i),getRoland(), getApoyo(), getBolsaDelCaos().BolsaDelCaos());
              
-             }
-             
-             
-            
-             
-         }
+             }}
        
-        
-         
-         
-         return Mantenimiento;
+        return Mantenimiento;
          
          
 }

@@ -6,12 +6,8 @@
 package Controlador;
 
 import ClaseMano.uso_descarte_cartas;
-import CartasInvestigador.Carta;
-import CartasInvestigador.CartasInvestigador;
 import Escenarios.Escenario;
-import Modelo.BDCarta;
 import Modelo.RolandBanks;
-import java.util.ArrayList;
 import java.util.Collections;
 
 /**
@@ -30,28 +26,29 @@ public class FasePrepararPartida extends Fase{
         //Crear y barajar mazo Jugador
 
        
-        MazoInvestigadorFinal= getMazoInvestigador().getListaCartasMazo();
+        setMazoInvestigadorFinal(getMazoInvestigador().getListaCartasMazo());
+        
         Collections.shuffle(getMazoInvestigador().getListaCartasMazo());
-        getMazoInvestigador().setListaMazo(MazoInvestigadorFinal);
+        
+        getMazoInvestigador().setListaMazo(getMazoInvestigadorFinal());
 
         //Robar mano inicial
+        
         uso_descarte_cartas UDC=new uso_descarte_cartas();
+        
         UDC.robar5cartas();
-        //Preparar mazo de Plan
-        //MazoPlan.añadirCartasPlan();
+        
 
-        //Preparar mazo de acto
-       // getMazoActo().barajar();
-        
-        
         //Poner investigador en el Estudio
         getRoland().setLugar(getEstudio());
 
         //Crea mazo encuentro
         getMazoEncuentro().barajar();
     
-    Escenario escenario=new Escenario();
-    escenario.introEscenario();
+           
+        Escenario escenario=new Escenario();
+        
+        escenario.introEscenario();
     
     
     

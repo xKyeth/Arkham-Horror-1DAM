@@ -34,8 +34,6 @@ public class FaseMito extends Fase{
              
          } else {
              getMazoPlan().avanzarPlan();
-             
-             
          }
         
        

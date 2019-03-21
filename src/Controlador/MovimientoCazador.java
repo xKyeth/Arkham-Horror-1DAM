@@ -40,8 +40,11 @@ public void moverseMapa1(ArrayList<Enemigo> e, Investigador RB){
     
     
     for (int i = 0; i < e.size(); i++) {
+        
         if (e.get(i).isCazador()==true){
+            
             for (int j = 0; j < e.size(); j++) {
+                
                 if (e.get(j).getLugar()==pasillo && RB.getLugar()!=pasillo){
                     
                     e.get(j).setLugar(RB.getLugar());

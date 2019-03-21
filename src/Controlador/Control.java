@@ -26,13 +26,17 @@ public class Control {
     }
 
     public void ComenzarJuego() {
-        System.out.println(Ronda);
+        
+
         
         FasePrepararPartida FasePrepararPartida=new FasePrepararPartida();
+        
+        FasePrepararPartida.RealizarFasePrepararPartida();
         
         setInvestigacion((Boolean) true);
         
         ControlFaseInvestigacion FaseInvestigacion=new ControlFaseInvestigacion();
+        
         FaseEnemigos FaseEnemigos=FaseInvestigacion.procesaOrden(v.MenuPrincipal());
         
         setInvestigacion((Boolean) false);
@@ -42,7 +46,8 @@ public class Control {
         Ronda++;
         
         while (true != acabarPartida) {
-        System.out.println(Ronda);
+            
+     
         
             FaseMito FaseMito=FaseMantenimiento.RealizaFaseMantenimiento();
             
@@ -53,7 +58,8 @@ public class Control {
             setInvestigacion((Boolean) false);
             
             FaseMantenimiento=FaseEnemigos.RealizaFaseEnemigos();
-           Ronda++;
+            
+       
            
         }
         

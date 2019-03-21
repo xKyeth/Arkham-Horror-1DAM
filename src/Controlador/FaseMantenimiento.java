@@ -21,18 +21,12 @@ public class FaseMantenimiento extends Fase {
         
         //robar una carta y obtiene un recurso
         getUsoDeCartasInvestigador().robarCarta();
+        
         getRoland().setNumeroRecursos(getRoland().getNumeroRecursos()+1);
+        
         //si hay mas de 8 cartas elige y descarta 
         getUsoDeCartasInvestigador().descartar8Cartas();
          
-         
-         
-         
-         
-         
-         
-         
-         
-         return Mito;
+        return Mito;
 }
 }
