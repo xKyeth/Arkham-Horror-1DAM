@@ -1,13 +1,14 @@
 package CartasMito;
 
 import CartasInvestigador.Carta;
+import Controlador.Fase;
 import Modelo.Investigador;
 
 
 public abstract class Traicion extends Carta {
 
-    public Traicion(String nombreCarta,boolean preparada,int fichaPerdicion) {
-        super(nombreCarta,preparada, fichaPerdicion);
+    public Traicion(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion) {
+        super( fase,nombreCarta,preparada, fichaPerdicion);
 
     }
 
