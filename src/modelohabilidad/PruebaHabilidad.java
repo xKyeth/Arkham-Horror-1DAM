@@ -35,11 +35,26 @@ public abstract class PruebaHabilidad {
         vista = new Vista_Habilidad(this);
     }
     
-    //Método para iniciar la prueba.
+    //Método para iniciar la prueba. Devuelve true 
     public void iniciarPrueba(int dificultad){
         vista.pruebaHabilidad(dificultad);
+//        boolean x = prueba(dificultad);
+//        if(x == true){
+//            vista.resultadoPruebaExito();
+//        }else{
+//            vista.resultadoPruebaFracaso();
+//        }
+//        System.out.println(x);
+//        return prueba(dificultad);
     }
 
+    public void resultadoPruebaExito(){
+        vista.resultadoPruebaExito();
+    }
+    
+    public void resultadoPruebaFracaso(){
+        vista.resultadoPruebaFracaso();
+    }
     //Método abstracto para hacer la prueba.
     public abstract boolean prueba(int a);
     
@@ -91,7 +106,7 @@ public abstract class PruebaHabilidad {
         else if(n == 9) a = 0;//efecto calavera
         else if(n == 10) a = 0;//efecto capucha
         else if(n == 11) a = 0;//efecto piedra
-        else if(n == 12) a = 100;//efecto tentáculo. Prueba perdida. 
+        else if(n == 12) a = -100;//efecto tentáculo. Prueba perdida. 
         else if(n == 13) a = inv.efectoEstrella();
         return a;
         //Retorna ese valor obtenido

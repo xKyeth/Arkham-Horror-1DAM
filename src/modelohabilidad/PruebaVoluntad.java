@@ -15,6 +15,8 @@ import java.util.ArrayList;
  */
 public class PruebaVoluntad extends PruebaHabilidad{
     
+    private boolean x;
+    
 
     public PruebaVoluntad(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
         super(inv, apoyos, bolsa);
@@ -22,16 +24,16 @@ public class PruebaVoluntad extends PruebaHabilidad{
 
 
     public boolean prueba(int a) {        
-       boolean x = false;
+       x = false;
        System.out.println("Voluntad del investigador: "+inv.getVoluntad());
         int n = inv.getVoluntad() + seleccionaApoyo() + seleccionaCaos();
-        if (n < a){
-            vista.resultadoPruebaExito();
-            return x;
+        if (n >= a){
+            resultadoPruebaExito();
+            return x = true;
         }
         else{
-            vista.resultadoPruebaFracaso();
-            return x = true;
+            resultadoPruebaFracaso();
+            return x;
         }
     }
     

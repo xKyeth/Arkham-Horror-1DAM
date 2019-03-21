@@ -15,20 +15,22 @@ import java.util.ArrayList;
  */
 public class PruebaIntelecto extends PruebaHabilidad{
     
+    private boolean x;
+    
     public PruebaIntelecto(RolandBanks inv, ArrayList<CartasInvestigador.Apoyo> apoyos, BolsaDelCaos bolsa) {
         super(inv, apoyos, bolsa);
     }
 
     public boolean prueba(int a) {
-        boolean x = false;
+        x = false;
         System.out.println("Intelecto del investigador: "+inv.getIntelecto());
         int n = inv.getIntelecto() + seleccionaApoyo() + seleccionaCaos();
-        if (n < a){
-            vista.resultadoPruebaExito();
+        if (n >= a){
+            resultadoPruebaExito();
             return x;
         }
         else{
-            vista.resultadoPruebaFracaso();
+            resultadoPruebaFracaso();
             return x = true;
         }
     }
