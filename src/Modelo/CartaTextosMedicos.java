@@ -28,7 +28,8 @@ public class CartaTextosMedicos extends Apoyo{
                 + "una prueba de intelecto(2). Si tienes éxito, cúrale 1 punto de daño a "
                 + "ese investigador. Si fracasas, inflígele 1 punto de daño a ese "
                 + "investigador.");
-        if(prueba.prueba(prueba.getDificultad())== true){
+        prueba.iniciarPrueba(2);
+        if(prueba.isX() == true){
             inv.setDaño(inv.getDaño()+1);
         }else{
             inv.setDaño(inv.getDaño()-1);
