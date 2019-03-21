@@ -4,19 +4,22 @@ package Modelo;
 // Si esta prueba de habilidad tiene éxito durante un ataque, dicho ataque inflige +1 de daño.
 
 import CartasInvestigador.Habilidad;
+import Controlador.Fase;
 
 
 public abstract class CartaGolpeBrutal extends Habilidad{
     
     Investigador investigador;
     RolandBanks roland;
+
+    public CartaGolpeBrutal(Fase fase, String nombreCarta, boolean preparada, int fichaPerdicion, int voluntad, int intelecto, int habilidad, int combate, int comodin) {
+        super(fase, "Golpe Brutal",false,0, 0 , 0 , 0,1,0);
+    }
     
-   public CartaGolpeBrutal(){
-    super("Golpe Brutal",false,0, 0 , 0 , 1 ,0 );
-   }
    
-   public void Accion (){
-       roland.daño=roland.daño+1;
+   
+   public void Accion (Investigador investigador){
+       investigador.daño=investigador.daño+1;
        
        
    
