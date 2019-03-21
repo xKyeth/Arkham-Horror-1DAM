@@ -1,6 +1,7 @@
 
 package CartasInvestigador;
 
+import Controlador.Fase;
 import Modelo.Investigador;
 
 
@@ -8,11 +9,12 @@ import Modelo.Investigador;
 
 public abstract  class Carta {
     
+    
     private String nombreCarta;
     private boolean preparada;
     private int fichaPerdicion;
     
-    public Carta(String nombreCarta, boolean preparada,int fichaPerdicion){
+    public Carta(Fase fase,String nombreCarta, boolean preparada,int fichaPerdicion){
         this.nombreCarta = nombreCarta;
         this.preparada = preparada;
         this.fichaPerdicion = fichaPerdicion;
