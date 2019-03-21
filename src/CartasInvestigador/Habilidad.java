@@ -1,13 +1,14 @@
 
 package CartasInvestigador;
 
+import Controlador.Fase;
 import Modelo.Investigador;
 
 
 public abstract class Habilidad extends CartasInvestigador{
     
-    public Habilidad(String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
-        super(nombreCarta, preparada, fichaPerdicion,voluntad, intelecto, habilidad, combate, comodin);
+    public Habilidad(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int habilidad, int combate, int comodin) {
+        super( fase,nombreCarta, preparada, fichaPerdicion,voluntad, intelecto, habilidad, combate, comodin);
     }
     
     @Override
