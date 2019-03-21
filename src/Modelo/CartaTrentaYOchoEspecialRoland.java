@@ -23,48 +23,36 @@ public class CartaTrentaYOchoEspecialRoland extends Apoyo{
 //      int fichaPerdicion,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro,
 //      boolean comprada
     public CartaTrentaYOchoEspecialRoland() {
-        super(".38 Especial De Roland", true, 0, 0, 0, 1, 1, 1, 0, 0, 3, 0, false);
+        super(".38 Especial De Roland", true, 0, 0, 0, 1, 1, 1, 0, 0, 3, 4, false);
         usos=4;
     }
-    public void ampliaCombate(RolandBanks investigador){
-        if(investigador.getLugar().getPistas()>0){
-            mensaje.muestraMensaje("Gracias a tu experiencia de campo consigues un bonus al combate, +3 a combate");
-            this.setCombate(3);
-        }
-    }
- 
-    public void usaCarta(Enemigo enemigo){
-        
-      
-        if(usos<=0){
-            mensaje.muestraMensaje("¡MALDICIÓN! No te quedan balas...");
-           
-       }else{
-            mensaje.muestraMensaje("Usas tu fiel revolver del 38 y le asestas un terrible disparo a esa criatura.");
-            enemigo.setVida(enemigo.getVida()-1);
-            usos--;
-        }
-     
-    }
-
-    public int getUsos() {
-        return usos;
-    }
-
-    public void setUsos(int usos) {
-        this.usos = usos;
-    }
-
+    
     @Override
     public void verCarta() {
         mensaje.muestraMensaje("Gasta 1 munición: "
                 + "Combatir. Recibe +1  para este ataque, o bien recibe +3  "
                 + "si hay 1 o más pistas en tu Lugar. Este ataque inflige +1 de daño.");
     }
+    public void restablecerValoresRoland(Investigador investigador){
+        investigador.setAgilidad(2);
+        investigador.setCombate(4);
+        investigador.setIntelecto(3);
+        System.out.println("Valores restablecidos.");
+    }  
 
     @Override
     public void Accion(Investigador investigador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(investigador.getLugar().getPistas()>0&&this.getSuministro()>0){
+            investigador.setCombate(investigador.getCombate()+3);
+            investigador.setDaño(investigador.getDaño()+1);
+            this.setSuministro(this.getSuministro()-1);
+        }else if(investigador.getLugar().getPistas()<=0&&this.getSuministro()>0){
+            investigador.setCombate(investigador.getCombate()+1);
+            investigador.setDaño(investigador.getDaño()+1);
+            this.setSuministro(this.getSuministro()-1);
+        }else{
+            mensaje.muestraMensaje("No te quedan municiones");
+        }
     }
     
 }

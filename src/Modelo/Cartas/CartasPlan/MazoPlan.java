@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Imanol
  */
-public abstract class MazoPlan extends CartaPlan {
+public  class MazoPlan extends CartaPlan {
     
     ArrayList<MazoPlan> mazoPlan = new ArrayList<>();
     

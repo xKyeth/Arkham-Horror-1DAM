@@ -13,7 +13,7 @@ import java.util.Random;
  *
  * @author Imanol
  */
-public abstract class QueEstaPasando extends CartaPlan {
+public  class QueEstaPasando extends CartaPlan {
     private int opcion;
     private int aleatorio;
     Scanner sc = new Scanner(System.in);

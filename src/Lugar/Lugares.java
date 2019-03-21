@@ -55,6 +55,12 @@ public class Lugares {
         }
     }
     
+    public boolean estanConectados(Lugar a, Lugar b){
+        int x = getLugares().indexOf(a);
+        int y = getLugares().indexOf(b);
+        return getConexion()[x][y];
+    }
+    
     public ArrayList<Lugar> getConexiones(Lugar a){
         
         ArrayList <Lugar> conexionesLugar = new ArrayList();
