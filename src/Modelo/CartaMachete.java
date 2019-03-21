@@ -12,6 +12,11 @@ public class CartaMachete  extends Apoyo{
     boolean descarte=false;
     RolandBanks roland;
 
+    // He creado la carta Machete mediante una herencia de la clase apoyo
+    // la carta machete es una carta de apoyo, que cuesta tres recursos
+    // con la que Recibes +1  para este ataque. 
+    // Si el Enemigo atacado es el único Enemigo enfrentado a ti, este ataque recibe +1 de daño.
+    
     public CartaMachete() {
         super("Machete",false,0,0, 0, 1, 0, 0, 0, 0, 1, 0, false);
     }
