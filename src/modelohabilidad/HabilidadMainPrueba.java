@@ -23,7 +23,7 @@ public class HabilidadMainPrueba {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//        
+//        PROBANDO PRUEBA DE HABILIDAD
         RolandBanks Roland = new RolandBanks();        
         
         ArrayList<Apoyo> apoyosprueba = new ArrayList();
