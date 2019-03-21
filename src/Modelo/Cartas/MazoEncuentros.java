@@ -7,6 +7,8 @@ package Modelo.Cartas;
 
 
 import CartasInvestigador.Carta;
+import Modelo.Cartas.CartasMitos.*;
+import Modelo.Investigador;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -18,25 +20,38 @@ import java.util.Scanner;
 
 public class MazoEncuentros {
 
-  private LinkedList<Carta> c;
-  private LinkedList<Carta> d=new LinkedList();
+  private LinkedList<Carta> Mazo;
+ Investigador Roland;
   
   
-    public MazoEncuentros(){
-    this.c = new LinkedList();
+    public MazoEncuentros(Investigador Roland){
+    this.Mazo = new LinkedList();
+    this.Roland=Roland;
+    AntiguosMales AntiguosMales = null;
+    ManosAferradoras  ManosAferradoras = null;
+    ParalizadoPorElMiedo ParalizadoPorElMiedo = null;
+    RestosEnDescomposicion RestosEnDescomposicion = null;
+            
+            
+    getMazo().add(AntiguosMales);
+    getMazo().add(ManosAferradoras);
+    getMazo().add(ParalizadoPorElMiedo);
+    getMazo().add(RestosEnDescomposicion);
+    
+    
     }
     
+    
+
     
     
     public Carta cogerCarta(){
    
         
         System.out.println("cojo la primera carta");
-        getD().add(getC().peek());
-        
-        
-      
-        return getC().getFirst();
+  
+  
+        return getMazo().getFirst();
         
       
     }
@@ -53,8 +68,7 @@ public class MazoEncuentros {
     
     }else for (int i=0; i<x; i++){
         System.out.println("cojo una carta");
-                getD().add(getC().peek());
-        return getC().getFirst();
+        return getMazo().getFirst();
         
       }
       
@@ -73,17 +87,16 @@ public class MazoEncuentros {
        
     
     
-        for (int i = 0; i < getC().size(); i++) {
-            getC().get(i).getNombreCarta();
+        for (int i = 0; i < getMazo().size(); i++) {
+            getMazo().get(i).getNombreCarta();
           
         }
         Scanner sc=new Scanner(System.in);
           String nombre= sc.next();
           
-            for (int i = 0; i < getC().size(); i++) {
-            if (getC().get(i).getNombreCarta().equals(nombre)){
-                getD().add(getC().get(i));
-            return getC().get(i);
+            for (int i = 0; i < getMazo().size(); i++) {
+            if (getMazo().get(i).getNombreCarta().equals(nombre)){
+            return getMazo().get(i);
             }else System.out.println("Esa carta no existe");
          
         }
@@ -95,15 +108,15 @@ public class MazoEncuentros {
     public void introducirCartaAleatoria(Carta card){
   
     
-        getC().addLast(card);
-    Collections.shuffle(getC());
+        getMazo().addLast(card);
+    Collections.shuffle(getMazo());
    System.out.println("he introducido una carta");
     
     }
     
   public void barajar(){
 
-   Collections.shuffle(getC());
+   Collections.shuffle(getMazo());
    System.out.println("barajo");
   
   }
@@ -111,7 +124,7 @@ public class MazoEncuentros {
     
     public boolean mazoVacio(){
        
-    if (getC().isEmpty()){
+    if (getMazo().isEmpty()){
         System.out.println("mazo vacio");
     return true;
     
@@ -123,52 +136,18 @@ public class MazoEncuentros {
     }
     
     
-    public void restaurarMazo(){
-        for (int i = 0; i < d.size(); i++) {
-          c.add(d.get(i));
-             
-        }
-  
-    
-    
-    
-    
-    
-    }
-    
-    
-    
-    
-    
-    
-    
-    
     /**
-     * @return the c
+     * @return the Mazo
      */
-    public LinkedList<Carta> getC() {
-        return c;
+    public LinkedList<Carta> getMazo() {
+        return Mazo;
     }
 
     /**
-     * @param c the c to set
+     * @param Mazo the Mazo to set
      */
-    public void setC(LinkedList<Carta> c) {
-        this.c = c;
-    }
-
-    /**
-     * @return the d
-     */
-    public LinkedList<Carta> getD() {
-        return d;
-    }
-
-    /**
-     * @param d the d to set
-     */
-    public void setD(LinkedList<Carta> d) {
-        this.d = d;
+    public void setMazo(LinkedList<Carta> Mazo) {
+        this.Mazo = Mazo;
     }
     
     

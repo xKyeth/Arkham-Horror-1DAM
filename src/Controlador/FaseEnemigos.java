@@ -5,7 +5,6 @@
  */
 package Controlador;
 
-import Modelo.Personaje;
 import modelohabilidad.PruebaCombate;
 
 /**
@@ -25,16 +24,16 @@ public class FaseEnemigos extends Fase{
         MovimientoCazador MovimientoCazador= new MovimientoCazador();
        
         
-      MovimientoCazador.moverseMapa1("arrayEnemgios ");
+      MovimientoCazador.moverseMapa1(getEnemigos(), getRoland());
       
         
         
         
         //Enemigo ataca 
         
-         for (int i = 0; i < "arrayEnemigos.size"; i++) {
-             if (arrayenemigo.get(i).getLugar=Roland.getLugar()){
-               pruebaCombate.combate("array de enemigos".get(i),Roland,Apoyo,BolsaDelCaos.BolsaDelCaos());
+         for (int i = 0; i < getEnemigos().size(); i++) {
+             if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
+               pruebaCombate.enfrenta(getEnemigos().get(i),getRoland(), getApoyo(), getBolsaDelCaos().BolsaDelCaos());
              
              }
              

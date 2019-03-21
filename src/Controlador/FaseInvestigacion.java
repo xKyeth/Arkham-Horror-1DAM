@@ -6,6 +6,7 @@
 package Controlador;
 
 import CartasInvestigador.Carta;
+import Modelo.Enemigo;
 
 import java.util.InputMismatchException;
 import java.util.Iterator;
@@ -30,32 +31,36 @@ public class FaseInvestigacion extends Fase {
 
                 case 1://Robar 1 carta
 
-                    UsoDeCartasInvestigador.robarCarta();
-
+                    getUsoDeCartasInvestigador().robarCarta();
+                    System.out.println("La carta que has rovado es:");
+                    getUsoDeCartasInvestigador().getCartasmano().peek().verCarta();
                     break;
 
                 case 2:  //Obtener un recurso
-                    Roland.getRecursoRobo();
+                    getRoland().getRecursoRobo();
+                    System.out.println("Obtuviste un recurso");
+                    System.out.println(getRoland().getNumeroRecursos());
+                    
                     break;
 
                 case 3:  //Acivar una capacidad
-                   Scanner sr=new Scanner(System.in);
-                    Iterator iterator=CartasEscenario.iterator();
+                   
+                    Iterator iterator=getCartasEscenario().iterator();
                     System.out.println("Estas son tus cartas");
                     
                     while(iterator.hasNext()){
-                    Carta c=CartasEscenario.poll();
+                    Carta c=getCartasEscenario().poll();
                         System.out.println(c.getNombreCarta());
                     } 
                     
                     System.out.println("Que carta del escenario quieres activar?");
                     
-                    String n=sr.next();
+                    String n=getSr().next();
                     
                     while(iterator.hasNext()){
-                    Carta c=CartasEscenario.poll();
+                    Carta c=getCartasEscenario().poll();
                         if(n==c.getNombreCarta()){
-                        c.Accion(Roland);
+                        c.Accion(getRoland());
                         
                         }
                     }
@@ -88,31 +93,85 @@ public class FaseInvestigacion extends Fase {
 
                     break;
                 case 8://intentar evitar a un enemigo
-                    EvitarEnemigo evitar = new EvitarEnemigo();
-                    if (evitar.EvitarEnemigo(Roland.getAgilidad(), 0, 0) == true) {
+                    
+                    //primero va a mostrar los nombres de todos los enemigos del array
+                    
+                    
+                    for (int i = 0; i < getEnemigos().size(); i++) {
+                      if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
+                      
+                          
+                          //Da error porque no existe El nombre de los Enemigos
+                    //     System.out.println(getEnemigos().get(i).getNombre);
+                      
+                      }
+                  
+                    }
+                    
+                    
+                    //te pedirá que escribas el nombre de alguno de los enemigos de los que acabas de ver
+                    
+                    System.out.println("Elige el enemigo con el que quieras luchar");
+                    String NombreEnemigo = getSr().next();
+                  
+                     for (int i = 0; i < getEnemigos().size(); i++) {
+                         
+                         
+                    //  if (getEnemigos().get(i).getNombre==NombreEnemigo){
+                      
+                          
+                          //Realiza el algoritmo de Evitar al Enemigo y te dice si lo evitaste con Éxito o no
+                        if (getEvitar().EvitarEnemigo(getRoland().getAgilidad(), getEnemigos().get(i).getAgilidad() ) == true) {
                         System.out.println("Has Evitado al enemigo");
 
                     } else {
                         System.out.println("No has evitado al enemigo");
                     }
+                      
+                         
+                         
+                      }
+                   // }
+                    
+                    
+                    
+                    
+                    
+                 
 
                     break;
                 case 9:    //Combatir con un enemigo
                     
-                    for (int i = 0; i < "array enemigos".length; i++) {
+                    //Te devuelve los Enemigos con los que puedes luchar en este turno
+                    
+                     for (int i = 0; i < getEnemigos().size(); i++) {
+                      if (getEnemigos().get(i).getLugar()==getRoland().getLugar()){
                       
-                        System.out.println("\"arrayEnemigos\".getNombre");
+                          
+                          //Da error porque no existe El nombre de los Enemigos
+                      //   System.out.println(getEnemigos().get(i).getNombre);
+                      
+                      }
+                  
                     }
                     
+                      //te pedirá que escribas el nombre de alguno de los enemigos de los que acabas de ver
+                     
+                     
                     System.out.println("Elige el enemigo con el que quieras luchar");
-                    String Enemigo = sr.next();
-                    Enemigo enemigo;
-                     for (int i = 0; i < "array enemigos".length; i++) {
-                      if ("array enemigo"[i].getNombre== Enemigo){
-                        enemigo="array enemigo"[i]}
-                    }
+                    String NombreEnemigoLucha = getSr().next();
+                  
+                     for (int i = 0; i < getEnemigos().size(); i++) {
+                   //   if (getEnemigos().get(i).getNombre==NombreEnemigoLucha){
+                       
+                          
+                          //Realiza la prueba de combate con el enemigo que se ha pedido por teclado
+                     getPruebaCombate().enfrenta(getEnemigos().get(i), getRoland(), getApoyo(), getBolsaDelCaos().BolsaDelCaos());
+                      
+                      }
+                //    }
                     
-                    pruebaCombate.enfrenta(enemigo, Roland, Apoyo, opcion);
+                   
                     
                     
                     

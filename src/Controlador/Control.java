@@ -13,14 +13,14 @@ import Vista.VistaFaseInvestigacion;
  *
  * @author Jose
  */
-public class ControlGeneral {
+public class Control {
 
     boolean acabarPartida = false;
     VistaFaseInvestigacion v;
     int Ronda=1;
     private Boolean investigacion=false;
     Escenario escenario=new Escenario();
-    public ControlGeneral() {
+    public Control() {
         v = new VistaFaseInvestigacion(this);
 
     }

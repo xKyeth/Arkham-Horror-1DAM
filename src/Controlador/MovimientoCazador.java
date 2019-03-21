@@ -7,52 +7,56 @@ package Controlador;
 
 import Lugar.Lugar;
 import Lugar.Pasillo;
-//import Modelo.Investigador;
-import Modelo.Personaje;
+import Modelo.Enemigo;
+import Modelo.Investigador;
+//import Modelo.Personaje;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
-
 //import java.util.LinkedList;
+
 
 /**
  *
- * @author usuario
+ * @author jose
  */
 public class MovimientoCazador {
     //LinkedList Cola=new LinkedList();
     //ArrayList usados=new ArrayList();
 //ArrayList<Investigador> personajes= new ArrayList();   
 //boolean encontrado=false;
-RolandBanks RB;
+
 Lugar pasillo=new Pasillo();
+
     
     public MovimientoCazador(){
       //  personajes=p;
+     
     }
     
-public void moverseMapa1(ArrayList<Personaje> p){
-   
-    for (int i = 0; i < p.size(); i++) {
-      if (p.get(i).getLugar()==pasillo && RB.getLugar()!=pasillo){
-   p.get(i).setLugar(RB.getLugar());
-   } else if (p.get(i).getLugar()==RB.getLugar()){
+public void moverseMapa1(ArrayList<Enemigo> e, Investigador RB){
+    
+    //Hace que todos los Enemigos CAZADORES se muevan acercándose al jugador
+    
+    
+    
+    for (int i = 0; i < e.size(); i++) {
+        if (e.get(i).isCazador()==true){
+            for (int j = 0; j < e.size(); j++) {
+                if (e.get(j).getLugar()==pasillo && RB.getLugar()!=pasillo){
+                    
+                    e.get(j).setLugar(RB.getLugar());
+                    
+                } else if (e.get(j).getLugar()==RB.getLugar()){
 
-   }else if(RB.getLugar()==pasillo){
-    p.get(i).setLugar(pasillo);
-    
-    }else if(RB.getLugar()!=pasillo && p.get(i).getLugar()!=RB.getLugar()){
-    
-    p.get(i).setLugar(pasillo);
-    
-    }}}
-        
-        
-        
-        
-        
-        
-        
-    }
+                    }else if(RB.getLugar()==pasillo){
+                        
+                         e.get(j).setLugar(pasillo);
+
+                            }else if(RB.getLugar()!=pasillo && e.get(j).getLugar()!=RB.getLugar()){
+
+                                 e.get(j).setLugar(pasillo);
+
+             }}}}}}
     
     
     

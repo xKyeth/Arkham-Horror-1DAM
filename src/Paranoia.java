@@ -3,28 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
 
 import CartasMito.Traicion;
+import Controlador.Fase;
 import Modelo.Investigador;
 import Modelo.RolandBanks;
 import java.util.ArrayList;
 
 /**
  *
- * @author usuario
+ * @author Jose
  */
 public class Paranoia extends Traicion {
     
    
-    public Paranoia(){
-    super("Paranoia",false,0);
+    public Paranoia(Fase fase){
+    super(fase, "Paranoia",false,0);
    }
       
+    @Override
    public void Accion(Investigador R) {
          System.out.println("¿Que ha sido ese ruido?"); 
          
     R.setNumeroRecursos(0);
+    }
+
+
+    @Override
+    public void verCarta() {
+        System.out.println("Pierdes todos tus recursos");
     }
 
     /**

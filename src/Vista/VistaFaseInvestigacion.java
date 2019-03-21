@@ -1,5 +1,6 @@
 package Vista;
 /**AUTOR ALEXANDRA**/
+import Controlador.Control;
 import Controlador.ControlFaseInvestigacion;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,13 +9,13 @@ import Modelo.BDCarta;
 import Modelo.MazoInvestigador;
 
 public class VistaFaseInvestigacion {
-    ControlFaseInvestigacion control;
+    Control control;
     private BD bd;
     Scanner sc=new Scanner(System.in);
     int numRonda=1;
     int decisionesRestantes=3;
     
-    public VistaFaseInvestigacion(ControlFaseInvestigacion control){
+    public VistaFaseInvestigacion(Control control){
         this.control=control;
     }
     

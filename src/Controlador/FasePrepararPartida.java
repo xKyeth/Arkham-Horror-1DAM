@@ -26,13 +26,13 @@ public class FasePrepararPartida extends Fase{
     public void RealizarFasePrepararPartida(){
     
     //Elegir investigador/Por ahora NO SE IMPLEMENTA
-        Roland = new RolandBanks();
+        setRoland(new RolandBanks());
         //Crear y barajar mazo Jugador
 
-        ArrayList<CartasInvestigador> MazoInvestigadorFinal = new ArrayList();
-       MazoInvestigadorFinal= MazoInvestigador.getListaCartasMazo();
-        Collections.shuffle(MazoInvestigador.getListaCartasMazo());
-        MazoInvestigador.setListaMazo(MazoInvestigadorFinal);
+       
+        MazoInvestigadorFinal= getMazoInvestigador().getListaCartasMazo();
+        Collections.shuffle(getMazoInvestigador().getListaCartasMazo());
+        getMazoInvestigador().setListaMazo(MazoInvestigadorFinal);
 
         //Robar mano inicial
         uso_descarte_cartas UDC=new uso_descarte_cartas();
@@ -41,14 +41,14 @@ public class FasePrepararPartida extends Fase{
         //MazoPlan.añadirCartasPlan();
 
         //Preparar mazo de acto
-        MazoActo.barajar();
+       // getMazoActo().barajar();
         
         
         //Poner investigador en el Estudio
-        Roland.setLugar(Estudio);
+        getRoland().setLugar(getEstudio());
 
         //Crea mazo encuentro
-        MazoEncuentro.barajar();
+        getMazoEncuentro().barajar();
     
     Escenario escenario=new Escenario();
     escenario.introEscenario();

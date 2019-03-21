@@ -20,10 +20,10 @@ public class FaseMantenimiento extends Fase {
            //Prepara todas las cartas agotadas
         
         //robar una carta y obtiene un recurso
-        UsoDeCartasInvestigador.robarCarta();
-        Roland.setNumeroRecursos(Roland.getNumeroRecursos()+1);
+        getUsoDeCartasInvestigador().robarCarta();
+        getRoland().setNumeroRecursos(getRoland().getNumeroRecursos()+1);
         //si hay mas de 8 cartas elige y descarta 
-        UsoDeCartasInvestigador.descartar8Cartas();
+        getUsoDeCartasInvestigador().descartar8Cartas();
          
          
          
