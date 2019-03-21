@@ -1,4 +1,4 @@
-package Modelo.Cartas;
+package Modelo;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
