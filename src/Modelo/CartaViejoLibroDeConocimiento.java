@@ -5,6 +5,7 @@
  */
 package Modelo;
 import CartasInvestigador.Apoyo;
+import Controlador.Fase;
 
 /**
  *
@@ -13,10 +14,11 @@ import CartasInvestigador.Apoyo;
 public class CartaViejoLibroDeConocimiento extends Apoyo{
     
     RolandBanks roland;
+    Fase fase;
 
     
-    public CartaViejoLibroDeConocimiento(){
-        super("Viejo Libro de Conocimiento",false, 0, 1, 0, 0, 0, 0, 0, 0, 3, 0, false);
+    public CartaViejoLibroDeConocimiento(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada){
+        super(fase, "Viejo Libro de Conocimiento",false, 0, 1, 0, 0, 0, 0, 0, 0, 3, 0, false);
     }
     
     @Override
