@@ -6,14 +6,14 @@ import CartasInvestigador.Evento;
 import Modelo.Personaje;
 import CartasMito.Traicion;
 import ClaseMano.uso_descarte_cartas;
+import Controlador.Fase;
 import java.util.LinkedList;
 
 public class VocesDisonantes extends Traicion {
-
     LinkedList<CartasInvestigador> cartasmano;
 
-    public VocesDisonantes() {
-        super("Voces Disonantes", false, 0);
+    public VocesDisonantes(Fase fase){
+        super(fase,"voces Disonantes", false, 0);
     }
     
     

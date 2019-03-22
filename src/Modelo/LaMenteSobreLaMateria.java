@@ -1,6 +1,7 @@
 package Modelo;
 
 import CartasInvestigador.Evento;
+import Controlador.Fase;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -8,9 +9,9 @@ public class LaMenteSobreLaMateria extends Evento {
 
     Controlador.Control investigar;
 
-    public LaMenteSobreLaMateria() {
-        super("La Mente Sobre La Materia", false, 0, 0, 0, 1, 1, 0, 1);
-
+    public LaMenteSobreLaMateria(Fase fase) {
+        super(fase,"La Mente Sobre La Materia", false, 0, 0, 0, 1, 1, 0, 1);
+      
     }
 
     @Override
@@ -29,7 +30,7 @@ public class LaMenteSobreLaMateria extends Evento {
 
     public void Accion(Investigador investigador) {
         Investigador inv = investigador;
-
+        
         if (investigar.getInvestigacion() == true) {
             setPreparada(true);
             usarCarta(inv);

@@ -1,12 +1,13 @@
 package Modelo;
 
 import CartasInvestigador.Evento;
+import Controlador.Fase;
 public class UnaPrueba extends Evento{
     
     RolandBanks roland;
     
-    public UnaPrueba() {
-        super("Una Prueba",false,0,0, 2, 0, 0, 0, 1);
+    public UnaPrueba(Fase fase) {
+        super(fase,"Una Prueba",false,0,0, 2, 0, 0, 0, 1);
     }
     
     
