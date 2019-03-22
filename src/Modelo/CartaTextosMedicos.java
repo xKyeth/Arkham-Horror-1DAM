@@ -6,6 +6,7 @@
 package Modelo;
 import modelohabilidad.PruebaHabilidad;
 import CartasInvestigador.Apoyo;
+import Controlador.Fase;
 
 /**
  *
@@ -15,9 +16,10 @@ public class CartaTextosMedicos extends Apoyo{
     
     PruebaHabilidad prueba;
     RolandBanks roland;
+    Fase fase;
 
-    public CartaTextosMedicos(){
-        super("Textos Medicos",false, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, false);
+    public CartaTextosMedicos(Fase fase,String nombreCarta,boolean preparada,int fichaPerdicion,int voluntad, int intelecto, int combate, int habilidad, int comodin, int vida, int cordura, int coste, int suministro, boolean comprada){
+        super(fase,"Textos Medicos",false, 0, 0, 0, 1, 0, 0, 0, 0, 2, 0, false);
     }
     
     
